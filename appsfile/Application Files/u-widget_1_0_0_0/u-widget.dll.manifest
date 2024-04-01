@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="u-widget.exe" version="1.0.0.0" publicKeyToken="bfa1406c749d6155" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="mini-my-widget-logo-32x32.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Launcher" version="8.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Launcher.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC マニフェスト オプション
+          Windows のユーザー アカウント制御のレベルを変更するには、
+          requestedExecutionLevel ノードを以下のいずれかで置換します。
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         下位互換性を保つためにファイルおよびレジストリの仮想化を使用する場合、
+         requestedExecutionLevel ノードを削除します。
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Launcher.exe" size="17336">
+      <assemblyIdentity name="Launcher" version="8.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>+Mwt25Jhr/8e2VFUUTF0dd1x762owUvokVqASB5erjk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="D3DCompiler_47_cor3.dll" size="4127224">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JDi1IKyWHjjFhSd5EDc0vjc+4rbR5ael1JJItSrMfE0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="mini-my-widget-logo-32x32.ico" size="4286">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>H8ueANx3WQ5aWBnUPBBzGycyCoLBJjde3D+2vY54D6E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="PenImc_cor3.dll" size="141584">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>eA82E8NIpD9Y5Q5xaQDtpH5p0WqOIOHoyZUQFWxE4Q0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="PresentationNative_cor3.dll" size="943792">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>P0pd7n4Izfv5TnmwsIcVfrXbE1LG/y0sXDsIVlUFOVQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\win-x86\native\WebView2Loader.dll" size="116824">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>fdfc+SBBTjYpxzE/6pXayPSd5KZ9m7plBvri65u0N/s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="u-widget.exe" size="145086216">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>NunPcDIremk/z6STXQ8JRnu5GMzKyV3haWf370Qt/Ek=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="vcruntime140_cor3.dll" size="91240">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xDLTxqAtY2xOZsuXu3OGVe+xeGqJ0u9EbNCq7cf2+3s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="wpfgfx_cor3.dll" size="1803032">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oo5prbvwn2zIXUTQyjLwHXJrOoew3N7lf5avdz/uxec=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=KOUTA-PC\ku-da" issuerKeyHash="9f788143b8570c8c81bb4206ddc41139fac4a504" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Atas9Yo4EFMj1VjPPeTbQ4rmbvLWSx10A0CzY9Drv70=</DigestValue></Reference></SignedInfo><SignatureValue>DZzy/7ir9t/1R3RHj+1QGhX9X6H9vhqEO2fJCM4UCQ9OSz2IAW0DGanbUmS/harQfAxK3C2iY8kg48EPn44jY+oCg8ndrgaitt1v7PN4yDxtJx99rNJJe4rJ+Gkg+n6wneZ/jGT0MkX8bXyfm2+ny2vot6DhKtP5l5RAA1JM0W8=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>oCZOWGUNv1tXMPXpjQvZTT2C6K6vuheqQWzo7GHtEhVMHjucRA2VqX67TUzmaxMRviHsURIabPBShMi3PaWMzo6SRt91tpj2DFiwZC+zedZDwUZU/ge0+4FsDuPjQXKOKVBimgTvLJcfKuuDYQ1jTZW01OWTXYwxBcXemaIhh5U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="bdbfebd063b34003741d4bd6f26ee68a43dbe43dcf58d5235310388af5acd602" Description="" Url=""><as:assemblyIdentity name="u-widget.exe" version="1.0.0.0" publicKeyToken="bfa1406c749d6155" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=KOUTA-PC\ku-da</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>KGwCpN5FIYG8XpV9e+UJAuGcV/hsZ9X5iMDGLXMZ1zA=</DigestValue></Reference></SignedInfo><SignatureValue>af3PJrBi7ri37/w2izu7WvX+rVm5CuR56+FhpMkygZuOlqZFCtIF2pFDs1VyWryIe4ypHF743lYyooaCQsmh5SSnndikazvGZIKwIFCdoKYXaiZwecU9sOyg5VtaJu9AV9pKFTYPWPaein7poR5M0ZNSIwQ1mq01QXGb41JY6Yw=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>oCZOWGUNv1tXMPXpjQvZTT2C6K6vuheqQWzo7GHtEhVMHjucRA2VqX67TUzmaxMRviHsURIabPBShMi3PaWMzo6SRt91tpj2DFiwZC+zedZDwUZU/ge0+4FsDuPjQXKOKVBimgTvLJcfKuuDYQ1jTZW01OWTXYwxBcXemaIhh5U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQI+zfCyVn0rZP5IKpN9jztDANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDHhwASwBPAFUAVABBAC0AUABDAFwAawB1AC0AZABhMB4XDTI0MDMzMDA5NDgxOVoXDTI1MDMzMDE1NDgxOVowJzElMCMGA1UEAx4cAEsATwBVAFQAQQAtAFAAQwBcAGsAdQAtAGQAYTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAoCZOWGUNv1tXMPXpjQvZTT2C6K6vuheqQWzo7GHtEhVMHjucRA2VqX67TUzmaxMRviHsURIabPBShMi3PaWMzo6SRt91tpj2DFiwZC+zedZDwUZU/ge0+4FsDuPjQXKOKVBimgTvLJcfKuuDYQ1jTZW01OWTXYwxBcXemaIhh5UCAwEAATANBgkqhkiG9w0BAQsFAAOBgQAUl94Z/ZqVvrqop6cbrSHJE4SDEVJUrXx/Yvwmswzlo4xh8Lz+p4aUCIWEQycMPVGJm7XnXWakw/Tb2CaHxWaJ4L+7IGhXE6g5YQ+JPBPgUxLRIjWTdaBslLpPN3UR69QDUcFU3rmVjvfgXxhQuZXY9DXLTAhX1sapaRPFdIh7og==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
