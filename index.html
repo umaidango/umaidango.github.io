@@ -5,7 +5,15 @@
   if (screen.width <= 767) {
     document.location = "https://umaidango.github.io/sp/";
   }
-
+var dialog = document.querySelector('dialog');
+var btn_show = document.getElementById('show');
+var btn_close = document.getElementById('close');
+btn_show.addEventListener('click', function() {
+  dialog.show();
+}, false);
+btn_close.addEventListener('click', function() {
+  dialog.close();
+}, false);
           
 </script>
 
@@ -25,7 +33,18 @@
 <header style="position: fixed; margin-top: -10px;">
 <div style="background: #fff; border: 1px #ccc solid; box-shadow: 0 2px 3px 0 #ddd; font-size: 100%; padding: 20px;  border-radius: 10px;"> <img src="/u-software.png" style="width: 120px;height: 30px;">&nbsp;&nbsp;
 &nbsp;&nbsp;<a href="/index.html"><font style="vertical-align: 40%; color:black;">HOME</font></a>
-&nbsp;&nbsp;<a href="/about"><font style="vertical-align: 40%; color:black;">ABOUT</font></a>&nbsp;&nbsp;<a href="/shop"><font style="vertical-align: 40%; color:black;">APPS</font></a></div></header><font style="vertical-align: 40%; color:black;">
+&nbsp;&nbsp;<a href="/about"><font style="vertical-align: 40%; color:black;">ABOUT</font></a>&nbsp;&nbsp;<a href="/shop"><font style="vertical-align: 40%; color:black;">APPS</font></a>
+
+
+<dialog>
+  <p>Language</p>
+  <font id="close">✖</button>
+</dialog>
+<font id="show">LANGUAGE</button>
+
+
+
+</div></header><font style="vertical-align: 40%; color:black;">
 
 
 
