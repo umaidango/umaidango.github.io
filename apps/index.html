@@ -1,5 +1,6 @@
-<!doctype html>
-<style>
+<!DOCTYPE html>
+<html><head> <meta name="description" content="U Softwareのアプリ一覧です。">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style>
 *{
 	border-radius:10px;
 }
@@ -11,36 +12,64 @@
 }
 
 a{text-decoration:none;}
+.waku{
+  display: inline-block; _display: inline;
+  background: #fff;
+  border: 1px #ccc solid;
+  box-shadow: 0 2px 3px 0 #ddd;
+  font-size: 100%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+img{
+  display: inline-block; _display: inline; 
+}
+.size1
+{
+  font-size: 28px;
+  color: #000;
+  vertical-align: 40%;
+}
 </style>
-<head><title>U Software - APPS</title> <link rel="shortcut icon" href="u-logo.png" sizes="64x64"></head><body>
-<header><img src="apps.png" width="310" height="50"> <font class="text"><a href="index.html" style="color:black;" >ストアホーム</a></font>　
+<title>U Software - AppStore</title> <link rel="shortcut icon" href="https://umaidango.github.io/apps/u-logo.png" sizes="64x64"></head><body>
+<header><img src="appstore_files/apps.png" width="310" height="50"> <font class="text"><a href="https://umaidango.github.io/apps/index.html" style="color:black;">ストアホーム</a></font>　
 
 
 
  &nbsp; 
-<font style="vertical-align: 80%; color:black; cursor: pointer;" class="openBtn" >アプリ一覧</font></a></header>
+<font style="vertical-align: 80%; color:black; cursor: pointer;" class="openBtn">アプリ一覧</font></header>
 
 
-  <dialog class="custom-dialog"  style="border-radius: 10px;border-color: #a2a2a2;">
+  <dialog class="custom-dialog" style="border-radius: 10px;border-color: #a2a2a2;">
      <font class="closeBtn" style="cursor: pointer;">✖</font>
         <div style="padding: 1em">
-          <h2>アプリ一覧</h2><p>
-<img src="https://umaidango.github.io/U%20SOFTWARE%20Original%20Clock%20Manual/images/image1.png" style="border-radius:10px;"><a href="https://umaidango.github.io/apps/original_clock">Original Clock</a>
-          <p>
-<a href="https://umaidango.github.io/apps/my_widget">
-<img style="height: 65px;" src="https://umaidango.github.io/mini-my-widget-logo.png">MY Widget</a>
-        </div>
+          <h2>アプリ一覧</h2><p><div class="waku">
+<img src="appstore_files/image1.png" style="border-radius:10px;"><a href="https://umaidango.github.io/apps/original_clock">Original Clock</a></div>
+          </p><p>
+
+<a href="https://umaidango.github.io/apps/my_widget"> 
+	    <img src="my_widget_background.jpg" alt="MY Widget" width="231" height="340"></a>
+        </p>
       </dialog>
- <a href="/apps/original_clock"> 
-	 <img src="https://umaidango.github.io/apps/img/original_clock_background.jpg" alt="Original Clock img" width="231" height="340" >
- </a>
 
 
+    <a href="https://umaidango.github.io/apps/original_clock">   
+      <div class="waku">
+ 
+	 <img src="original_clock_background.jpg" alt="Original Clock img" width="231" height="300">
+   <p>
+    <img src="image1.png"><font class="size1">Original Clock</font>
+</div> </a>
 
 
-    <a href="/apps/my_widget"> 
-	    <img src="https://umaidango.github.io/apps/img/my_widget_background.jpg" alt="MY Widget"  width="231" height="340" >
-    </a>
+<a href="https://umaidango.github.io/apps/my_widget"> 
+<div class="waku">
+    
+	    <img src="my_widget_background.jpg" alt="MY Widget" width="231" height="300">
+      <p>
+        <img src="mini-my-widget-logo.png" width="64" height="64"><font class="size1">MY Widget</font>
+    </div></a>
 
 
 
@@ -86,6 +115,7 @@ a{text-decoration:none;}
           }
         });
       </script>
-</body>
+
 
    
+</body></html>
