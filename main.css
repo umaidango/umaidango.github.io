@@ -1,0 +1,28 @@
+  *{
+      border-radius: 10px;
+      
+    
+    font-family:'Arial'} 
+  
+  
+  
+     .img{
+     width: 180px; height: 85px;
+    }
+  
+    button{
+      background-color: #1d82bf;
+    color: #fff;
+  
+  
+    }
+    
+    a{text-decoration:none;}
+
+    .waku{
+      border-radius: 10px;
+      background-color: rgb(185, 222, 255);
+      width: 230px;
+      display: inline-block;
+      margin:10px;
+    }
