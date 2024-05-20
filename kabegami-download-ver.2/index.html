@@ -28,12 +28,40 @@
       display: inline-block;
       margin:10px;
     }
+    
+    #hideMe {
+    -moz-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 5s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
     </style>
   
   <meta http-equiv="content-type" content="text/html; charset=UTF-8"><link rel="shortcut icon" href="index_files\icons.png" sizes="64x64">
   </head>
   <body><center><div style="height: 7px;"></div>
 <div style="width: 1113px;/*! height: 895px; */background-color: #e0f5ff;/*! border: ; */"><header style=" margin-top: -10px;width: 878px;">
+  
+  <div id="hideMe">pause wait...</div>
     <div style="height: 8px;"></div><div style="background: #fff; border: 1px #ccc solid; box-shadow: 0 2px 3px 0 #ddd; font-size: 100%; padding: 20px;  border-radius: 10px;"> <img style="width: 120px;height: 30px;" src="https://umaidango.github.io/u-software.png">&nbsp;&nbsp;
     &nbsp;&nbsp; &nbsp;&nbsp;<a href="https://umaidango.github.io/kabegami-download-ver.2/index.html"><font style="vertical-align: 40%; color:black;">壁紙ダウンロード</font></a><a href="illustrator/">&nbsp;&nbsp;<font style="vertical-align: 40%; color:black;">イラストレーター一覧</font></a> 
     
@@ -113,6 +141,15 @@
 
 
 
+
+
+
+
+
+
+
+
+</body></html>
 
 
 
