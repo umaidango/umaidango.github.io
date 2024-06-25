@@ -86,3 +86,6 @@ font-style: normal;
   }
 }
     
+.logo:hover {
+  background: #f4f4f4;
+}
