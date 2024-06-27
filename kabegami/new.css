@@ -89,3 +89,11 @@ font-style: normal;
 .logo:hover {
   background: #f4f4f4;
 }
+.name:hover{
+    background:aliceblue;
+    width:96px;
+}
+
+.name{
+    display:inline-block;
+}
