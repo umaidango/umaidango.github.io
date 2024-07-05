@@ -44,7 +44,11 @@ btn_close.addEventListener('click', function() {
   <a href="https://umaidango.github.io/web-styles/"><font style="vertical-align: 40%; color:black;">Web Styles</font></a>&nbsp;&nbsp;
 <a href="https://umaidango.github.io/hamster/"><font style="vertical-align: 40%; color:black;">🐹日記</font></a>&nbsp;&nbsp;<a href="https://umaidango.github.io/meishi/"><font style="vertical-align: 40%; color:black;">名刺</font></a>&nbsp;&nbsp;
   
-  <a href="https://umaidango.github.io/profile/"><font style="vertical-align: 40%; color:black;">Profile</font></a>&nbsp; <a href="https://umaidango.github.io/language.html"><font style="vertical-align: 40%; color:black;">Language</font></a></div></header>
+  <a href="https://umaidango.github.io/profile/"><font style="vertical-align: 40%; color:black;">Profile</font></a>&nbsp; <a onclick="document.getElementById('lang').show()"><font style="vertical-align: 40%; color:black;cursor: pointer;">Language</font></a>
+<dialog id="lang" style="border: 4px #d6ecff solid;width: 146px;height: 254px;position: fixed;margin-left: 264px;"><div>
+  <span onclick="document.getElementById('lang').close()" style="cursor: pointer;"><font style="font-size: 38px;">×</font></span><center><h4>Select Language</h4><p><a href="https://umaidango.github.io/tw/" style="color: #000;"><font>Taiwan</font></a></p><p><a href="https://umaidango.github.io/" style="color: #000;"><font class="word">Japanese</font></a></p><p><a href="https://umaidango.github.io/en/" style="color: #000;"><font class="word">English</font></a></p><p></p></center>
+  
+</div></dialog></div></header>
 
 
 
@@ -72,6 +76,7 @@ btn_close.addEventListener('click', function() {
   width: 98%; "> 
     <font style="color:white;"><h6>
 &nbsp; <img src="/u-software.png" style="width: 80px;height: 20px;border-radius: 0px;"> (c) U SOFTWARE Umaidango.</h6></font></footer></span></font>
+
 
 
 
