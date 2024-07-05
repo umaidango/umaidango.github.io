@@ -7,10 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
   </head>
   <body>
-      <header style="margin-left: -8px;margin-right: -7px;margin-top: -8px;"><div style="position: fixed;background-color: #fff;height: 67px;width: 100%;border-radius: 0px;border-bottom: 2px #eee solid;">
+      <header style="margin-left: -8px;margin-right: -7px;margin-top: -8px;"><div style="position: fixed;background-color: #fff;height: 67px;width: 100%;border-radius: 0px;border-bottom: 2px #e3e3e3 solid;box-shadow: 0px 3px 4px #f2f2f2;">
   <a href="/en/"><img style="height: 46px;width: 171px;margin-top: 11px;margin-left: 10px;" src="https://umaidango.github.io/u-software.png"></a>
   
-  <a href="index.html" style="vertical-align: 73%;margin: 15px;"><font class="word">Home</font></a><a style="vertical-align: 73%;" href="about.html"><font class="word" style="">About</font></a>
+  <a href="index.html" style="vertical-align: 73%;margin: 15px;cursor: pointer;"><font class="word">Home</font></a><a style="vertical-align: 73%;cursor: pointer;" href="about.html"><font class="word" style="">About</font></a><a style="vertical-align: 73%;margin-left: 15px;cursor: pointer;"><font class="word" onclick="document.getElementById('lang').show()">Language</font></a><dialog id="lang" style="border: 4px #d6ecff solid;width: 128px;height: 225px;position: fixed;margin-left: 264px;"><div>
+  <span onclick="document.getElementById('lang').close()" style="cursor: pointer;"><font style="font-size: 38px;">×</font></span><center><h4>Select Language</h4><p><a href="https://umaidango.github.io/tw/" style="color: #000;"><font class="word">Taiwan</font></a></p><p><a href="https://umaidango.github.io/" style="color: #000;"><font class="word">Japanese</font></a></p><p><a href="https://umaidango.github.io/en/" style="color: #000;"><font class="word">English</font></a></p><p></p></center>
+  
+</div></dialog>
   
   
   </div></header>
