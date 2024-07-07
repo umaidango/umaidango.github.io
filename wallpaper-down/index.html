@@ -33,7 +33,7 @@ font-style: normal;
 #hideMe {
   -moz-animation: cssAnimation 0s ease-in 0.8s forwards;
   /* Firefox */
-  -webkit-animation: cssAnimation 0s ease-in 0.2s forwards;
+  -webkit-animation: cssAnimation 0s ease-in 0.8s forwards;
   /* Safari and Chrome */
   -o-animation: cssAnimation 0s ease-in 0.8s forwards;
   /* Opera */
@@ -109,32 +109,16 @@ font-style: normal;
   .word:hover{
     background: #f4f4f4;
   }
-  
   /* HTML: <div class="loader"></div> */
 .loader {
   width: 50px;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 8px solid #514b82;
-  animation:
-    l20-1 0.8s infinite linear alternate,
-    l20-2 1.6s infinite linear;
+  border: 8px solid lightblue;
+  border-right-color: #009fff;
+  animation: l2 0.7s infinite linear;
 }
-@keyframes l20-1{
-   0%    {clip-path: polygon(50% 50%,0       0,  50%   0%,  50%    0%, 50%    0%, 50%    0%, 50%    0% )}
-   12.5% {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100%   0%, 100%   0%, 100%   0% )}
-   25%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 100% 100%, 100% 100% )}
-   50%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
-   62.5% {clip-path: polygon(50% 50%,100%    0, 100%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
-   75%   {clip-path: polygon(50% 50%,100% 100%, 100% 100%,  100% 100%, 100% 100%, 50%  100%, 0%   100% )}
-   100%  {clip-path: polygon(50% 50%,50%  100%,  50% 100%,   50% 100%,  50% 100%, 50%  100%, 0%   100% )}
-}
-@keyframes l20-2{ 
-  0%    {transform:scaleY(1)  rotate(0deg)}
-  49.99%{transform:scaleY(1)  rotate(135deg)}
-  50%   {transform:scaleY(-1) rotate(0deg)}
-  100%  {transform:scaleY(-1) rotate(-135deg)}
-}
+@keyframes l2 {to{transform: rotate(1turn)}}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -379,6 +363,7 @@ download</button>create:<a style="color: #1707d0;cursor: pointer;" onclick="docu
 </div></div>
     </center>
 <footer style="background-color: #fff;height: 25px;border-radius: 0px;width: 100%;">(c) 2024 - Wallpaper Down.</footer>
+
 
 
 </body></html>
