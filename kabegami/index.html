@@ -1,155 +1,7 @@
 <html lang="ja" style="background-color: #e0f5ff;"><head>
   
      <meta name="viewport" content="width=device-width">
-  <style>.sw:hover{
-    font-weight:bold;
-    text-decoration:underline;
-    }
-      
-    
-
-date-tooltip {
-  display: inline-block;
-  position: relative;
-}
-
-date-tooltip::before,
-date-tooltip::after {
-  -webkit-transition: all 0.2s;
-  opacity: 0;
-  position: absolute;
-  transition: all 0.2s;
-  visibility: hidden;
-  z-index: 11;
-}
-
-date-tooltip::before {
-  -webkit-transform: translateY(-50%);
-  border-color: transparent #5f6368 transparent transparent;
-  border-style: solid;
-  border-width: 3px 7px 3px 0;
-  content: "";
-  height: 0;
-  left: calc(100% + 6px);
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-}
-
-date-tooltip::after {
-  -webkit-transform: translateY(-50%);
-  background: #5f6368;
-  border-radius: 3px;
-  color: #fff;
-  content: attr(data-tooltip);
-  display: block;
-  font-size: 11px;
-  font-weight: 600;
-  left: calc(100% + 13px);
-  padding: 5px 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  white-space: nowrap;
-}
-
-date-tooltip:hover {
-  cursor: pointer;
-}
-
-date-tooltip:hover::before {
-  opacity: 1;
-  visibility: visible;
-}
   
-  .header-button:hover{
-    background-color: #dddddd30;
-    border-radius:0px;
-  }
-
-date-tooltip:hover::after {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* HTML: <div class="loader"></div> */
-.loader {
-  width: 50px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  border: 8px solid lightblue;
-  border-right-color: #1b9b89;
-  animation: l2 1s infinite linear;
-}
-@keyframes l2 {to{transform: rotate(1turn)}}
-  
-  
-  .post:active{
-     background:#ddd;
-  }
-  
-  
-  .uwa:hover{
-    
-  }
-  
-  
-a {
-  color: #333;
-  text-decoration: none;
-}
-
-.content{
-  margin: 0px;
-}
-
-.twitter-hashtag {
-  background: #1b95e0;
-  border-radius: 3px;
-  color: #fff;
-  display: inline-block;
-  font-size: 11px;
-  margin-left: 10px;
-  padding: 1px 8px 1px 6px;
-  vertical-align: bottom;
-  &::before {
-    background: transparent 0 0 no-repeat;
-    background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2072%2072%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h72v72H0z%22%2F%3E%3Cpath%20class%3D%22icon%22%20fill%3D%22%23fff%22%20d%3D%22M68.812%2015.14c-2.348%201.04-4.87%201.744-7.52%202.06%202.704-1.62%204.78-4.186%205.757-7.243-2.53%201.5-5.33%202.592-8.314%203.176C56.35%2010.59%2052.948%209%2049.182%209c-7.23%200-13.092%205.86-13.092%2013.093%200%201.026.118%202.02.338%202.98C25.543%2024.527%2015.9%2019.318%209.44%2011.396c-1.125%201.936-1.77%204.184-1.77%206.58%200%204.543%202.312%208.552%205.824%2010.9-2.146-.07-4.165-.658-5.93-1.64-.002.056-.002.11-.002.163%200%206.345%204.513%2011.638%2010.504%2012.84-1.1.298-2.256.457-3.45.457-.845%200-1.666-.078-2.464-.23%201.667%205.2%206.5%208.985%2012.23%209.09-4.482%203.51-10.13%205.605-16.26%205.605-1.055%200-2.096-.06-3.122-.184%205.794%203.717%2012.676%205.882%2020.067%205.882%2024.083%200%2037.25-19.95%2037.25-37.25%200-.565-.013-1.133-.038-1.693%202.558-1.847%204.778-4.15%206.532-6.774z%22%2F%3E%3C%2Fsvg%3E);
-    content: "";
-    display: inline-block;
-    height: 14px;
-    padding-right: 3px;
-    position: relative;
-    top: 2px;
-    width: 14px;
-    vertical-align: top;
-  }
-}
-  
-    
-    .header-div{
-      background: #fff; border: 1px #ccc solid; box-shadow: 0 2px 3px 0 #ddd; font-size: 100%; padding: 20px;  border-top-left-radius: 0px;border-top-right-radius: 0px;width: 722px;position: fixed;margin-top: -17px;margin-left: 174px;
-    }
-    
-  .qwe{
-    border-radius: 10px;background-color: rgb(185, 222, 255);width: 368px;display: inline-block;margin: 10px;/*! height: 10px; */height: 257px;border: 1px #9ec8cc solid;box-shadow: 0 2px 3px 0 #cdcedb;
-  }
-  .rty{
-    border-radius: 10px;background-color: rgb(185, 222, 255);width: 339px;display: inline-block;margin: 10px;/*! height: 10px; */height: 257px;border: 1px #9ec8cc solid;box-shadow: 0 2px 3px 0 #cdcedb;
-  }
-  .xyz{
-    border-radius: 10px;background-color: rgb(185, 222, 255);width: 339px;display: inline-block;margin: 10px;/*! height: 10px; */height: 257px;border: 1px #9ec8cc solid;box-shadow: 0 2px 3px 0 #cdcedb;
-  }
-  
-  .fgjd{
-   margin-top: 30px;overflow: hidden;height: 25px;background: #fff;border: 3px #ddd dotted;border-radius: 4px; 
-  }
-  
-  .download-dialogs{
-    position: fixed;
-  border-radius: 34px;
-  border: 5px #76b9ff solid;
-  }
-  </style>
   <link rel="stylesheet" type="text/css" href="new.css">
   <title>【壁紙ダウンロード】Kabegami Download│ホーム</title> <meta charset="UTF-8">
   
@@ -165,7 +17,7 @@ a {
     
     <div style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;font-size: 20px;color: black;z-index: 1000;font-family: Arial;background-color: #e0f5ff;" id="hideMe"><div class="loader"></div></div><center>
 <div style="width: 1113px;background-color: #e0f5ff;"><header>
-    <div class="header-div"> <a href="https://umaidango.github.io/kabegami/index.html"><img class="logo" style="width: 120px;height: 38px;vertical-align: -25%;" src="https://umaidango.github.io/kabegami/kabegami-logo.png"></a>&nbsp;&nbsp;
+    <div class="header-div"> <a href="https://umaidango.github.io/kabegami/index.html"><img class="logo" style="width: 120px;height: 38px;vertical-align: -25%;" src="https://umaidango.github.io/kabegami/kabegami-logo.png"></a><font style="font-family: sans-serif;font-size: 10px;color: #939393;position: fixed;top: 19px;">JP</font>&nbsp;&nbsp;
     &nbsp;&nbsp; &nbsp;&nbsp;<a href="#">
 
 <font 　onclick="document.getElementById('illust').close()" style="vertical-align: 50%; color:black;cursor: pointer;"><svg class="header-button" fill="#000000" height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" style="height: 22px;vertical-align: -28%;margin-left: -8px;margin-right: 10px;"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M505.017,218.881L272.571,7.567l-2.221-2.019c-1.526-1.387-3.202-2.514-4.973-3.381c-0.079-0.038-0.161-0.066-0.24-0.104 c-5.772-2.738-12.503-2.738-18.276,0c-0.079,0.037-0.161,0.065-0.24,0.104c-1.771,0.867-3.447,1.994-4.973,3.381l-2.189,1.99 L6.983,218.881c-8.718,7.925-9.361,21.418-1.435,30.136c7.925,8.718,21.418,9.361,30.136,1.435l6.983-6.348v246.563 C42.667,502.449,52.218,512,64,512h106.667h170.667H448c11.782,0,21.333-9.551,21.333-21.333V244.104l6.983,6.348 c8.718,7.926,22.21,7.283,30.136-1.435C514.378,240.299,513.735,226.807,505.017,218.881z M213.333,469.334v-128 c0-23.567,19.099-42.667,42.667-42.667s42.667,19.099,42.667,42.667v128H213.333z M426.667,469.334h-85.333v-128 C341.334,294.202,303.132,256,256,256s-85.333,38.202-85.333,85.333v128H85.333V205.32L256,50.165L426.667,205.32V469.334z"></path> </g> </g> </g></svg></font>  </a>  &nbsp;&nbsp;<font class="hito" onclick="document.getElementById('itiran').show()" style="vertical-align: 46%; color:black;cursor: pointer;"><svg class="header-button" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 20px;vertical-align: -20%;margin-left: -40px;"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g clip-path="url(#clip0_1251_98416)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0C5.96243 0 3.5 2.46243 3.5 5.5C3.5 8.53757 5.96243 11 9 11C12.0376 11 14.5 8.53757 14.5 5.5C14.5 2.46243 12.0376 0 9 0ZM5.5 5.5C5.5 3.567 7.067 2 9 2C10.933 2 12.5 3.567 12.5 5.5C12.5 7.433 10.933 9 9 9C7.067 9 5.5 7.433 5.5 5.5Z" fill="#000000"></path> <path d="M15.5 0C14.9477 0 14.5 0.447715 14.5 1C14.5 1.55228 14.9477 2 15.5 2C17.433 2 19 3.567 19 5.5C19 7.433 17.433 9 15.5 9C14.9477 9 14.5 9.44771 14.5 10C14.5 10.5523 14.9477 11 15.5 11C18.5376 11 21 8.53757 21 5.5C21 2.46243 18.5376 0 15.5 0Z" fill="#000000"></path> <path d="M19.0837 14.0157C19.3048 13.5096 19.8943 13.2786 20.4004 13.4997C22.5174 14.4246 24 16.538 24 19V21C24 21.5523 23.5523 22 23 22C22.4477 22 22 21.5523 22 21V19C22 17.3613 21.0145 15.9505 19.5996 15.3324C19.0935 15.1113 18.8625 14.5217 19.0837 14.0157Z" fill="#000000"></path> <path d="M6 13C2.68629 13 0 15.6863 0 19V21C0 21.5523 0.447715 22 1 22C1.55228 22 2 21.5523 2 21V19C2 16.7909 3.79086 15 6 15H12C14.2091 15 16 16.7909 16 19V21C16 21.5523 16.4477 22 17 22C17.5523 22 18 21.5523 18 21V19C18 15.6863 15.3137 13 12 13H6Z" fill="#000000"></path> </g> <defs> <clipPath id="clip0_1251_98416"> <rect width="24" height="24" fill="white"></rect> </clipPath> </defs> </g></svg></font><dialog id="itiran" style="border: 5px aliceblue solid;">
@@ -188,12 +40,12 @@ a {
   
   
 
-</dialog><dialog style="border: 0px;width: 505px;height: 100%;position: fixed;margin-right: 1px;top: 0px;border-radius: 0px;" id="news">
+</dialog><dialog style="border: 0px;width: 604px;height: 100%;position: fixed;margin-right: 1px;top: 0px;border-radius: 0px;" id="news">
   <font style="margin-left: -17px;font-size: 26px;cursor: pointer;position: fixed;" onclick="document.getElementById('news').close()">×</font>
   
   
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTBM7sPN_Rbn7ekHpCRXNlA93wIXFK2Y6vJhyIqnNOD4D9qh7KMwDrTICkJERDrGZHOJW-FNHO1Y4Ql/pubhtml?gid=1283763595&amp;single=true&amp;widget=true&amp;headers=false" style="border: 0px;margin-top: 16px;height: 100%;width: 468px;"></iframe><span onclick="document.getElementById('news').close()" style="display: inline-block;position: fixed;height: 100%;width: 100%;top: 0px;background: #0000007a;border-radius: 0px;left: 0px;margin-left: -538px;"></span></dialog>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTBM7sPN_Rbn7ekHpCRXNlA93wIXFK2Y6vJhyIqnNOD4D9qh7KMwDrTICkJERDrGZHOJW-FNHO1Y4Ql/pubhtml?gid=1283763595&amp;single=true&amp;widget=true&amp;headers=false" style="border: 0px;margin-top: 16px;height: 100%;width: 515px;"></iframe><span onclick="document.getElementById('news').close()" style="display: inline-block;position: fixed;height: 100%;width: 100%;top: 0px;background: #0000007a;border-radius: 0px;left: 0px;margin-left: -637px;"></span></dialog>
 
 <dialog id="search" style="border: 4px #a4bbce solid;width: 430px;"><div style=""><span style="font-size:28px;cursor: pointer;margin-left: -351px;color: #000;" onclick="document.getElementById('search').close()">×</span><div><img class="logo" style="width: 180;height: 56px;" src="https://umaidango.github.io/kabegami/kabegami-logo.png"></div><div style="height:5px"></div>
 <form id="search" method="GET" action="https://www.google.com/search">
@@ -637,6 +489,7 @@ https://umaidango.github.io/kabegami/ ">ツイート</a>
 
 
 <style type="text/css"></style>
+
 
 
 
