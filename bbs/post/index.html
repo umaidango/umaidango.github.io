@@ -1,4 +1,4 @@
-<html><head></head><body><form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeLrvCM7cUg9IV5QiOAzGmZPoHSWZxodg1MdrJh4LhceACgpQ/formResponse" method="post">
+<html><head></head><body><form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeLrvCM7cUg9IV5QiOAzGmZPoHSWZxodg1MdrJh4LhceACgpQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
 
 名前
 <input type="text" name="entry.1939417926">
@@ -10,13 +10,8 @@
 
 </form>
 
-<script>
+<script type="text/javascript">
     let submitted = false;
-
-    const page_transition = function () {
-        if(submitted){
-            window.location = 'post.html';
-        }
-    }
-</script> 
+</script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='post.html';}"></iframe> 
 </body></html>
