@@ -1,23 +1,93 @@
 <html lang="ja" style="background-color: #e0f5ff;"><head>
   
-  <meta name="viewport" content="width=device-width">
+     <meta name="viewport" content="width=device-width">
+  <style>.sw:hover{
+    font-weight:bold;
+    text-decoration:underline;
+    }
+      
+    
 
-<link rel="stylesheet" type="text/css" href="new.css">
-<title>【壁紙ダウンロード】Kabegami Download│ホーム</title> <meta charset="UTF-8">
+date-tooltip {
+  display: inline-block;
+  position: relative;
+}
+
+date-tooltip::before,
+date-tooltip::after {
+  -webkit-transition: all 0.2s;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.2s;
+  visibility: hidden;
+  z-index: 11;
+}
+
+date-tooltip::before {
+  -webkit-transform: translateY(-50%);
+  border-color: transparent #5f6368 transparent transparent;
+  border-style: solid;
+  border-width: 3px 7px 3px 0;
+  content: "";
+  height: 0;
+  left: calc(100% + 6px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+}
+
+date-tooltip::after {
+  -webkit-transform: translateY(-50%);
+  background: #5f6368;
+  border-radius: 3px;
+  color: #fff;
+  content: attr(data-tooltip);
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  left: calc(100% + 13px);
+  padding: 5px 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+}
+
+date-tooltip:hover {
+  cursor: pointer;
+}
+
+date-tooltip:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+  
+  .header-button:hover{
+    background-color: #dddddd30;
+    border-radius:0px;
+  }
+
+date-tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
 
 
-<link rel="shortcut icon" sizes="64x64" href="https://umaidango.github.io/kabegami-download-ver.2/kabegami-icon.png">
-<meta name="description" content="U Software Kabegami Download (壁紙ダウンロード)でPC・タブレッド・Original Clock などの壁紙を見つけよう。 U Software Kabegami Download (壁紙ダウンロード)では無料・登録不要で壁紙をダウンロードできます。">
-
-<meta name="keywords" content="壁紙,かべがみ,kabegami,ダウンロード,登録不要">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+  </style>
+  <link rel="stylesheet" type="text/css" href="new.css">
+  <title>【壁紙ダウンロード】Kabegami Download│ホーム</title> 
+  
+  
+  <link rel="shortcut icon" sizes="64x64" href="https://umaidango.github.io/kabegami-download-ver.2/kabegami-icon.png">
+  <meta name="description" content="U Software Kabegami Download (壁紙ダウンロード)でPC・タブレッド・Original Clock などの壁紙を見つけよう。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&amp;display=swap" rel="stylesheet">
-</head>
-<body style="text-align: center;/*! margin: -16px auto; *//*! width: 1120px; */">
-
+  </head>
+  <body>
  
- <div style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;font-size: 20px;color: black;z-index: 1000;font-family: Arial;background-color: #e0f5ff;" id="hideMe"><div class="loader"></div></div><center style="background-color: #e0f5ff;"><header>
+    
+    <center>
+<div style="width: 1113px;/*! height: 895px; */background-color: #e0f5ff;/*! border: ; */"><header>
  <div class="header-div" style=""> <a href="https://umaidango.github.io/kabegami/index.html"><img class="logo" style="width: 120px;height: 38px;vertical-align: -25%;" src="https://umaidango.github.io/kabegami/kabegami-logo.png"></a><font style="font-family: sans-serif;font-size: 10px;color: #939393;position: fixed;top: 19px;">JP</font>&nbsp;&nbsp;
  &nbsp;&nbsp; &nbsp;&nbsp;<a href="#">
 
@@ -65,13 +135,13 @@
 <div></div></div></header>
 
 <p>
-</p><div style="height: 10vh;"></div><noscript style="font-size: 27px;background-color: #fff;width: 1000px;height: 372px;border: 1px #ccc solid;position: fixed;margin-top: 25px;margin-left: -450px;">
+  </p><div style="height: 10vh;"></div><noscript style="font-size: 27px;background-color: #fff;width: 1000px;height: 372px;border: 1px #ccc solid;position: fixed;margin-top: 25px;margin-left: -450px;">
 <p><img src="https://umaidango.github.io/u-software.png" style="margin-left: -520px;"></p>
 
 <font style="font-family: Arial;">Java Scriptがオフです。<br>オンにしてください。<br>
-<font style="font-size: 12px;font-family: Arial;">（当サイトはJavascriptを利用しているためです。）</font>
+  <font style="font-size: 12px;font-family: Arial;">（当サイトはJavascriptを利用しているためです。）</font>
 </font></noscript><div style="text-align: center;margin: 0 auto;display: flex;justify-content: center;">
-<div>
+ <div>
 <div style="width: 1113px;/*! height: 895px; */background-color: #e0f5ff;/*! border: ; */"><p>
 </p><div class="fgjd">
  kabegami Downloadへようこそ
@@ -387,8 +457,8 @@ download</button>作成：<a style="color: #1707d0;cursor: pointer;" onclick="do
 閉じる
 </button></dialog></footer>&nbsp; &nbsp; 
 <div>
-</div></div><dialog id="illust" style="border: 0px;margin: -10px;background-color: transparent;"><iframe src="https://umaidango.github.io/kabegami-download-ver.2/illust.html" frameborder="0" style="width: 1222px;height: 1162px;margin: -18px;"></dialog></iframe></dialog><div></div></div></div></center>
-<style type="text/css"></style>
+</div></div><dialog id="illust" style="border: 0px;margin: -10px;background-color: transparent;"><iframe src="https://umaidango.github.io/kabegami-download-ver.2/illust.html" frameborder="0" style="width: 1222px;height: 1162px;margin: -18px;"></dialog></iframe></dialog><div></div></div></div></div></center>
+  <style type="text/css"></style>
 
 
 
@@ -451,31 +521,6 @@ download</button>作成：<a style="color: #1707d0;cursor: pointer;" onclick="do
 
 
 <style type="text/css"></style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
