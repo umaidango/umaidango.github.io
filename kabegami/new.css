@@ -19,9 +19,18 @@ font-style: normal;
   button{
     background-color: #1d82bf;
   color: #fff;
+  border: 2px #fff5f5 solid;
+  cursor: pointer;
 
 
   }
+
+
+  button:active{
+    font-weight: bold;
+    background-color:blue;
+  }
+
 #hideMe {
   -moz-animation: cssAnimation 0s ease-in 0.5s forwards;
   /* Firefox */
