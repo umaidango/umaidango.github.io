@@ -1,0 +1,56 @@
+<html lang="ja"><head>
+    <meta charset="UTF-8">
+    <title>ログイン</title>
+    <style>
+        * {
+            font-family: Arial;
+            border-radius: 10px;
+            text-decoration:none;
+        }
+    .button:hover{
+        
+            font-weight:bold;
+    
+        display: block;
+box-shadow: 0px 5px 2px #ddd;
+  height: 38px;
+    }
+    </style>
+</head>
+
+<body>
+<div>
+
+        <form name="login_form">
+            <center>
+                <h1 class="contact-title">ログイン</h1>
+                <p>ID, Passwordご入力の上, 「認証」ボタンをクリックしてください。</p>
+            </center>
+            <div>
+
+                <center>
+                    <div>
+                        <input type="id" name="id" placeholder="ID" style="border: 2px #ddd solid;border-radius: 4px;">
+                    </div>
+                    <br>
+                    <div>
+                        <input type="password" name="pass" placeholder="Password" onchange="nextPage()" style="border: 2px #ddd solid;border-radius: 4px;">
+                    </div>
+                </center>
+
+            </div>
+            <center><div class="button" style="display: inline-block;">
+<div onclick="nextPage();" style="border: 2px #5fb4ff solid;background-color: #5fb4ff;color: #fff;cursor: pointer;margin-top: 10px;width: 60px;border-radius: 4px;">認証</div></div></center>
+        </form>
+
+        
+        <script language="JavaScript" type="text/javascript">
+            function nextPage() {
+                id = document.login_form.id.value
+                pwd = document.login_form.pass.value;
+                location.href = id + pwd + "mxw4di8dxdqpz2fst06ealv659ymmu7ympt35a3ybmo3r6thhl.html";
+            }</script>
+
+    </div>
+
+</body></html>
