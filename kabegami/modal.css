@@ -1,0 +1,323 @@
+
+
+
+.modal-open{
+    display: inline-block;
+    background-color: #666;
+    color: #fff;
+    margin: 10px;
+  }
+
+  .modal-open a{
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+  }
+  .modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .modal:not(:target) {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+  }
+  .modal:target{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s, visibility 0.5s;
+  }
+  .modal .overlay{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+  }
+  .modal-wrapper1{
+    width: 100%;
+    
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-wrapper2{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .modal-wrapper3{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-wrapper4{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-wrapper5{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-wrapper6{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .modal-wrapper7{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-wrapper8{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-wrapper9{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .modal-wrapper10{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .modal-wrapper11{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-wrapper12{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .modal-wrapper13{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .modal-wrapper14{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-wrapper15{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-wrapper16{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .modal-wrapper17{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-wrapper18{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-wrapper19{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-wrapper20{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-wrapper21{
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .modal-contents{
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .modal-content{
+    margin: 25px;
+  }
+  .modal-close{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    text-decoration: none;
+  }
