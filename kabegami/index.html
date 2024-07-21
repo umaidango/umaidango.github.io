@@ -34,9 +34,10 @@
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&amp;display=swap" rel="stylesheet">
  </head>
  <body>
-     <div style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: #e0f5ff;display: flex;align-items: center;justify-content: center;font-size: 20px;color: black;z-index: 1000;" id="hideMe"><div class="loader"></div></div>
+     
+     
    
-   <div style="width: 1113px;background-color: #e0f5ff;"><header>
+   <div style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: #e0f5ff;display: flex;align-items: center;justify-content: center;font-size: 20px;color: black;z-index: 1000;" id="hideMe"><div class="loader"></div></div><div style="width: 1113px;background-color: #e0f5ff;"><header>
 <div class="header-div" style=""> <a href="https://umaidango.github.io/kabegami/index.html"><img class="logo" style="width: 120px;height: 38px;vertical-align: -25%;" src="https://umaidango.github.io/kabegami/kabegami-logo.png"></a><font style="font-family: sans-serif;font-size: 10px;color: #939393;position: fixed;top: 19px;">JP</font>&nbsp;&nbsp;
 &nbsp;&nbsp; &nbsp;&nbsp;<a href="#">
 
@@ -104,17 +105,41 @@ https://umaidango.github.io/kabegami/ ">ツイート</a>
 
 </div><!--おすすめ新壁紙--><div>
     
-    <div class="modal" id="modal1">
+    <div class="modal" id="no-10-1">
     <a href="#!" class="overlay" style="border-radius: 0px;"></a>
     <div class="modal-wrapper1" style="width: 80%;">
       <div class="modal-contents" style="">
         <a href="#!" class="modal-close">✕</a>
         <div class="modal-content">次郎君とﾐｸｯﾁ<br><br>
 <img src="https://umaidango.github.io/kabegami/index_files/no-10-1.png" style="width: 80%;max-width: 525px;">
+<script id="rendered-js">
+const btn = document.getElementById("button"); // button要素取得
+const txt = document.getElementById("text").textContent; // テキスト取得
+
+btn.addEventListener("click", () => {// ボタンをクリックしたら
+  navigator.clipboard.
+  writeText(txt) // テキストをクリップボードに書き込み（＝コピー）
+  .then(
+  success => console.log('テキストのコピーに成功'),
+  error => console.log('テキストのコピーに失敗'));
+
+
+  btn.innerHTML = "OK!"; // ボタンの文字変更
+  setTimeout(() => btn.innerHTML = "COPY!", 1000); // ボタンの文字を戻す
+});
+//# sourceURL=pen.js
+    </script>    
+    
+    
+    
+
+    
+
+ 
         </div>
       </div>
     </div>
-  </div><div class="modal" id="modal2">
+  </div><div class="modal" id="purin-3">
     <a href="#!" class="overlay" style="border-radius: 0px;"></a>
     <div style="width: 100%;" class="modal-wrapper2">
       <div class="modal-contents" style="">
@@ -124,7 +149,7 @@ https://umaidango.github.io/kabegami/ ">ツイート</a>
         </div>
       </div>
     </div>
-  </div><div class="modal" id="modal3">
+  </div><div class="modal" id="obu-2">
     <a href="#!" class="overlay" style="border-radius: 0px;"></a>
     <div style="width: 100%;" class="modal-wrapper3">
       <div class="modal-contents" style="">
@@ -136,11 +161,11 @@ https://umaidango.github.io/kabegami/ ">ツイート</a>
     </div>
   </div>
     
-    <div class="qwe"><a href="#modal1"><img style="height: 168px;margin: 8px;margin-top: 39px;" class="uwa" src="https://umaidango.github.io/kabegami/index_files/no-10-1.png"></a><button onclick="document.getElementById('post-osu1').show()" style="background: #0000;border: 0px;cursor: pointer;"><img src="https://umaidango.github.io/kabegami/come.png" style="margin-left: 296px;width: 22px;margin-top: -49px;background: #fff;height: 22px;box-shadow: 1px 1px 2px #222;padding: 5;"></button><font class="font1" style="color: red;">NEW!!</font><font class="font1">次郎君とﾐｸｯﾁ</font><font style="/*! margin: 36px 27px 136px 0px; */">作成：<a style="color: #1707d0;cursor: pointer;" onclick="document.getElementById('no-10').show()">No.10</a></font><!--?xml version="1.0" ?-->
+    <div class="qwe"><a href="#no-10-1"><img style="height: 168px;margin: 8px;margin-top: 39px;" class="uwa" src="https://umaidango.github.io/kabegami/index_files/no-10-1.png"></a><button onclick="document.getElementById('post-osu1').show()" style="background: #0000;border: 0px;cursor: pointer;"><img src="https://umaidango.github.io/kabegami/come.png" style="margin-left: 296px;width: 22px;margin-top: -49px;background: #fff;height: 22px;box-shadow: 1px 1px 2px #222;padding: 5;"></button><font class="font1" style="color: red;">NEW!!</font><font class="font1">次郎君とﾐｸｯﾁ</font><font style="/*! margin: 36px 27px 136px 0px; */">作成：<a style="color: #1707d0;cursor: pointer;" onclick="document.getElementById('no-10').show()">No.10</a></font><!--?xml version="1.0" ?-->
 
 
 
-<button id="download" style="margin: 1px 1px 1px -3px;" onclick="document.getElementById('osu3').show()">download</button></div><div class="rty"><a href="#modal2"><img style="margin: 1px 1px 25px 8px;width: 285px;" src="https://umaidango.github.io/kabegami/index_files/purin-3.png" class="uwa"></a>
+<button id="download" style="margin: 1px 1px 1px -3px;" onclick="document.getElementById('osu3').show()">download</button></div><div class="rty"><a href="#purin-3"><img style="margin: 1px 1px 25px 8px;width: 285px;" src="https://umaidango.github.io/kabegami/index_files/purin-3.png" class="uwa"></a>
 
 <button onclick="document.getElementById('post-osu2').show()" style="background: #0000;border: 0px;cursor: pointer;"><img src="https://umaidango.github.io/kabegami/come.png" style="margin-left: 296px;width: 22px;margin-top: -49px;background: #fff;height: 22px;box-shadow: 1px 1px 2px #222;padding: 5;"></button>
 
@@ -395,7 +420,7 @@ https://umaidango.github.io/kabegami/ ">ツイート</a>
 
 
 
-</div><div class="xyz"><a href="#modal3"><img style="height: 200px;margin: 8px;" src="https://umaidango.github.io/kabegami/index_files/obu-2.jpg" class="uwa">
+</div><div class="xyz"><a href="#obu-2"><img style="height: 200px;margin: 8px;" src="https://umaidango.github.io/kabegami/index_files/obu-2.jpg" class="uwa">
 
 
 </a>
@@ -482,6 +507,7 @@ download</button>作成：<a style="color: #1707d0;cursor: pointer;" onclick="do
 <div>
 </div></div><dialog id="illust" style="border: 0px;margin: -10px;background-color: transparent;"><iframe src="https://umaidango.github.io/kabegami-download-ver.2/illust.html" frameborder="0" style="width: 1222px;height: 1162px;margin: -18px;"></dialog></iframe></dialog><div></div></div></div></div>
  
+
 
 
 
