@@ -1,0 +1,56 @@
+<html><head>
+<script>document.oncontextmenu = OnRightButton;
+document.onclick = OnLeftButton;
+
+function OnRightButton() {
+    menu.style.top = document.body.scrollTop + event.y;
+    menu.style.left = document.body.scrollLeft + event.x;
+
+    if (menu.style.width < 120) {
+        menu.style.width = 120;
+    }
+    menu.style.visibility = "visible";
+    return false;
+}
+
+function OnLeftButton() {
+    menu.style.visibility = "hidden";
+    return true;
+}
+</script></head><style>
+
+#menu{
+position: absolute;
+  background-color: #fff;
+  padding: 6pt;
+  font-size: 15px;
+  border-radius: 13px;
+  box-shadow: 0px 2px 3px #D9D9D9;
+  }
+a.tono{
+ width:100%;
+ white-space:nowrap;
+  cursor: pointer;
+}
+
+a.tono:link{
+ background-color:#ffffff;
+ color:#000000;
+ text-decoration:none;
+}
+
+a.tono:visited{
+ background-color:#ffffff;
+ color:#000000;
+ text-decoration:none;
+}
+
+a.tono:hover{
+  background-color: #5599ff1f;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 8px;
+}
+
+</style><span id="menu" style="top: 341px; left: 455px; width: 191px; visibility: hidden; border: 1px solid rgb(221, 221, 221); border-top-left-radius: 0px; padding-top: 18px; padding-bottom: 10px;"><div align="center" style="margin-bottom: 10px;"><a href="#!" class="tono" onclick="document.getElementById('post-osu1').show()">コメント</a></div></span><body></body></html>
