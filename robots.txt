@@ -1,0 +1,4 @@
+User-Agent:*
+Disallow:
+ 
+Sitemap:https://umaidango.github.io/kabegami/sitemap.xml
