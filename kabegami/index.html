@@ -868,7 +868,7 @@ dango12はumaidangoのもともとの名前です。
   
 </div><div class="waku">
 <a target="_blank" href="https://umaidango.github.io/kabegami/upload"><img class="img" alt="画像" width="50" height="50" src="https://umaidango.github.io/commons/index_files/images/upl1.jpg" style="height: 86px;width: 167px;"><span style="display: inline-block;position: absolute;z-index: 1;border: 2px #b9deff solid;padding: 6px;padding-top: 2px;padding-left: 6px;padding-right: 3px;padding-bottom: 2px;/*! border-bottom-right-radius: 0px; */border-bottom-left-radius: 0px;border-top-right-radius: 0px;background: #fff;margin-left: -32px;margin-top: 55px;">PR</span></a>
-<br><a target="_blank" href="https://umaidango.github.io/kabegami/upload"><button onclick="document.getElementById('ads').show()" style="position: relative;z-index: 1;width: 74.9px;height: 25px;">開く</button></a>
+<br><a target="_blank" href="https://umaidango.github.io/kabegami/upload"><button style="position: relative;z-index: 1;width: 74.9px;height: 25px;">開く</button></a>
 &nbsp;&nbsp;&nbsp;
 <a target="_blank" href="https://umaidango.github.io/kabegami/upload" style="color: blue;">広告</a></div><div class="waku">
 <a href="#umaidango-15"><img class="img" alt="画像" width="50" height="50" src="https://umaidango.github.io/kabegami/index_files/umaidango-15.png"></a>
@@ -957,10 +957,19 @@ download</button>作成：<a style="color: #1707d0;cursor: pointer;" onclick="do
 
 
 
-<details style="position: fixed;z-index: 5;right: -13px;bottom: 0px;" open="">
-  <summary style="cursor: pointer;background: #fff;width: 30px;margin-right: 10px;border-radius: 5px;border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;padding-left: 6px;border: 1px #ddd solid;"></summary><img src="https://umaidango.github.io/kabegami/index_files/hint-1.jpg" style="height: 170px;border-radius: 5px;"></details>
+<div id="idName" style="position: fixed;z-index: 5;right: 0px;bottom: 0px;">
+  <img src="close.png" type="button" style="right: 203px;position: fixed;bottom: 163px;z-index: 5;border-radius: 0px;width: 13px;background: #fff;padding: 5px;cursor: pointer;" alt="閉じる"><img src="https://umaidango.github.io/kabegami/index_files/hint-1.jpg" style="height: 163px;border-radius: 6px;"></div>
+  <script>
+   
+    document.getElementById("idName").onclick = function() {
+  document.getElementById("idName").style.display = "none";
+};
+
+    
+  </script>
 
 </div>
+
 
 
 
