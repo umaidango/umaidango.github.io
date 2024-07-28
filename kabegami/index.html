@@ -67,7 +67,7 @@ background: #777;
     z-index:3;
   }
 
-}
+
 .loop-area {
   display: flex;
   animation: loop-slide 20s infinite linear 1s both;
@@ -939,6 +939,7 @@ download</button>作成：<a style="color: #1707d0;cursor: pointer;" onclick="do
 
 
 
+
 <footer style="/*! background-color: #cecece; *//*! height: 21px; *//*! border-radius: 1px; */margin: 97px;">(c) 2024 - U Software Kabegami Download│<a href="#rkiyaku"><button style="border: 0px;color: black;cursor: pointer;text-decoration: underline;background-color: #e0f5ff;">イラスト・画像の利用に関して</button></a>
 | <font><a href="#">Page Top</a></font> |
 <!--カウンター画像からは配布サイトへリンクが設定されています。また、誤作動、誤表示の原因となりますのでコードの改変、改行は行わないで下さい。
@@ -956,19 +957,37 @@ download</button>作成：<a style="color: #1707d0;cursor: pointer;" onclick="do
 
 
 
-
-<div id="idName" style="position: fixed;z-index: 5;right: 0px;bottom: 0px;">
-  <img src="close.png" type="button" style="right: 203px;position: fixed;bottom: 163px;z-index: 5;border-radius: 0px;width: 13px;background: #fff;padding: 5px;cursor: pointer;border: 1px #a6a6a6 solid;border-bottom: 0px;" alt="閉じる"><img src="https://umaidango.github.io/kabegami/index_files/hint-1.jpg" style="height: 163px;border-radius: 6px;"></div>
+<img draggable="false" id="close" src="close.png" type="button" style="right: 8px;position: fixed;bottom: 140px;z-index: 5;border-radius: 10px;width: 13px;background: #ffffffdb;padding: 5px;cursor: pointer;/*! border: 1px #a6a6a6 solid; */border-bottom: 0px;" alt="閉じる"><img id="img1" src="https://umaidango.github.io/kabegami/index_files/hint-1.jpg" style="height: 163px; border-radius: 6px; position: fixed; z-index: 2; bottom: 2px;  right: 1px;" draggable="false">
   <script>
    
-    document.getElementById("idName").onclick = function() {
-  document.getElementById("idName").style.display = "none";
+    document.getElementById("close").onclick = function() {
+  document.getElementById("img1").style.display = "none";
+  document.getElementById("close").style.display = "none";
 };
 
     
   </script>
 
+  
+<script>
+  dora.onpointermove = function(event){
+      if(event.buttons){
+          this.style.left     = this.offsetLeft + event.movementX + 'px'
+          this.style.top      = this.offsetTop  + event.movementY + 'px'
+          this.style.position = 'absolute'
+          this.draggable      = false
+          this.setPointerCapture(event.pointerId)
+      }
+  }
+  </script>
+  
+  
+
+
+
 </div>
+
+
 
 
 
