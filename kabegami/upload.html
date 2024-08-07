@@ -2,213 +2,279 @@
   
      <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" type="text/css" href="new.css"><link rel="stylesheet" type="text/css" href="https://umaidango.github.io/kabegami/modal.css"><style>*{
-   margin-right: auto;
-  margin-left: auto;
-   text-align:center;
+ margin-right: auto;
+margin-left: auto;
+ text-align:center;
+}
 
+@media screen and (max-width: 1800px) {
+
+.fgjd{
+  margin-top: 20px;
+}
+
+
+}
+
+@media screen and (min-width: 1800px) {
+
+.fgjd{
+  margin-top: -20px;
+}
+
+.adsimg1c{
+  display: inline-block;
+}
+}
+
+@media screen and (max-width: 1600px) {
+  .adsimg1c{
+  display: none;
+}
+}
+
+.sw:hover{
+ font-weight:bold;
+ text-decoration:underline;
+ }
+
+.header-button:hover{
+ background-color: aliceblue;
+border-radius: 4px;
+}
+
+button:hover{
+ box-shadow: 2px 10px 13px #f0f0f0;
+font-weight: bold;
+color: #e8e8e8;
+}
+
+
+.banana1:not(:target) {
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.5s, visibility 0.5s;
+}
+
+.banana1 {
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0;
+left: 0;
+}
+
+
+#page-top a{
+background:#942D2F;
+color:#fff;
+text-align: center;
+display: block;
+text-decoration: none;
+padding:20px;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+font-size: 0.8rem;
+transition: all 0.3s;
+}
+
+#page-top a:hover{
+background: #777;
+}
+
+  dialog{
+    z-index:3;
+  }
+
+
+.loop-area {
+  display: flex;
+  animation: loop-slide 20s infinite linear 1s both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.loop-area .content {
+  width: 500px;
+}
+@keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+  
+  
+  li{
+    list-style:none;
+    
   }
   
-  
-  .sw:hover{
-   font-weight:bold;
-   text-decoration:underline;
-   }
-  
-  .header-button:hover{
-   background-color: aliceblue;
-  border-radius: 4px;
-  }
-  
-  button:hover{
-   box-shadow: 2px 10px 13px #f0f0f0;
-  font-weight: bold;
-  color: #e8e8e8;
-  }
-  
-  
-  .banana1:not(:target) {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s, visibility 0.5s;
-  }
-  
-  .banana1 {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  }
-  
-  
-  #page-top a{
-  background:#942D2F;
-  color:#fff;
+  details {
+  margin: 14px;
+  padding: 10px;
+  height: 10px;
+  transition: .5s;
+}
+details[open] {
+  height: 166px;
+  background: #ffffff8a;
+  padding: 11px;
+  border-radius: 0px;
+  border-top-left-radius: 18px;
+}
+
+
+.loader2 {
+  width: 22px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 4px solid lightblue;
+  border-right-color: #1b9b89;
+  animation: l2 1s infinite linear;
+}
+@keyframes l2 {to{transform: rotate(1turn)}}
+.sample01 {
+  margin: 0 auto 40px;
+  width: 568px;
+  font-size: 28px;
   text-align: center;
-  display: block;
-  text-decoration: none;
-  padding:20px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 0.8rem;
-  transition: all 0.3s;
-  }
+  overflow: hidden;
+  position: fixed;
+  text-shadow: 3px 3px 0 #fff, -3px 3px 0 #fff, -3px -3px 0 #fff, 3px -3px 0 #fff;
+  font-weight: bold;
+  margin-left: 25px;
+  height: 323px;
+}
+.sample01 p{
+margin:0;
+display : inline-block;
+padding-left: 100%;
+white-space : nowrap;
+line-height : 1em;
+animation : scrollSample01 20s linear infinite;
+}
+@keyframes scrollSample01{
+0% { transform: translateX(0)}
+100% { transform: translateX(-100%)}
+}
+
   
-  #page-top a:hover{
-  background: #777;
-  }
+.sample02 {
+margin : 0 auto 40px;
+text-align : center;
+overflow : hidden;
+  width: 568px;
+  font-size: 28px;
+  position: fixed;
+  text-shadow: 3px 3px 0 #fff, -3px 3px 0 #fff, -3px -3px 0 #fff, 3px -3px 0 #fff;
+  font-weight: bold;
+  margin-left: 25px;
+  height: 323px;
+}
+.sample02 ul{
+margin:0;
+display : inline-block;
+padding-left: 100%;
+white-space : nowrap;
+line-height : 1em;
+animation : scrollSample02 15s linear infinite;
+}
+.sample02 ul li{
+display:inline;
+margin:0 100px 0 0;
+}
+.sample02 ul li:nth-child(1){
+font-weight:bold;
+}
+.sample02 ul li:nth-child(2){
+color:#F00;
+}
+.sample02 ul li:nth-child(3){
+
+}
+.sample02 ul li:last-child{
+color:#F90;
+margin:0;
+}
+@keyframes scrollSample02{
+0% { transform: translateX(0)}
+100% { transform: translateX(-100%)}
+}
+
+ul li.remove span {
+  color: rgb(255, 251, 0);
   
-    dialog{
-      z-index:3;
-    }
+}
+
+.osu3{
+  border-radius: 10px;
+  background-color: rgb(185, 222, 255);
+  width: 348px;
+  display: inline-block;
+  margin: 10px;
+  height: 10px;
+  height: 237px;
+  border: 1px #9ec8cc solid;
+  box-shadow: 0 2px 3px 0 #cdcedb;
+}
+
+.osu3frame{
+  display: inline-block;
+  width: 290px;
+  height: 165px;
+  background: #0040ff3d;
+}
+
+.osu3wf{
+  width: 180px;
+  height: 85px;
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  background: #0040ff3d;
+  margin-top: 12px;
+
+}
+
+.popup{
+  padding:4px;
+  padding-left: 5px;
+  padding-right:5px;
+  border:1px #0000007a solid;
+  background: #fff;
+  position: fixed;
+  z-index: 10;
   
-  
-  .loop-area {
-    display: flex;
-    animation: loop-slide 20s infinite linear 1s both;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .loop-area .content {
-    width: 500px;
-  }
-  @keyframes loop-slide {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
-    
-    
-    li{
-      list-style:none;
-      
-    }
-    
-    details {
-    margin: 14px;
-    padding: 10px;
-    height: 10px;
-    transition: .5s;
-  }
-  details[open] {
-    height: 166px;
-    background: #ffffff8a;
-    padding: 11px;
-    border-radius: 0px;
-    border-top-left-radius: 18px;
-  }
-  
-  
-  
-  .sample01 {
-    margin: 0 auto 40px;
-    width: 568px;
-    font-size: 28px;
-    text-align: center;
-    overflow: hidden;
-    position: fixed;
-    text-shadow: 3px 3px 0 #fff, -3px 3px 0 #fff, -3px -3px 0 #fff, 3px -3px 0 #fff;
-    font-weight: bold;
-    margin-left: 25px;
-    height: 323px;
-  }
-  .sample01 p{
-  margin:0;
-  display : inline-block;
-  padding-left: 100%;
-  white-space : nowrap;
-  line-height : 1em;
-  animation : scrollSample01 20s linear infinite;
-  }
-  @keyframes scrollSample01{
-  0% { transform: translateX(0)}
-  100% { transform: translateX(-100%)}
-  }
-  
-    
-  .sample02 {
-  margin : 0 auto 40px;
-  text-align : center;
-  overflow : hidden;
-    width: 568px;
-    font-size: 28px;
-    position: fixed;
-    text-shadow: 3px 3px 0 #fff, -3px 3px 0 #fff, -3px -3px 0 #fff, 3px -3px 0 #fff;
-    font-weight: bold;
-    margin-left: 25px;
-    height: 323px;
-  }
-  .sample02 ul{
-  margin:0;
-  display : inline-block;
-  padding-left: 100%;
-  white-space : nowrap;
-  line-height : 1em;
-  animation : scrollSample02 15s linear infinite;
-  }
-  .sample02 ul li{
-  display:inline;
-  margin:0 100px 0 0;
-  }
-  .sample02 ul li:nth-child(1){
-  font-weight:bold;
-  }
-  .sample02 ul li:nth-child(2){
-  color:#F00;
-  }
-  .sample02 ul li:nth-child(3){
-  
-  }
-  .sample02 ul li:last-child{
-  color:#F90;
-  margin:0;
-  }
-  @keyframes scrollSample02{
-  0% { transform: translateX(0)}
-  100% { transform: translateX(-100%)}
-  }
-  
-  ul li.remove span {
-    color: rgb(255, 251, 0);
-    
-  }
-  
-  .osu3{
-    border-radius: 10px;
-    background-color: rgb(185, 222, 255);
-    width: 348px;
-    display: inline-block;
-    margin: 10px;
-    height: 10px;
-    height: 237px;
-    border: 1px #9ec8cc solid;
-    box-shadow: 0 2px 3px 0 #cdcedb;
-  }
-  
-  .osu3frame{
-    display: inline-block;
-    width: 290px;
-    height: 165px;
-    background: #0040ff3d;
-  }
-  
-  .osu3wf{
-    width: 180px;
-    height: 85px;
-    position: relative;
-    z-index: 0;
-    display: inline-block;
-    background: #0040ff3d;
-    margin-top: 12px;
-  
+}
+
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
   }
 
-  .button:hover{
-    background: #ffffff69;
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.fadein{
+  animation-name: fadeInAnime;
+  animation-duration: 0.35s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 0s;
+}
+  
+  .poti:hover{
+    background:gray;
+    padding:2px;
+    border-radius:4px;
+    color:white;
   }
 </style>
   
@@ -299,14 +365,23 @@
 <input type="submit" value="かべがみ検索" style="border: 1px #ddd solid;border-radius: 2px;box-shadow: 0px 1px 2px #ddd;"><div style="width:5px;display: inline-block;"></div><input type="submit" value="I'm Feeling Lucky" style="border: 1px #ddd solid;border-radius: 2px;box-shadow: 0px 1px 1px #ddd;"><div style="border: 2px #acacac dashed;margin-top: 18px;padding: 10px;"><p style="font-weight: bold;font-size: 18px;margin-top: -3px;color: #3c3c3c;cursor: default;">ワードで検索</p>
 <p><a class="sw" style="color: #000;" href="https://umaidango.github.io/kabegami/kabegami-search/keyword/djedoakoslow/neko-jfieokeo.html">猫を検索</a></p><p><a class="sw" style="color: #000;" href="https://umaidango.github.io/kabegami/kabegami-search/keyword/dkorkfowdleo/hato-fjiekw.html">鳩を検索</a></p>
 </div></div></dialog>  
-<div></div></div><div tabindex="-1" style="position: fixed; width: 238px; height: 100%; border-radius: 0px; border: 1px solid rgb(238, 238, 238); left: 0px; background: rgb(255, 255, 255); top: 0px; bottom: 0px; z-index: 5; display: none;" id="menuber1">
+<div></div></div><div class="fadein" tabindex="-1" style="position: fixed; width: 325px; height: 100%; border-radius: 0px; border: 1px solid rgb(238, 238, 238); left: 0px; background: rgb(255, 255, 255); top: 0px; bottom: 0px; z-index: 5; display: none;" id="menuber1">
   
-<img draggable="false" type="button" style="left: 177px; position: fixed; top: 17px; z-index: 5; border-radius: 38%; width: 22px; background: rgb(255, 255, 255); padding: 5px; cursor: pointer; border-bottom: 0px; display: block;" alt="閉じる" onclick="closemenu()" src="https://umaidango.github.io/kabegami/close.png"><span onclick="closemenu()" draggable="false" style=" position: fixed;  z-index: 5;  width: 2000px;  padding: 5px; cursor: pointer; border-bottom: 0px; display: block;background: #6e92ff29;border-radius: 0px;margin-left: 239px;bottom: 0px;top: 0px;z-index: 10;"></span>
+
+<svg class="header-button" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 35px;width: 64px;margin-left: -94px;vertical-align: -10%;cursor: pointer;margin-right: 5px;margin-top: 25px;" onclick="closemenu()"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="" stroke="#c4c4c4"></path> </g>
+
+
+</svg>
+
+
+<span onclick="closemenu()" draggable="false" style=" position: fixed;    width: 2000px;  padding: 5px; cursor: pointer; border-bottom: 0px; display: block;background: #000;border-radius: 0px;margin-left: 326px;bottom: 0px;top: 0px;z-index: 10;opacity: 0.2;"></span>
+
+<img onclick="closemenu()" style="width: 120px;height: 38px;vertical-align: -25%;cursor: pointer;" src="https://umaidango.github.io/kabegami/kabegami-logo.png">
 <br>
 
 
 
-<ul style="margin-left: -57px;"><li class="header-button" style="width: 110px;border-radius: 100px;padding: 4px;padding-left: 5px;padding-right: 5px;cursor: pointer;/*! background-color: aliceblue; */color: #333;">ホーム</li><li class="header-button" style="width: 110px;border-radius: 100px;margin-bottom: 10px;margin-top: 10px;padding: 4px;padding-left: 5px;padding-right: 5px;cursor: pointer;color: #333;"><a href="https://umaidango.github.io/kabegami/illustrator/">ユーザー一覧</a></li><li class="header-button" style="width: 110px;border-radius: 100px;margin-top: 10px;margin-bottom: 10px;padding: 4px;padding-left: 5px;padding-right: 5px;cursor: pointer;"><a href="https://umaidango.github.io/kabegami/upload">アップロード</a></li><li class="header-button" style="width: 110px;border-radius: 100px;margin-top: 10px;margin-bottom: 10px;padding: 4px;padding-left: 5px;padding-right: 5px;cursor: pointer;"><a href="https://umaidango.github.io/kabegami/help-center">ヘルプ</a></li><li onclick="document.getElementById('news').show()" class="header-button" style="width: 110px;border-radius: 100px;margin-top: 10px;margin-bottom: 10px;padding: 4px;padding-left: 5px;padding-right: 5px;cursor: pointer;color: #333;">お知らせ</li></ul></div><dialog style="border: 0px;width: 604px;height: 100%;position: fixed;margin-right: 1px;top: 0px;border-radius: 0px;z-index: 6;" id="news">
+<ul style="margin-left: -57px;"><li class="header-button" style="width: 110px;border-radius: 100px;padding: 4px;padding-left: 5px;padding-right: 5px;cursor: pointer;/*! background-color: aliceblue; */color: #333;"><a href="https://umaidango.github.io/kabegami/">ホーム</a></li><li class="header-button" style="width: 110px;border-radius: 100px;margin-bottom: 10px;margin-top: 10px;padding: 4px;padding-left: 5px;padding-right: 5px;cursor: pointer;color: #333;"><a href="https://umaidango.github.io/kabegami/illustrator/">ユーザー一覧</a></li><li class="header-button" style="width: 110px;border-radius: 100px;margin-top: 10px;margin-bottom: 10px;padding: 4px;padding-left: 5px;padding-right: 5px;cursor: pointer;"><a href="https://umaidango.github.io/kabegami/upload">アップロード</a></li><li class="header-button" style="width: 110px;border-radius: 100px;margin-top: 10px;margin-bottom: 10px;padding: 4px;padding-left: 5px;padding-right: 5px;cursor: pointer;"><a href="https://umaidango.github.io/kabegami/help-center">ヘルプ</a></li><li onclick="document.getElementById('news').show()" class="header-button" style="width: 110px;border-radius: 100px;margin-top: 10px;margin-bottom: 10px;padding: 4px;padding-left: 5px;padding-right: 5px;cursor: pointer;color: #333;">お知らせ</li></ul></div><dialog style="border: 0px;width: 604px;height: 100%;position: fixed;margin-right: 1px;top: 0px;border-radius: 0px;z-index: 6;" id="news">
 <font style="margin-left: -17px;font-size: 26px;cursor: pointer;position: fixed;" onclick="document.getElementById('news').close()">×</font>
 
 
@@ -454,4 +529,5 @@
           document.getElementById("menuber1").style.display = "none";
           document.getElementById("closemenubtn1").style.display = "none";
     }</script>
+
 </body></html>
