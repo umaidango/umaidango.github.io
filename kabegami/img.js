@@ -5,11 +5,10 @@ document.getElementById("fgjd2").style.display = "inline-block";
 
 setTimeout(function() {
     na1.innerHTML = '<img class="uwa" src="https://umaidango.github.io/kabegami/index_files/no-10-1.png" style="width: 307px;height: 164px;margin-left: -10px;/*! display: none; */">';
-    na2.innerHTML = '<img class="uwa" src="https://umaidango.github.io/kabegami/index_files/purin-3.png" style="height: 165px;width: 295px;margin-left: -2px;">';
+    na2.innerHTML = '<img class="uwa" src="https://umaidango.github.io/kabegami/index_files/purin-4.png" style="margin-left: -9px;width: 307px;height: 165px;">';
     na3.innerHTML = '<img class="uwa" src="https://umaidango.github.io/kabegami/index_files/no-10-2.jpg" style="width: 307px;height: 164px;margin-left: -10px;/*! display: none; */">';
-
   
-  }, 10)
+  }, 50)
   setTimeout(function() {
   ads1.innerHTML = '<img class="img" width="50" height="50" src="https://umaidango.github.io/commons/index_files/images/upl1.jpg" style="height: 85px;width: 182px;margin-top: 0px;">';
   ads2.innerHTML = '<img class="img" width="50" height="50" src="https://umaidango.github.io/images/coejflkoao.png" style="height: 85px;width: 182px;margin-top: 0px;">';
@@ -32,6 +31,8 @@ setTimeout(function() {
   k16c.innerHTML = '<img class="img" width="80" height="50" src="https://umaidango.github.io/kabegami-download-ver.2/index_files/umaidango0014.JPG">'
   k17c.innerHTML = '<img class="img" width="50" height="50" src="https://umaidango.github.io/kabegami/index_files/down00004.png">';
   k18c.innerHTML = '<img class="img" width="80" height="50" src="https://umaidango.github.io/kabegami-download-ver.2/index_files/umaidango0012.JPG">';
-}, 20)
+  k19c.innerHTML = '<img class="img" src="https://umaidango.github.io/kabegami/index_files/purin-3.png" style="height: 86px;margin-left: -2px;width: 183px;">';
+}, 100)
+
 
 
