@@ -1,4 +1,6 @@
 
+
+
 document.getElementById("fgjd0").style.display = "none";
 document.getElementById("fgjd1").style.display = "inline-block";
 document.getElementById("fgjd2").style.display = "inline-block";
@@ -32,6 +34,8 @@ setTimeout(function() {
   k17c.innerHTML = '<img class="img" width="50" height="50" src="https://umaidango.github.io/kabegami/index_files/down00004.png">';
   k18c.innerHTML = '<img class="img" width="80" height="50" src="https://umaidango.github.io/kabegami-download-ver.2/index_files/umaidango0012.JPG">';
   k19c.innerHTML = '<img class="img" src="https://umaidango.github.io/kabegami/index_files/purin-3.png" style="height: 86px;margin-left: -2px;width: 183px;">';
+  news2.innerHTML = '<img src="https://umadango.github.io/kabegami/kupl.JPG" style="height: 140px;background: #fff;padding-left: 73px;padding-right: 73px;">';
+  news2a.innerHTML = '<img src="https://umadango.github.io/kabegami/kupl.JPG" style="height: 140px;background: #fff;padding-left: 73px;padding-right: 73px;">';
 }, 100)
 
 
