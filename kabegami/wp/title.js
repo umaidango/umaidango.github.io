@@ -1,0 +1,1 @@
+purin_4a.innerHTML = 'そらとぶユニコーン';
