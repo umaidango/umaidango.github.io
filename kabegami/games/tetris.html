@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>テトリス風ゲーム</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+    <style>
+      *{
+    touch-action: manipulation;
+    margin: 0 auto; text-align: center;
+    border-radius: 10px;
+    font-family: Noto Sans JP, Arial;
+}
+
+.wrapper-container {
+    display: inline-block;
+}
+
+.tetris-container {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    background-color: #333333;
+}
+
+.tetris-panel-container {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-direction: column;
+    color: white;
+    background-color: #333333;
+}
+
+.tetris-panel-container-padding {
+    flex-grow: 1;
+}
+
+.tetris-panel-container p {
+   margin: 0;
+   padding: 0;
+}
+
+.tetris-button-panel {
+    border-style: none;
+    width: 100%;
+}
+
+.tetris-button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: #444444;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.tetris-button:active{
+  background: #222;
+}
+    </style>
+    <script type="text/javascript" src="js/tetris.js"></script>
+  </head>
+  <body>
+
+        <div style="width: 500px; position: fixed; z-index: 1000; border: 4px solid rgb(238, 238, 238); background: rgb(255, 255, 255); padding: 45px; border-radius: 30px; text-align: center; top: 50%; left: 50%; display: none; transform: translate(-50%, -50%);" id="gameover">
+      <p style="font-size: 32px;">ゲームオーバー</p>
+      <button onclick="window.location.reload();" style="cursor: pointer;padding: 10px;border-radius: 30px;border: 2px #eee solid;background: #cfffd2;">もう一度ゲームをする</button> 
+  
+  </div>
+
+    <div class="wrapper-container">
+        <span class="tetris-container">
+          
+            <canvas id="stage" width="250px" height="500px" style="background-color:black; ">
+            </canvas>
+            <span class="tetris-panel-container">
+              <p>Next:</p>
+              <canvas id="next" width="150px" height="150px" style="background-color:black;">
+              </canvas>
+              <p>LINES:<span id="lines">0</span></p>
+              <p><span id="message"></span></p>
+              <div class="tetris-panel-container-padding"></div>
+              <table class="tetris-button-panel">
+                <tr>
+                  <td></td>
+                  <td id="tetris-rotate-button" class="tetris-button">↻</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td id="tetris-move-left-button"class="tetris-button">←</td>
+                  <td id="tetris-fall-button"class="tetris-button">↓</td>
+                  <td id="tetris-move-right-button"class="tetris-button">→</td>
+                </tr>
+              </table>
+            </span>
+        </span>
+    </div>
+    <script>
+      var tetris = new Tetris();
+      tetris.startGame();
+    </script>
+  </body>
+</html>
