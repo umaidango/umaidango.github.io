@@ -1,6 +1,456 @@
-<html><head>
-        <title>メンテナンス中です。</title>
-    </head>
-<body>    
-<h2>準備中です</h2>  
-<script src="https://umaidango.github.io/kabegami/m1a.js" defer=""></script></body></html>
+<html lang="ja" style="background-color: #e0f5ff;"><head>
+  
+    <meta name="viewport" content="width=device-width">
+ <link rel="stylesheet" type="text/css" href="https://umaidango.github.io/kabegami/new.css"><link rel="stylesheet" type="text/css" href="https://umaidango.github.io/kabegami/modal.css">
+ <style>*{
+margin-right: auto;
+margin-left: auto;
+text-align:center;
+}
+
+
+
+.sw:hover{
+font-weight:bold;
+text-decoration:underline;
+}
+
+.header-button:hover{
+background-color: aliceblue;
+border-radius: 4px;
+}
+
+button:hover{
+box-shadow: 2px 10px 13px #f0f0f0;
+font-weight: bold;
+color: #e8e8e8;
+}
+
+
+.banana1:not(:target) {
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.5s, visibility 0.5s;
+}
+
+.banana1 {
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0;
+left: 0;
+}
+
+
+#page-top a{
+background:#942D2F;
+color:#fff;
+text-align: center;
+display: block;
+text-decoration: none;
+padding:20px;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+font-size: 0.8rem;
+transition: all 0.3s;
+}
+
+#page-top a:hover{
+background: #777;
+}
+
+ dialog{
+   z-index:3;
+ }
+
+
+.loop-area {
+ display: flex;
+ animation: loop-slide 20s infinite linear 1s both;
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+.loop-area .content {
+ width: 500px;
+}
+@keyframes loop-slide {
+ from {
+   transform: translateX(0);
+ }
+ to {
+   transform: translateX(-100%);
+ }
+}
+ 
+ 
+ li{
+   list-style:none;
+   
+ }
+ 
+ details {
+ margin: 14px;
+ padding: 10px;
+ height: 10px;
+ transition: .5s;
+}
+details[open] {
+ height: 166px;
+ background: #ffffff8a;
+ padding: 11px;
+ border-radius: 0px;
+ border-top-left-radius: 18px;
+}
+
+
+.loader2 {
+ width: 22px;
+ aspect-ratio: 1;
+ border-radius: 50%;
+ border: 4px solid lightblue;
+ border-right-color: #1b9b89;
+ animation: l2 1s infinite linear;
+}
+@keyframes l2 {to{transform: rotate(1turn)}}
+.sample01 {
+ margin: 0 auto 40px;
+ width: 568px;
+ font-size: 28px;
+ text-align: center;
+ overflow: hidden;
+ position: fixed;
+ text-shadow: 3px 3px 0 #fff, -3px 3px 0 #fff, -3px -3px 0 #fff, 3px -3px 0 #fff;
+ font-weight: bold;
+ margin-left: 25px;
+ height: 323px;
+}
+.sample01 p{
+margin:0;
+display : inline-block;
+padding-left: 100%;
+white-space : nowrap;
+line-height : 1em;
+animation : scrollSample01 20s linear infinite;
+}
+@keyframes scrollSample01{
+0% { transform: translateX(0)}
+100% { transform: translateX(-100%)}
+}
+
+ 
+.sample02 {
+margin : 0 auto 40px;
+text-align : center;
+overflow : hidden;
+ width: 568px;
+ font-size: 28px;
+ position: fixed;
+ text-shadow: 3px 3px 0 #fff, -3px 3px 0 #fff, -3px -3px 0 #fff, 3px -3px 0 #fff;
+ font-weight: bold;
+ margin-left: 25px;
+ height: 323px;
+}
+.sample02 ul{
+margin:0;
+display : inline-block;
+padding-left: 100%;
+white-space : nowrap;
+line-height : 1em;
+animation : scrollSample02 15s linear infinite;
+}
+.sample02 ul li{
+display:inline;
+margin:0 100px 0 0;
+}
+.sample02 ul li:nth-child(1){
+font-weight:bold;
+}
+.sample02 ul li:nth-child(2){
+color:#F00;
+}
+.sample02 ul li:nth-child(3){
+
+}
+.sample02 ul li:last-child{
+color:#F90;
+margin:0;
+}
+@keyframes scrollSample02{
+0% { transform: translateX(0)}
+100% { transform: translateX(-100%)}
+}
+
+ul li.remove span {
+ color: rgb(255, 251, 0);
+ 
+}
+
+.osu3{
+ border-radius: 10px;
+ background-color: rgb(185, 222, 255);
+ width: 348px;
+ display: inline-block;
+ margin: 10px;
+ height: 10px;
+ height: 237px;
+ border: 1px #9ec8cc solid;
+ box-shadow: 0 2px 3px 0 #cdcedb;
+}
+
+.osu3frame{
+ display: inline-block;
+ width: 290px;
+ height: 165px;
+ background: #0040ff3d;
+}
+
+.osu3wf{
+ width: 180px;
+ height: 85px;
+ position: relative;
+ z-index: 0;
+ display: inline-block;
+ background: #0040ff3d;
+ margin-top: 12px;
+
+}
+
+.popup{
+ padding:4px;
+ padding-left: 5px;
+ padding-right:5px;
+ border:1px #0000007a solid;
+ background: #fff;
+ position: fixed;
+ z-index: 10;
+ 
+}
+
+@keyframes fadeInAnime{
+ from {
+   opacity: 0;
+   transform: translateX(-100%);
+ }
+
+ to {
+   opacity: 1;
+   transform: translateX(0%);
+ }
+}
+
+.fadein{
+ animation-name: fadeInAnime;
+ animation-duration: 0.35s;
+ animation-fill-mode: forwards;
+ opacity: 0;
+ animation-delay: 0s;
+}
+ 
+ .poti:hover{
+   background:gray;
+   padding:2px;
+   border-radius:4px;
+   color:white;
+ }
+</style>
+ 
+
+
+ <title>ミニゲームセンター | Mini Game Center</title> <meta charset="UTF-8">
+ 
+ 
+ <link rel="shortcut icon" sizes="64x64" href="https://umaidango.github.io/kabegami-download-ver.2/kabegami-icon.png">
+ <meta name="description" content="ミニゲームセンターで無料のミニゲームを遊ぼう！！">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900&amp;family=Noto+Sans+JP:wght@100..900&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&amp;display=swap" rel="stylesheet">
+ </head>
+ <body>
+
+   
+   
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="width: 1113px;/*! height: 895px; */background-color: #e0f5ff;/*! border: ; */"><header>
+<div class="header-div" style="z-index: 5;border: 0;box-shadow: none;padding: 14px;border-radius: 800px;width: 650px;margin-left: 214px;margin-top: -8px;border: 1px #f9f6f6 solid;"> <svg class="header-button" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 32px;width: 59px;margin-left: -58px;vertical-align: -10%;cursor: pointer;margin-right: 5px;" onclick="menuber()"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="" stroke="#c4c4c4"></path> </g></svg>
+
+<a href="https://umaidango.github.io/kabegami/games/"><svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000" style="height: 32px;"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#000000;} </style> <g> <path class="st0" d="M389.488,226.899H122.512C54.854,226.899,0,281.746,0,349.412c0,67.658,54.854,122.512,122.512,122.512 c42.653,0,80.199-21.812,102.135-54.854h62.706c21.936,33.042,59.49,54.854,102.135,54.854C457.154,471.924,512,417.07,512,349.412 C512,281.746,457.154,226.899,389.488,226.899z M389.488,440.332c-30.535,0-58.881-15.226-75.818-40.74l-9.372-14.115h-16.945 h-62.706h-16.945l-9.371,14.115c-16.938,25.514-45.282,40.74-75.819,40.74c-50.134,0-90.92-40.786-90.92-90.92 c0-50.134,40.786-90.921,90.92-90.921h266.976c50.134,0,90.92,40.786,90.92,90.921 C480.408,399.545,439.622,440.332,389.488,440.332z"></path> <path class="st0" d="M268.927,110.897c0-2.46,0.486-4.72,1.366-6.803c1.311-3.116,3.548-5.8,6.332-7.69 c2.8-1.89,6.085-2.97,9.757-2.97c2.437,0,4.705,0.494,6.788,1.373c3.116,1.311,5.799,3.533,7.689,6.333 c1.882,2.8,2.97,6.085,2.97,9.756c0,5.893,1.203,11.593,3.394,16.752c3.278,7.744,8.716,14.292,15.58,18.928 c6.849,4.643,15.21,7.374,24.08,7.366c5.916,0,11.616-1.211,16.768-3.394c7.728-3.278,14.284-8.716,18.92-15.58 c4.643-6.857,7.366-15.21,7.366-24.072v-70.82h-25.607v70.82c0,2.437-0.478,4.705-1.357,6.78c-1.319,3.124-3.556,5.808-6.333,7.69 c-2.808,1.881-6.093,2.969-9.757,2.969c-2.436,0-4.705-0.486-6.787-1.365c-3.116-1.311-5.8-3.548-7.682-6.333 c-1.889-2.8-2.977-6.1-2.992-9.741c0.016-5.924-1.188-11.616-3.378-16.768c-3.279-7.744-8.716-14.292-15.58-18.928 c-6.864-4.651-15.21-7.374-24.08-7.366c-5.909-0.008-11.608,1.203-16.768,3.394c-7.743,3.263-14.292,8.716-18.927,15.58 c-4.644,6.857-7.359,15.21-7.359,24.088v104.71h25.599V110.897z"></path> <polygon class="st0" points="138.363,293.338 105.452,293.338 105.452,331.124 67.658,331.124 67.658,364.051 105.452,364.051 105.452,401.829 138.363,401.829 138.363,364.051 176.156,364.051 176.156,331.124 138.363,331.124 "></polygon> <path class="st0" d="M375.126,289.698c-7.937,7.929-7.921,20.794,0,28.723c7.936,7.929,20.794,7.929,28.716,0 c7.936-7.929,7.936-20.794,0-28.723C395.92,281.769,383.063,281.769,375.126,289.698z"></path> <path class="st0" d="M329.774,335.05c-7.929,7.929-7.929,20.794,0,28.723c7.937,7.929,20.794,7.929,28.723,0 c7.93-7.929,7.93-20.794,0-28.731C350.568,327.121,337.711,327.121,329.774,335.05z"></path> <path class="st0" d="M375.126,380.402c-7.937,7.929-7.937,20.786,0,28.715c7.936,7.929,20.794,7.929,28.716,0.008 c7.936-7.937,7.936-20.794,0-28.739C395.92,372.457,383.063,372.473,375.126,380.402z"></path> <path class="st0" d="M449.193,335.05c-7.921-7.929-20.786-7.929-28.723,0c-7.937,7.929-7.937,20.794,0,28.723 c7.937,7.929,20.802,7.929,28.723,0C457.123,355.844,457.123,342.979,449.193,335.05z"></path> </g> </g></svg>
+
+
+<font style="font-family: roboto;font-size: 22px;color: #333;vertical-align: 12%;margin-left: 10px;">Mini Game Center</font></a><font style="font-family: sans-serif;font-size: 10px;color: #939393;position: fixed;top: 19px;">GAME</font>&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;<a href="#">
+
+<font 　onclick="document.getElementById('illust').close()" style="vertical-align: 50%; color:black;cursor: pointer;"><svg class="header-button" fill="#000000" height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" style="height: 22px;vertical-align: -28%;margin-left: -8px;margin-right: 10px;padding: 2px;"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M505.017,218.881L272.571,7.567l-2.221-2.019c-1.526-1.387-3.202-2.514-4.973-3.381c-0.079-0.038-0.161-0.066-0.24-0.104 c-5.772-2.738-12.503-2.738-18.276,0c-0.079,0.037-0.161,0.065-0.24,0.104c-1.771,0.867-3.447,1.994-4.973,3.381l-2.189,1.99 L6.983,218.881c-8.718,7.925-9.361,21.418-1.435,30.136c7.925,8.718,21.418,9.361,30.136,1.435l6.983-6.348v246.563 C42.667,502.449,52.218,512,64,512h106.667h170.667H448c11.782,0,21.333-9.551,21.333-21.333V244.104l6.983,6.348 c8.718,7.926,22.21,7.283,30.136-1.435C514.378,240.299,513.735,226.807,505.017,218.881z M213.333,469.334v-128 c0-23.567,19.099-42.667,42.667-42.667s42.667,19.099,42.667,42.667v128H213.333z M426.667,469.334h-85.333v-128 C341.334,294.202,303.132,256,256,256s-85.333,38.202-85.333,85.333v128H85.333V205.32L256,50.165L426.667,205.32V469.334z"></path> </g> </g> </g></svg></font>  </a><span class="more" style="cursor: pointer;" onclick="document.getElementById('more').show()"><font style="vertical-align: 47%;margin-left: -7px;"><svg class="header-button" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 25px;vertical-align: -37%;margin-left: -23px;margin-right: 1px;padding: 2px;"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 13C6.55 13 7 12.55 7 12C7 11.45 6.55 11 6 11C5.45 11 5 11.45 5 12C5 12.55 5.45 13 6 13Z" stroke="#000000" stroke-width="2"></path> <path d="M6 7C6.55 7 7 6.55 7 6C7 5.45 6.55 5 6 5C5.45 5 5 5.45 5 6C5 6.55 5.45 7 6 7Z" stroke="#000000" stroke-width="2"></path> <path d="M6 19C6.55 19 7 18.55 7 18C7 17.45 6.55 17 6 17C5.45 17 5 17.45 5 18C5 18.55 5.45 19 6 19Z" stroke="#000000" stroke-width="2"></path> <path d="M12 13C12.55 13 13 12.55 13 12C13 11.45 12.55 11 12 11C11.45 11 11 11.45 11 12C11 12.55 11.45 13 12 13Z" stroke="#000000" stroke-width="2"></path> <path d="M12 7C12.55 7 13 6.55 13 6C13 5.45 12.55 5 12 5C11.45 5 11 5.45 11 6C11 6.55 11.45 7 12 7Z" stroke="#000000" stroke-width="2"></path> <path d="M12 19C12.55 19 13 18.55 13 18C13 17.45 12.55 17 12 17C11.45 17 11 17.45 11 18C11 18.55 11.45 19 12 19Z" stroke="#000000" stroke-width="2"></path> <path d="M18 13C18.55 13 19 12.55 19 12C19 11.45 18.55 11 18 11C17.45 11 17 11.45 17 12C17 12.55 17.45 13 18 13Z" stroke="#000000" stroke-width="2"></path> <path d="M18 7C18.55 7 19 6.55 19 6C19 5.45 18.55 5 18 5C17.45 5 17 5.45 17 6C17 6.55 17.45 7 18 7Z" stroke="#000000" stroke-width="2"></path> <path d="M18 19C18.55 19 19 18.55 19 18C19 17.45 18.55 17 18 17C17.45 17 17 17.45 17 18C17 18.55 17.45 19 18 19Z" stroke="#000000" stroke-width="2"></path> </g></svg></font></span>
+
+<dialog id="more" style="border: 4px #d4e0ea solid;/*! top: 50%; *//*! left: 50%; *//*! transform: translate(-50%, -50%); */position: fixed;">
+<font style="margin-left: -197px;font-size: 26px;cursor: pointer;" onclick="document.getElementById('more').close()">×</font>
+
+<h3 style="cursor: default;">他のページ</h3><iframe frameborder="0" src="https://umaidango.github.io/ja/more/" style="height: 209px;"></iframe>
+
+
+
+</dialog>
+
+<dialog id="search" style="border: 4px #a4bbce solid;width: 430px;"><div style=""><span style="font-size:28px;cursor: pointer;margin-left: -351px;color: #000;" onclick="document.getElementById('search').close()">×</span><div><img class="logo" style="width: 180;height: 56px;" src="https://umaidango.github.io/kabegami/kabegami-logo.png"></div><div style="height:5px"></div>
+<form id="search" method="GET" action="https://www.google.com/search">
+<input type="hidden" name="ie" value="utf-8">
+<input type="hidden" name="oe" value="utf-8">
+<input type="hidden" name="hl" value="ja">
+<input type="hidden" name="lr" value="lang_ja">
+<input type="hidden" name="as_sitesearch" value="umaidango.github.io/kabegami/wallpapers/">
+<a href="http://www.google.com/" target="_top"></a>
+<input type="text" name="q" maxlength="255" value="" style="border: 1px #ddd solid;box-shadow: 0px 1px 2px #e6e6e6;border-radius: 4px;height: 23px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;text-align: left;" size="18">
+<input type="submit" name="btnG" value="検索" style="border: 2px #3356bd solid;background-color: #3356bd;border-radius: 4px;color: #fff;cursor: pointer;border-bottom-left-radius: 0px;border-top-left-radius: 0px;margin-left: -5px;width: 80px;box-shadow: 0px 3px 2px #e6e6e6;"></form>
+
+<input type="submit" value="かべがみ検索" style="border: 1px #ddd solid;border-radius: 2px;box-shadow: 0px 1px 2px #ddd;"><div style="width:5px;display: inline-block;"></div><input type="submit" value="I'm Feeling Lucky" style="border: 1px #ddd solid;border-radius: 2px;box-shadow: 0px 1px 1px #ddd;"><div style="border: 2px #acacac dashed;margin-top: 18px;padding: 10px;"><p style="font-weight: bold;font-size: 18px;margin-top: -3px;color: #3c3c3c;cursor: default;">ワードで検索</p>
+<p><a class="sw" style="color: #000;" href="https://umaidango.github.io/kabegami/kabegami-search/keyword/djedoakoslow/neko-jfieokeo.html">猫を検索</a></p><p><a class="sw" style="color: #000;" href="https://umaidango.github.io/kabegami/kabegami-search/keyword/dkorkfowdleo/hato-fjiekw.html">鳩を検索</a></p>
+</div></div></dialog>  
+<div></div></div><div class="fadein" tabindex="-1" style="position: fixed; width: 325px; height: 100%; border-radius: 0px; border: 1px solid rgb(238, 238, 238); left: 0px; background: rgb(255, 255, 255); top: 0px; bottom: 0px; z-index: 5; display: none;" id="menuber1">
+ 
+
+
+
+
+<span onclick="closemenu()" draggable="false" style=" position: fixed;    width: 2000px;  padding: 5px; cursor: pointer; border-bottom: 0px; display: block;background: #000;border-radius: 0px;margin-left: 326px;bottom: 0px;top: 0px;z-index: 10;opacity: 0.2;"></span>
+
+
+<br>
+
+
+
+<ul style="margin-left: -57px;"><li class="header-button" style="width: 110px;border-radius: 100px;padding: 4px;padding-left: 5px;padding-right: 5px;cursor: pointer;/*! background-color: aliceblue; */color: #333;"><a href="https://umaidango.github.io/kabegami/games/">ホーム</a></li></ul></div><dialog style="border: 0px;width: 604px;height: 100%;position: fixed;margin-right: 1px;top: 0px;border-radius: 0px;z-index: 6;" id="news">
+<font style="margin-left: -17px;font-size: 26px;cursor: pointer;position: fixed;" onclick="document.getElementById('news').close()">×</font>
+
+
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTBM7sPN_Rbn7ekHpCRXNlA93wIXFK2Y6vJhyIqnNOD4D9qh7KMwDrTICkJERDrGZHOJW-FNHO1Y4Ql/pubhtml?gid=1283763595&amp;single=true&amp;widget=true&amp;headers=false" style="border: 0px;margin-top: 16px;height: 100%;width: 515px;"></iframe><span onclick="document.getElementById('news').close()" style="display: inline-block;position: fixed;height: 100%;width: 100%;top: 0px;background: #0000007a;border-radius: 0px;left: 0px;margin-left: -637px;"></span></dialog></header>
+
+<a name="壁紙をダウンロードする" style="margin-top: 124px;"></a><p>
+ </p><div style="height: 10vh;"></div>
+<div class="osu3"><a href="https://umaidango.github.io/kabegami/games/tetris"><span id="na1" class="osu3frame" style="margin-bottom: 5px;margin-top: 30px;"><img class="uwa" style="width: 307px;height: 164px;margin-left: -10px;/*! display: none; */" src="img1.png"></span></a><span><ul class="chipiui-1" style="list-style: none; cursor: default;position: absolute;margin-left: 192px;margin-top: -36px;">
+  <li style="background: rgb(255, 255, 255); padding-left: 10px; padding-right: 18px; border: 1px solid rgb(221, 221, 221); font-size: 12px; border-radius: 999px; color: rgb(230, 230, 230);"><span style="font-size: 15px;">☆</span>いいね!</li>
+  
+
+  </ul></span><br><font class="font1" style="color: #3800ff;margin-right: 2px;font-size: 0.66rem;">BlockGame!</font><font class="font1" style="font-size: 14px;">テトリス風ゲーム</font><!--?xml version="1.0" ?-->
+
+
+
+<a href="https://umaidango.github.io/kabegami/games/tetris"><button style="margin: 1px 1px 1px -3px;">Playing Game</button></a></div><div style="text-align: center;margin: 0 auto;display: flex;justify-content: center;">
+<div>
+<div style="width: 1113px;/*! height: 895px; */background-color: #e0f5ff;/*! border: ; */">
+
+
+
+ 
+ 
+
+
+
+
+<footer style="/*! background-color: #cecece; *//*! height: 21px; *//*! border-radius: 1px; */margin: 97px;">(c) 2024 - U Software Kabegami Download
+
+</footer>&nbsp; &nbsp; 
+ <div>
+</div></div><dialog id="illust" style="border: 0px;margin: -10px;background-color: transparent;"><iframe src="https://umaidango.github.io/kabegami-download-ver.2/illust.html" frameborder="0" style="width: 1222px;height: 1162px;margin: -18px;"></dialog></iframe></dialog><div></div></div></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ <script>
+   function menuber(){
+     document.getElementById("menuber1").style.display = "block";
+     document.getElementById("closemenu").style.display = "block";
+   }
+ 
+ 
+   </script>
+ 
+   <script>      function closemenu(){
+         document.getElementById("menuber1").style.display = "none";
+         document.getElementById("closemenubtn1").style.display = "none";
+   }</script>
+
+
+</body></html>
