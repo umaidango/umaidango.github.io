@@ -6,7 +6,7 @@
 setTimeout(function() {
     na1.innerHTML = '<img class="uwa" src="https://umaidango.github.io/kabegami/index_files/purin-1i.png" style="margin-left: -9px;width: 307px;height: 165px;">';
     na2.innerHTML = '<img class="uwa" src="https://umaidango.github.io/kabegami/index_files/purin-4.png" style="margin-left: -9px;width: 307px;height: 165px;">';
-    na3.innerHTML = '<img class="uwa" src="https://umaidango.github.io/kabegami/index_files/no-10-2.jpg" style="width: 307px;height: 164px;margin-left: -10px;/*! display: none; */">';
+    na3.innerHTML = '<img class="uwa" src="https://umaidango.github.io/kabegami/index_files/purin-5.png" style="width: 307px;height: 164px;margin-left: -10px;/*! display: none; */">';
   
   }, 50)
 
@@ -38,6 +38,9 @@ setTimeout(function(){
 
 }, 100)
 
+setTimeout(function(){
+  k21c.innerHTML = '<img class="img" width="50" height="50" src="https://umaidango.github.io/kabegami/index_files/no-10-2.jpg">';
+}, 100)
 setTimeout(function(){
   ads1.innerHTML = '<img class="img" width="50" height="50" src="https://umaidango.github.io/commons/index_files/images/upl1.jpg" style="height: 85px;width: 182px;margin-top: 0px;">';
   ads2.innerHTML = '<img class="img" width="50" height="50" src="https://umaidango.github.io/images/coejflkoao.png" style="height: 85px;width: 182px;margin-top: 0px;">';
