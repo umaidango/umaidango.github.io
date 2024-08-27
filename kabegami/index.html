@@ -2231,7 +2231,7 @@ document.getElementById("sapoclose1").onclick = function() {
     $('ul .remove').hide();  // お気に入り中の表示は一時的に非表示に。
   
     // お気に入りリストに存在するか確認
-    var key = 'chipi-id';
+    var key = 'chipi_id';
     var getjson = localStorage.getItem(key);
     var oidlist = JSON.parse(getjson);
     if(oidlist != null){
@@ -2245,7 +2245,7 @@ document.getElementById("sapoclose1").onclick = function() {
   /* 【解説Cパート】 "お気に入りに追加機能" */
   function addfav(oid){
   
-      var key = 'chipi-id';                       // キーの名前を指定
+      var key = 'chipi_id';                       // キーの名前を指定
   
       // ローカルストレージから値を取得
       var getjson = localStorage.getItem(key);
@@ -2275,7 +2275,7 @@ document.getElementById("sapoclose1").onclick = function() {
   /* 【解説Dパート】 "お気に入りから削除機能" */
   function removefav(oid){
   
-      var key = 'chipi-id';                       // キーの名前を指定
+      var key = 'chipi_id';                       // キーの名前を指定
   
       // ローカルストレージから値を取得
       var getjson = localStorage.getItem(key);
@@ -2424,7 +2424,16 @@ window.onload = function() {
         }
     }
     </script>
-  <script src="account-script.js" defer=""></script>
+    <!--
+<script src="account-script.js" defer=""></script>
+<script src="img.js" defer></script>-->
+<script>
+  main.innerHTML = '';
+setTimeout(function() {
+document.getElementById("m1a").style.display = "flex";
+document.getElementById("m1a").style.position = "fixed";
+m1a.innerHTML = '<font style="font-size:2rem;">メンテナンス中です。</font><font style="position:fixed; margin-top:80px;display:block">2024/8/27 ~ 2024/8/27 18:00までメンテナンスを行います。</font>';
 
-<script src="img.js" defer></script>
+}, 450)
+</script>
 </body></html>
