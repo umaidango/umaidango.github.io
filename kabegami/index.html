@@ -1540,7 +1540,7 @@ dango12はumaidangoのもともとの名前です。
 
 
 <span><ul class="chipiui-1" style="list-style: none; cursor: pointer;position: absolute;margin-top: -35px;margin-left: 98px;">
-  <li class="add" style="background: rgb(255, 255, 255); padding-left: 10px; padding-right: 18px; border: 1px solid rgb(221, 221, 221); font-size: 12px; border-radius: 999px;" no="04p" onclick="addfav('04p')"><span style="font-size: 15px;">☆</span>いいね!</li>
+  <li class="add" style="background: rgb(255, 255, 255); padding-left: 10px; padding-right: 18px; border: 1px solid rgb(221, 221, 221); font-size: 12px; border-radius: 999px; display: block;" no="04p" onclick="addfav('04p')"><span style="font-size: 15px;">☆</span>いいね!</li>
   <li class="remove" style="background: rgb(255, 255, 255); padding-left: 10px; padding-right: 18px; border: 1px solid rgb(221, 221, 221); font-size: 12px; border-radius: 999px; display: none;" no="04p" onclick="removefav('04p')"><span style="font-size:15px; ">★</span>いいね!</li>
 
   </ul>
@@ -1850,7 +1850,7 @@ dango12はumaidangoのもともとの名前です。
 
 <span>
   <ul class="chipiui-1" style="list-style: none; cursor: pointer;position: absolute;margin-top: -35px;margin-left: 98px;">
-  <li class="add" style="background: rgb(255, 255, 255); padding-left: 10px; padding-right: 18px; border: 1px solid rgb(221, 221, 221); font-size: 12px; border-radius: 999px;" no="05p" onclick="addfav('05p')"><span style="font-size: 15px;">☆</span>いいね!</li>
+  <li class="add" style="background: rgb(255, 255, 255); padding-left: 10px; padding-right: 18px; border: 1px solid rgb(221, 221, 221); font-size: 12px; border-radius: 999px; display: block;" no="05p" onclick="addfav('05p')"><span style="font-size: 15px;">☆</span>いいね!</li>
   <li class="remove" style="background: rgb(255, 255, 255); padding-left: 10px; padding-right: 18px; border: 1px solid rgb(221, 221, 221); font-size: 12px; border-radius: 999px; display: none;" no="05p" onclick="removefav('05p')"><span style="font-size:15px; ">★</span>いいね!</li>
 
   </ul>
@@ -2208,8 +2208,11 @@ document.getElementById("sapoclose").onclick = function() {
 document.getElementById("sapoclose1").onclick = function() {
   document.getElementById("sapocha").style.display = "none";
 }
-</script><script>
+</script>
+
+<script>
   /* 【解説Aパート】 "表示ソースの切り替え" */
+  /*名前を変えてrefresh.*/
   function togleitem(oid,event){
       if(event == 'add'){
           // 未チェック(class="add")を非表示にして、チェック済(class="remove")を表示する
@@ -2228,7 +2231,7 @@ document.getElementById("sapoclose1").onclick = function() {
     $('ul .remove').hide();  // お気に入り中の表示は一時的に非表示に。
   
     // お気に入りリストに存在するか確認
-    var key = 'お気に入りID';
+    var key = 'chipi-id';
     var getjson = localStorage.getItem(key);
     var oidlist = JSON.parse(getjson);
     if(oidlist != null){
@@ -2242,7 +2245,7 @@ document.getElementById("sapoclose1").onclick = function() {
   /* 【解説Cパート】 "お気に入りに追加機能" */
   function addfav(oid){
   
-      var key = 'お気に入りID';                       // キーの名前を指定
+      var key = 'chipi-id';                       // キーの名前を指定
   
       // ローカルストレージから値を取得
       var getjson = localStorage.getItem(key);
@@ -2272,7 +2275,7 @@ document.getElementById("sapoclose1").onclick = function() {
   /* 【解説Dパート】 "お気に入りから削除機能" */
   function removefav(oid){
   
-      var key = 'お気に入りID';                       // キーの名前を指定
+      var key = 'chipi-id';                       // キーの名前を指定
   
       // ローカルストレージから値を取得
       var getjson = localStorage.getItem(key);
@@ -2291,7 +2294,9 @@ document.getElementById("sapoclose1").onclick = function() {
           }
       }
   }
-  </script><script>
+  </script>
+  
+  <script>
 function uplopen(){
     document.getElementById("upl1").style.display = "block";  
     
