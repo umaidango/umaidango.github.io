@@ -27,3 +27,13 @@ function CloseObu_a(){
     document.getElementById("user_obu").style.display = "none";
 
 }
+
+function OpenNyanta_a(){
+    document.getElementById("user_Nyanta").style.display = "block";
+
+}
+
+function CloseNyanta_a(){
+    document.getElementById("user_Nyanta").style.display = "none";
+
+}
