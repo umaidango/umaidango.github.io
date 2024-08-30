@@ -37,7 +37,64 @@ btn_close.addEventListener('click', function() {
     text-decoration-color:#000;
     
   }
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+    
+  }
 
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+    
+  }
+  
+}
+
+  @keyframes h{
+    from{
+      opacity:0:
+    }
+    
+    to{
+      opacity:1;
+    }
+  }
+  
+@keyframes fadeoutAnime{
+  from {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+
+.fadein{
+  animation-name: fadeInAnime;
+  animation-duration: 0.35s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 0s;
+   
+
+  
+}
+
+  .h-anime{
+    
+  animation-name: h;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 0s;
+   
+  }
 </style></head>
     
  
@@ -46,19 +103,17 @@ btn_close.addEventListener('click', function() {
 
 
 <body>
-<div style="border-radius: 0px;text-align: left;width: 480px;margin: 10px auto;padding: 10px;border: 1px solid #ffffff;background-color: #ffffff;line-height: 1.3em;">
+<div style="border-radius: 0px;text-align: left;padding: 10px;border: 1px solid #ffffff;background-color: #ffffff;line-height: 1.3em;">
 <header style=" margin-top: -10px;">
-<div style="background: #fff; border: 1px #ccc solid; box-shadow: 0 2px 3px 0 #ddd; font-size: 100%; padding: 20px;  border-radius: 10px;position: fixed;width: 441px;margin-top: -11px;"> <img src="/u-software.png" style="width: 190px;">&nbsp;&nbsp;
-&nbsp;&nbsp;<div style="display: inline-block;" onclick="document.getElementById('d').show()"><svg data-icon-name="align-center" data-style="line" icon_origin_id="22740" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="align-center" class="icon line" width="48" height="48" style="margin: 0px 0px 2px 164px;cursor: pointer;"><path style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 1px;" d="M3,6H21M3,18H21M6,12H18" id="primary"></path></svg></div>
-<dialog id="d" style="height: 100%;width: 286px;position: fixed;top: 0px;border: 0px;margin-left: 0px;">
- 
-  <p style="font-size: 22px;margin-left: 20px;"><a href="https://umaidango.github.io/sp/">U Software</a></p><p style="font-size: 22px;margin-left: 20px;"><a href="https://umaidango.github.io/me/">うまいだんご</a></p><p style="font-size: 22px;margin-left: 20px;"><a href="https://umaidango.github.io/sp/#名刺">名刺</a></p><p style="font-size: 22px;margin-left: 20px;"><a href="https://umaidango.github.io/kabegami/mobile/">壁紙</a></p><p style="font-size: 22px;margin-left: 20px;"><a href="https://umaidango.github.io/hamster/">🐹日記</a></p><div style="font-size: 38px;display: inline-block;position: fixed;height: 100%;width: 100%;background: #00000063;border-radius: 0px;top: 0px;margin-left: 301px;" onclick="document.getElementById('d').close()"></div>
-</dialog><div></div><div></div></div></header>
+<div style="background: #fff; border-bottom: 1px #ccc solid; box-shadow: 0 2px 3px 0 #ddd; font-size: 100%;   border-radius: 0px;position: fixed;width: 100%;margin-top: -11px;padding: 8px;padding-right: 61px;margin-left: -16px;z-index: 3;"> <div style="display: inline-block;" onclick="document.getElementById('d').show()"><svg data-icon-name="align-center" data-style="line" icon_origin_id="22740" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="align-center" class="icon line" width="48" height="48" style="cursor: pointer;vertical-align: 10%;margin-right: 20px;margin-left: 10px;"><path style="fill: none; stroke: #000000ab; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1px;" d="M3,6H21M3,18H21M6,12H18" id="primary"></path></svg></div><img src="/u-software.png" style="width: 190px;">&nbsp;&nbsp;
+&nbsp;&nbsp;
+<dialog class="fadein" id="d" style="height: 100%;width: 286px;position: fixed;top: 0px;border: 0px;margin-left: 0px;z-index: 5;">
+ <div style="margin: -10px;"><div style="display: inline-block;" onclick="document.getElementById('d').close()"><svg data-icon-name="align-center" data-style="line" icon_origin_id="22740" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="align-center" class="icon line" width="48" height="48" style="cursor: pointer;vertical-align: 10%;margin-right: 20px;margin-left: 10px;"><path style="fill: none; stroke: #000000ab; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1px;" d="M3,6H21M3,18H21M6,12H18" id="primary"></path></svg></div><img src="/u-software.png" style="width: 190px;"></div>
+<p></p><p style="font-size: 18px;margin-left: 20px;margin-top: 36px;"><a href="https://umaidango.github.io/me/">うまいだんごのホームページ</a></p><p style="font-size: 22px;margin-left: 20px;"><a href="https://umaidango.github.io/sp/#名刺">名刺</a></p><p style="font-size: 22px;margin-left: 20px;"><a href="https://umaidango.github.io/kabegami/mobile/">壁紙</a></p><p style="font-size: 22px;margin-left: 20px;"><a href="https://umaidango.github.io/hamster/">🐹日記</a></p><div style="font-size: 38px;display: inline-block;position: fixed;height: 100%;width: 4000px;background: #00000063;border-radius: 0px;top: 0px;margin-left: 301px;" onclick="document.getElementById('d').close()"></div>
+</dialog></div></header>
 
-
-
-
-<div style="height: 20vh;"></div><a><font style="vertical-align: 40%; color:black;">
+<div style="margin: 10px auto;"><div style="height: 12vh;"></div>
+<div><font style="vertical-align: 40%; color:black;">
 
 
 
@@ -80,10 +135,10 @@ btn_close.addEventListener('click', function() {
 </style>
 
 </p><div class="silicon"></div>
-<div style="background: #fff; border: 1px #ccc solid; box-shadow: 0 2px 3px 0 #ddd; font-size: 100%; padding: 20px;  border-radius: 10px;" wight="815">&nbsp;
-<img src="/img-01.png" width="200" height="280">
-<img src="/img-02.png" width="200" height="280">&nbsp;&nbsp;</div>
-&nbsp;</font></a><font style="vertical-align: 40%; color:black;"><a name="about"></a><div><span style="font-size: 20px;margin: 10px;">‣About</span>
+<div class="h-anime" style="   font-size: 100%; padding: 20px;  border-radius: 4px;" wight="815">&nbsp;
+<img src="top.jpg" style="width: 100%;min-width: 512px;">
+</div>
+&nbsp;</font></div><font style="vertical-align: 40%; color:black;"><a name="about"></a><div><span style="font-size: 20px;margin: 10px;">‣About</span>
   <br>
   <font>
   U Softwareは、みんなに、「使いやすい」と思える無料アプリを公開します。
@@ -102,14 +157,14 @@ btn_close.addEventListener('click', function() {
     山っち - いろいろ</p>
 </font>
   </div><a name="apps"></a><div><span style="font-size: 20px;margin: 10px;color: black;">‣Apps</span>
-  <br><br><img src="/apps/appstore_files/image1.png"><font style="vertical-align: 14px;font-size: 34px;color: black;">
+  <br><br><div style="padding: 12px;"><img src="/apps/appstore_files/image1.png"><font style="vertical-align: 14px;font-size: 34px;color: black;">
 Original Clock
-</font>
+</font></div><div style="padding: 12px;"><img src="/apps/appstore_files/mini-my-widget-logo.png" style="width: 64px;border: 1px #ddd solid;margin-right: 10px;"><font style="vertical-align: 14px;font-size: 34px;color: black;">MY Widget</font></div><div style="padding: 12px;"><img style="width: 64px;border: 1px #ddd solid;margin-right: 10px;" src="https://umaidango.github.io/kabegami/kabegami-icon.png"><font style="vertical-align: 14px;font-size: 34px;color: black;">Kabegami Pro</font></div><div style="padding: 12px;"><img style="width: 64px;border: 1px #ddd solid;margin-right: 10px;" src="https://chipi-cha.web.app/img/chipiCHA.svg"><font style="vertical-align: 14px;font-size: 34px;color: black;">Chipi CHA!</font></div>
   
-  <p></p><img src="/apps/appstore_files/mini-my-widget-logo.png" style="width: 64px;border: 1px #ddd solid;"><font style="vertical-align: 14px;font-size: 34px;color: black;">MY Widget</font></div><p></p>
+  <p></p></div><p></p>
 <a name="名刺"><div>
   <span style="font-size: 20px;margin: 10px;color: black;">‣名刺</span><br><br>
-  <span style=""><img src="https://umaidango.github.io/meishi/%E3%83%97%E3%83%AA%E3%83%B3%E5%90%8D%E5%88%BA.png" width="320" style="margin: 10px;box-shadow: 0 2px 3px 0 #ddd;margin: 0px 0px 10px 100px;"><img src="https://umaidango.github.io/meishi/%E3%81%84%E3%81%A1%E3%81%94%E5%90%8D%E5%88%BA.png" style="border-radius: 0px;margin: 10px;box-shadow: 0 2px 3px 0 #ddd;margin: 0px 0px 10px 100px;" width="320"><img src="https://umaidango.github.io/meishi/%E3%81%86%E3%81%BE%E3%81%84%E3%81%A0%E3%82%93%E3%81%94%E5%90%8D%E5%88%BA.png" width="320" style="margin: 10px;box-shadow: 0 2px 3px 0 #ddd;margin: 0px 0px 10px 100px;"><img src="https://umaidango.github.io/meishi/%E3%81%8A%E3%81%B6%E5%90%8D%E5%88%BA.png" width="320" style="margin: 10px;box-shadow: 0 2px 3px 0 #ddd;margin: 0px 0px 10px 100px;"><img src="https://umaidango.github.io/meishi/%E3%81%8B%E3%81%84%E3%81%A8%E5%90%8D%E5%88%BA.png" width="320" style="margin: 10px;box-shadow: 0 2px 3px 0 #ddd;margin: 0px 0px 10px 100px;accent-color: ;"><img src="https://umaidango.github.io/meishi/%E3%81%AA%E3%82%93%E3%81%B0%E3%83%BC%EF%BC%91%EF%BC%90%E5%90%8D%E5%88%BA.png" width="320" style="margin: 10px;box-shadow: 0 2px 3px 0 #ddd;/*! margin: 0px 0px 0px 100px; */margin: 0px 0px 10px 100px;"><img src="https://umaidango.github.io/meishi/%E3%81%BE%E3%81%A3%E3%81%A1%E3%82%83%E5%90%8D%E5%88%BA.png" width="320" style="margin: 10px;box-shadow: 0 2px 3px 0 #ddd;/*! margin: 0px 0px 0px 100px; */margin: 0px 0px 10px 100px;"><img src="https://umaidango.github.io/meishi/%E3%82%84%E3%81%BE%E3%81%A3%E3%81%A1%E5%90%8D%E5%88%BA.png" width="320" style="margin: 10px;box-shadow: 0 2px 3px 0 #ddd;/*! margin: 0px 0px 0px 100px; */margin: 0px 0px 10px 100px;">
+  <span style=""><img src="https://umaidango.github.io/meishi/%E3%83%97%E3%83%AA%E3%83%B3%E5%90%8D%E5%88%BA.png" width="320" style="margin: 10px;box-shadow: 0 2px 3px 0 #ddd;margin: 0px 0px 10px 100px;"><img src="https://umaidango.github.io/meishi/%E3%81%84%E3%81%A1%E3%81%94%E5%90%8D%E5%88%BA.png" style="border-radius: 0px;margin: 10px;box-shadow: 0 2px 3px 0 #ddd;margin: 0px 0px 10px 100px;" width="320"><img src="https://umaidango.github.io/meishi/%E3%81%AA%E3%82%93%E3%81%B0%E3%83%BC%EF%BC%91%EF%BC%90%E5%90%8D%E5%88%BA.png" width="320" style="margin: 10px;box-shadow: 0 2px 3px 0 #ddd;/*! margin: 0px 0px 0px 100px; */margin: 0px 0px 10px 100px;"><img src="https://umaidango.github.io/meishi/%E3%81%BE%E3%81%A3%E3%81%A1%E3%82%83%E5%90%8D%E5%88%BA.png" width="320" style="margin: 10px;box-shadow: 0 2px 3px 0 #ddd;/*! margin: 0px 0px 0px 100px; */margin: 0px 0px 10px 100px;"><img src="https://umaidango.github.io/meishi/%E3%81%86%E3%81%BE%E3%81%84%E3%81%A0%E3%82%93%E3%81%94%E5%90%8D%E5%88%BA.png" width="320" style="margin: 10px;box-shadow: 0 2px 3px 0 #ddd;margin: 0px 0px 10px 100px;"><img src="https://umaidango.github.io/meishi/%E3%81%8A%E3%81%B6%E5%90%8D%E5%88%BA.png" width="320" style="margin: 10px;box-shadow: 0 2px 3px 0 #ddd;margin: 0px 0px 10px 100px;"><img src="https://umaidango.github.io/meishi/%E3%81%8B%E3%81%84%E3%81%A8%E5%90%8D%E5%88%BA.png" width="320" style="margin: 10px;box-shadow: 0 2px 3px 0 #ddd;margin: 0px 0px 10px 100px;accent-color: ;">
 
 
 
@@ -123,12 +178,18 @@ Original Clock
   left: 0;
   width: 98%; "> 
     <font style="color:white;"><h6>
-&nbsp; <img src="/u-software.png" style="width: 80px;height: 20px;"> (c) U SOFTWARE Umaidango.</h6></font></footer></span></font>
+&nbsp; <img src="/u-software.png" style="width: 80px;height: 20px;"> (c) U SOFTWARE Umaidango.</h6></font></footer></span></font></div>
+
+
+
+
+
 
 
 
 
   </div>
+
 
 
 
