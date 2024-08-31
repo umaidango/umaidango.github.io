@@ -63,9 +63,19 @@ setTimeout(function()
   document.getElementById("fgjd1").style.display = "inline-block";
   document.getElementById("fgjd2").style.display = "inline-block";
   document.getElementById("loads0").style.display = "none";
-  
-  
 }, 200)
+
+setTimeout(function()
+{
+  document.getElementById("load_i").style.display = "none";
+}, 400)
+
+setTimeout(function()
+{
+  
+  ichiosi_img.innerHTML = '<img class="uwa" src="https://umaidango.github.io/kabegami/index_files/nyanta1.jpg" style="margin-left: -9px;width: 325px;border-radius: 5px;">';
+  ichiosi_text.innerHTML = '<div style="margin-top: 70px;"><a style="color:#000;" href="https://umaidango.github.io/kabegami/wallpapers/nyanta1"><font style="font-weight:bold; font-size:22px;">にゃん太さんの壁紙</font><br>ぷりんとハムスター。</a></div>';
+}, 800)
 
 
 

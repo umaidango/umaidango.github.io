@@ -1,3 +1,6 @@
+
+
+
 function OpenPurin_a(){
     document.getElementById("user_purin").style.display = "block";
 
@@ -35,5 +38,15 @@ function OpenNyanta_a(){
 
 function CloseNyanta_a(){
     document.getElementById("user_Nyanta").style.display = "none";
+
+}
+
+function OpenNo10_a(){
+    document.getElementById("user_No10").style.display = "block";
+
+}
+
+function CloseNo10_a(){
+    document.getElementById("user_No10").style.display = "none";
 
 }
