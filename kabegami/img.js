@@ -4,7 +4,7 @@
 
 
 setTimeout(function() {
-    na1.innerHTML = '<img class="uwa" src="https://umaidango.github.io/kabegami/index_files/purin-1i.png" style="margin-left: -9px;width: 307px;height: 165px;">';
+    na1.innerHTML = '<img class="uwa" src="https://umaidango.github.io/kabegami/index_files/rai-1.png" style="margin-left: -9px;width: 307px;height: 165px;">';
     na2.innerHTML = '<img class="uwa" src="https://umaidango.github.io/kabegami/index_files/nyanta1.jpg" style="margin-left: -9px;width: 307px;height: 165px;">';
     na3.innerHTML = '<img class="uwa" src="https://umaidango.github.io/kabegami/index_files/purin-5.png" style="width: 307px;height: 164px;margin-left: -10px;/*! display: none; */">';
   
@@ -44,6 +44,13 @@ setTimeout(function(){
 
 setTimeout(function(){
   k22c.innerHTML = '<img class="img" width="50" height="50" src="https://umaidango.github.io/kabegami/index_files/purin-4.png">';
+
+
+}, 100)
+
+setTimeout(function(){
+  k23c.innerHTML = '<img class="img" width="50" height="50" src="https://umaidango.github.io/kabegami/index_files/purin-1i.png">';
+
 }, 100)
 
 
@@ -73,10 +80,26 @@ setTimeout(function()
 setTimeout(function()
 {
   
-  ichiosi_img.innerHTML = '<img class="uwa" src="https://umaidango.github.io/kabegami/index_files/nyanta1.jpg" style="margin-left: -9px;width: 325px;border-radius: 5px;">';
-  ichiosi_text.innerHTML = '<div style="margin-top: 70px;"><a style="color:#000;" href="https://umaidango.github.io/kabegami/wallpapers/nyanta1"><font style="font-weight:bold; font-size:22px;">にゃん太さんの壁紙</font><br>ぷりんとハムスター。</a></div>';
+  ichiosi_img.innerHTML = '<img class="uwa" src="https://umaidango.github.io/kabegami/index_files/umaidango-15.png" style="margin-left: -9px;width: 325px;border-radius: 5px;">';
+  ichiosi_text.innerHTML = '<div style="margin-top: 70px;"><a style="color:#000;" href="https://umaidango.github.io/kabegami/wallpapers/umaidango-15"><font style="font-weight:bold; font-size:22px;"> Kabegami (公式) の壁紙</font><br>女の子。</a></div>';
 }, 800)
 
+function a1aa(){
+  messagebox.innerHTML = '<div class="message_up" id="messagebox_in">ダミーです。</div>';
+
+  setTimeout(function()
+  {
+    messagebox.innerHTML = '';
+  }, 5000)
+}
 
 
+function a2aa(){
+  messagebox.innerHTML = '<div class="message_up" id="messagebox_in">ブログです！！</div>';
+
+  setTimeout(function()
+  {
+    messagebox.innerHTML = '';
+  }, 5000)
+}
 

@@ -50,3 +50,13 @@ function CloseNo10_a(){
     document.getElementById("user_No10").style.display = "none";
 
 }
+
+function OpenRai_a(){
+    document.getElementById("user_Rai").style.display = "block";
+
+}
+
+function CloseRai_a(){
+    document.getElementById("user_Rai").style.display = "none";
+
+}
