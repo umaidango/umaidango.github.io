@@ -7,12 +7,28 @@
 #pc_content{
     display: none;
 }
+
+#content{
+    display: none;
+}
+
+#mobile_content{
+    display: block;
+}
 }
 
 @media screen and (min-width: 767px) {
 /* ここに横幅が767pxより大きい時に発動するスタイルを記述 */
 #pc_content{
     display: inline-block;
+}
+
+#content{
+    display: block;
+}
+
+#mobile_content{
+    display: none;
 }
 }
 
@@ -147,6 +163,25 @@ a{
 <div style="position: fixed; bottom:0px;" id="footer_1">(c) 2024 - U Software Group</div>
 </footer>
 </div>
+
+
+
+<div id="mobile_content">
+    <div style="margin: 10px auto;"><div style="height: 12vh;"></div>
+    <div><font style="vertical-align: 40%; color:black;">
+    
+    
+    
+    </p><div class="silicon"></div>
+    <div class="h-anime" style="   font-size: 100%; padding: 20px;  border-radius: 4px;" wight="815">&nbsp;
+    <img style="width: 100%;margin-left: -40px;min-width: 480px;max-width: 600px;" src="https://umaidango.github.io/sp/top.jpg">
+    </div>
+    <a href="http://umaidango.y.ribbon.to/bbs/">
+      <div style="width: 64%;text-align: center;padding: 25px;font-size: 25px;border-radius: 50px;border: 1px #eee solid;background: #3b6fb1;color: #fff;margin: 20px;">チピ掲示板</div></a><a href="/me/">
+      <div style="width: 64%;text-align: center;padding: 25px;font-size: 20px;border-radius: 50px;border: 1px #eee solid;background: #3b6fb1;color: #fff;margin: 20px;">うまいだんごのホームページ</div></a>
+    &nbsp;</font></div></div></div>
+        <footer>(c) 2024 - U Software Group</footer>
+
 <script>
 function menu_open(){
 document.getElementById("menu").style.display = 'block';
