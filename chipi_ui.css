@@ -1,0 +1,94 @@
+@media screen and (max-width: 1250px)
+{
+    #pc_content{
+        display: none;
+      }
+}
+
+@media screen and (min-width: 1250px)
+{
+    #pc_content{
+        display: inline-block;
+      }
+}
+
+@media screen and (max-width: 800px) {
+/* ここに横幅が767px以下の時に発動するスタイルを記述 */
+
+
+#content{
+  display: none;
+}
+
+#mobile_content{
+  display: block;
+}
+}
+
+@media screen and (min-width: 800px) {
+/* ここに横幅が767pxより大きい時に発動するスタイルを記述 */
+
+
+#content{
+  display: block;
+}
+
+#mobile_content{
+  display: none;
+}
+}
+
+
+
+@media screen and (max-width: 1500px) {
+/* ここに横幅が767px以下の時に発動するスタイルを記述 */
+#text_top{
+  font-size: 1.8rem;
+  top: 75%;
+  left: 50%;
+}
+
+.top_img{
+  height: 375px;
+}
+}
+
+@media screen and (min-width: 1500px) {
+/* ここに横幅が767pxより大きい時に発動するスタイルを記述 */
+#text_top{
+  font-size: 3em;
+
+  top: 65%;
+  left: 50%;
+}
+
+.top_img{
+
+}
+
+}
+
+*{
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+a{
+  color:#000;
+  text-decoration: none;
+}
+
+@keyframes updown-anime {
+0% {
+  transform: translate(-100px, -100px);
+  }
+
+
+100% {
+  transform: translate(0px, 0px);
+  }
+
+}
+
+#menu{
+  animation: updown-anime 0.2s 1; 
+}
