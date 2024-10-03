@@ -92,3 +92,33 @@ a{
 #menu{
   animation: updown-anime 0.2s 1; 
 }
+.select_img{
+  background: #ddd;
+  cursor: pointer;
+}
+.select_img:hover{
+  background: #b6e8ff;
+  cursor: pointer;
+}
+
+@keyframes top-img-right{
+  0% {
+    transform: translateX(100%)
+    }
+  
+  
+  100% {
+    transform: translateX(0%)
+    }
+}
+
+@keyframes top-img-left{
+  0% {
+    transform: translateX(-100%)
+    }
+  
+  
+  100% {
+    transform: translateX(0%)
+    }
+}
