@@ -1,6 +1,20 @@
 
 
 
+@media screen and (max-width: 800px)
+{
+    #logo_text{
+        display:none;
+    }
+}
+
+@media screen and (min-width: 800px)
+{
+    
+    #logo_text{
+        display:inline-block;
+    }
+}
 
 *{
     font-family: Noto Sans JP;
