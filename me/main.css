@@ -1,0 +1,132 @@
+
+
+
+
+*{
+    font-family: Noto Sans JP;
+}
+
+ul{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+
+li{
+    display: inline-block;
+    margin-right:10px;
+    margin-left: 10px;
+}
+
+a li{
+    color:black;
+    text-decoration: none;
+}
+
+#link_content{
+  text-align: center;
+  margin-left: -45px;
+
+}
+
+#main_header{
+  background: #e5ffb6;
+  margin: -8px;
+  padding: 2px;
+  position: fixed;
+  width: 80%;
+  border-bottom-right-radius: 30px;
+  margin-top: -55px;
+  min-width: 330px;
+  max-width: 600px;
+  z-index: 3;
+}
+
+#logo{
+  border-radius: 50%;
+  width: 48px;
+  margin-bottom: -56px;
+  margin-top: 50px;
+  margin-left: 20px;
+  cursor: pointer;
+
+}
+
+#message1{
+  display: none;
+  position: fixed;
+  left: 80px;
+  background: #fcfcfc;
+  border-radius: 10000px;
+  border-bottom-left-radius: 0px;
+  padding: 0px 4px;
+  top:10px;
+}
+
+ 
+
+@keyframes updown-anime {
+  0% {
+    transform: translate(-100px, -100px);
+    
+    }
+  
+  
+  100% {
+    transform: translate(0px, 0px);
+    }
+  
+  }
+  
+
+  @keyframes downup-anime {
+    0% {
+      transform: translate(0px, 0px);
+      
+      }
+    
+    
+    100% {
+      transform: translate(-100px, -100px);
+      
+      }
+    
+    }
+   
+
+    @keyframes display_anime1 {
+      0% {
+        clip-path: circle(0px);
+        
+        }
+      
+      
+      100% {
+        clip-path: circle(100%);
+        
+        }
+      
+      }
+    
+    @keyframes anime_up_01 {
+
+      0%{
+        clip-path: polygon(441px 13px, 47.9% 28px, 436px 23.13%, 415px 22px);
+      }
+
+      100%{
+        clip-path: polygon(-17px 94px, -38.61% -19px, 138px -33.69%, 215px 92px);
+      }
+      
+    }
+     
+  #picup_text span{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    animation: anime_up_01;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  
