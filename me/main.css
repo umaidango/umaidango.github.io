@@ -129,4 +129,8 @@ a li{
     animation-fill-mode: forwards;
   }
 
-  
+
+
+#picup:hover{
+    box-shadow:0px 0px 20px 2px #888;
+}
