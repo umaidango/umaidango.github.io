@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html><head>
     <title>うまいだんごのホームページ</title>
     <meta name="description" content="umaidango(うまいだんご)のホームページです！！">
@@ -8,6 +8,9 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
         </style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+</style>
     <link rel="stylesheet" type="text/css" href="main.css">
     
 </head>
@@ -34,10 +37,13 @@
     <div id="content">
    
     <div style="height: 12vh;"></div>
-    <div style="text-align: center;margin: 0 auto;animation: display_anime1;animation-duration: 1.5s;animation-fill-mode: forwards;">
-        <div id="picup_text"><span>PICUP IMG</span></div>
+    <div id="scroll_text"><marquee scrollamount="10">
+  <span style="font-size: 25px;font-family: DotGothic16;color: #fff;">うまいだんごのホームページへようこそ！！！　うまいだんごのプロフィールみたいなものですね</span>
+  </marquee></div>
+<div id="picup" style="text-align: center;margin: 0 auto;animation: display_anime1;animation-duration: 1.5s;animation-fill-mode: forwards;border-radius: 8px;padding: 20px;background: #dbfff3;">
+        <div id="picup_text" style=""><span>PICUP IMG</span></div>
         <a href="https://ku-daa.web.app/original_clock.html">
-        <img style="cursor:pointer; text-align: center;margin: 0 auto;width: 100%;max-width: 850px;" src="https://umaidango.github.io/tmp/original_clock_h.jpg">
+        <img id="picup_img" src="https://umaidango.github.io/tmp/original_clock_h.jpg">
   </a></div>
 
 <div style="height: 4vh;"></div>
