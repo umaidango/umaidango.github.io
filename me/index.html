@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html><head>
     <title>うまいだんごのホームページ</title>
     <meta name="description" content="umaidango(うまいだんご)のホームページです！！">
@@ -15,8 +15,11 @@
     
 </head>
 <body>
+    <div id="top">
+        
+    </div>
     <header>
-        <div id="main_header">
+        <div id="main_header" style="display: block;">
             
                 
             <img onclick="menu_open()" src="menu.svg" style="cursor: pointer;vertical-align: -15%;margin-right: -13px;margin-left: -8px;width: 64px;height: 42px;margin-bottom: -50px;">
@@ -24,6 +27,14 @@
 <span id="logo_text" style="vertical-align: -165%;margin-bottom: -38px;margin-left: 5px;">うまいだんご</span>
             <div id="message1" style="display: none;">うまいだんごですっ！</div>
             <div id="link_content"><ul><a href="/me/"><li>ホーム</li></a><a href="/me/link.html"><li>リンク集</li></a></ul></div>
+    </div><div id="header_sc" style="margin: -8px;padding: 2px;position: fixed;width: 100%;margin-top: -55px;z-index: 2;">
+            
+                
+            <img onclick="menu_open()" src="menu.svg" style="cursor: pointer;vertical-align: -15%;margin-right: -13px;margin-left: -8px;width: 64px;height: 42px;margin-bottom: -50px;">
+<img src="icon.jpg" id="logo">
+<span id="logo_text" style="vertical-align: -165%;margin-bottom: -38px;margin-left: 5px;">うまいだんご</span>
+            <div id="message1" style="display: none;">うまいだんごですっ！</div>
+            <div id="link_content" style="margin-left: -42%;"><ul><a href="/me/"><li>ホーム</li></a><a href="/me/link.html"><li>リンク集</li></a></ul></div>
     </div></header>
     <div id="menu" style="display: none; margin: -8px; padding: 12px 50px 8px 27px; box-shadow: rgb(238, 238, 238) 0px 2px 5px; position: fixed; min-width: 280px; z-index: 5; background: rgb(255, 235, 209); top: 4px; border-bottom-right-radius: 15px; animation: 0.3s downup-anime;">
         <!--2024,u software--> 
@@ -39,7 +50,7 @@
    
     <div style="height: 12vh;"></div>
     <div id="scroll_text"><marquee scrollamount="10">
-  <span style="font-size: 25px;font-family: DotGothic16;color: #fff;">うまいだんごのホームページへようこそ！！！　うまいだんごのプロフィールみたいなものですね</span>
+  <span style="font-size: 25px;font-family: DotGothic16;color: #fff;">うまいだんごのホームページへようこそ！！</span>
   </marquee></div>
 <div style="text-align: center;margin: 0 auto;animation: display_anime1;animation-duration: 1.5s;animation-fill-mode: forwards;border-radius: 8px;padding: 20px;background: #dbfff3;width: 45%;">
         <div id="picup_text" style=""><span>PICUP IMG</span></div>
@@ -55,6 +66,8 @@
     猫とハムスターが好きな学生です！！
     <br>
 趣味は、ハドフのジャンクPC漁りと、GUIアプリ開発です。現在は、Winだけですが、Linux用にもつくりたいですねー
+<br>
+<img src="icon.jpg" style="border-radius: 50%;margin: 32px;">
 </span>
 </div>
 
@@ -124,6 +137,7 @@
     
     <script src="main.js"></script>
     
+
 
 
 </body></html>
