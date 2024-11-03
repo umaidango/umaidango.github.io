@@ -12,7 +12,6 @@ element.addEventListener('mouseover', function() {
 
 
 
-
 // ホバーイベントの追加
 element2.addEventListener('mouseover', function() {
     element2.style.display = 'block';
