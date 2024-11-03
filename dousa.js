@@ -11,7 +11,16 @@ element.addEventListener('mouseover', function() {
 });
 
 
+
+
 // ホバーイベントの追加
-element.addEventListener('mouseout', function() {
+element2.addEventListener('mouseover', function() {
+    element2.style.display = 'block';
+});
+
+
+// ホバーイベントの追加
+element2.addEventListener('mouseout', function() {
     element2.style.display = 'none';
 });
+
