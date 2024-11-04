@@ -20,11 +20,13 @@ element.addEventListener('mouseout', function() {
 function menu_open(){
     document.getElementById('menu').style.animation = '0.3s updown-anime';
     document.getElementById('menu').style.display = 'block';
+    document.getElementById('close_b2').style.display = 'block';
     
 }
 
 function menu_close(){
     document.getElementById('menu').style.animation = '0.3s downup-anime';
+    document.getElementById('close_b2').style.display = 'none';
     setTimeout(() => {
     document.getElementById('menu').style.display = 'none';
     } , "280");
