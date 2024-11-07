@@ -3,27 +3,32 @@
 
 @media screen and (max-width: 800px)
 {
-    
+
+        
     #content{
-        display:block;
+        display:none;
     }
 
     
     #mobile_content{
-        display:none;
+        display:block;
     }
+
+    
 }
 
 @media screen and (min-width: 800px)
 {
+
+    
     
     #content{
-        display:none;
+        display:block;
     }
 
     
     #mobile_content{
-        display:block;
+        display:none;
     }
 }
 
