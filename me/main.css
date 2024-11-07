@@ -3,7 +3,13 @@
 
 @media screen and (max-width: 800px)
 {
+    
     #content{
+        display:block;
+    }
+
+    
+    #mobile_content{
         display:none;
     }
 }
@@ -11,8 +17,13 @@
 @media screen and (min-width: 800px)
 {
     
+    #content{
+        display:none;
+    }
+
+    
     #mobile_content{
-        display:inline-block;
+        display:block;
     }
 }
 
