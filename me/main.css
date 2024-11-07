@@ -3,7 +3,7 @@
 
 @media screen and (max-width: 800px)
 {
-    #logo_text{
+    #content{
         display:none;
     }
 }
@@ -11,7 +11,7 @@
 @media screen and (min-width: 800px)
 {
     
-    #logo_text{
+    #mobile_content{
         display:inline-block;
     }
 }
