@@ -64,11 +64,8 @@ a li{
   margin: -8px;
   padding: 2px;
   position: fixed;
-  width: 80%;
-  border-bottom-right-radius: 30px;
+  width: 100%;
   margin-top: -55px;
-  min-width: 330px;
-  max-width: 600px;
   z-index: 3;
 }
 
@@ -189,3 +186,7 @@ a li{
 }
 
 
+
+#umaidango_txt{
+  vertical-align: -165%;margin-bottom: -38px;margin-left: 5px;display: inline-block;
+}
