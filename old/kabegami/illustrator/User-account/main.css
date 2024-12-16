@@ -1,0 +1,73 @@
+{*
+    border-radius: 10px;
+    
+  
+ font-family: "M PLUS 1", sans-serif;
+font-optical-sizing: auto;
+font-style: normal;
+}
+
+a{
+    text-decoration:none
+}
+
+.img{
+    width: 180px; height: 85px;
+   }
+ 
+   button{
+     background-color: #1d82bf;
+   color: #fff;border-radius: 10px;
+ 
+ 
+   }
+
+.user {
+    display: inline-block;
+  position: relative;
+  border-radius: 20px;
+  background-image: url(user-icon.png);
+  font-size: 85px;
+  overflow: hidden;
+  width: 124px;
+  height: 124px;
+}
+
+.user-name{
+    font-size: 38px;
+    vertical-align: 50%;
+    display: inline-block;
+}
+   
+  
+  
+     .img{
+     width: 180px; height: 85px;
+    }
+  
+    button{
+      background-color: #1d82bf;
+    color: #fff;
+  
+  
+    }
+    
+    a{text-decoration:none;}
+
+    .waku{
+      border-radius: 10px;
+      background-color: rgb(185, 222, 255);
+      width: 230px;
+      display: inline-block;
+      margin:10px;
+    }   
+
+    .hoka{
+
+        font-size: 20px;
+  vertical-align: 100%;
+  display: inline-block;
+
+    }
+
+    

@@ -1,0 +1,424 @@
+<html><head>
+  
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=0.75"><link rel="stylesheet" type="text/css" href="https://umaidango.github.io/kabegami/new.css"><link rel="stylesheet" type="text/css" href="https://umaidango.github.io/kabegami/modal.css"><link rel="stylesheet" type="text/css" href="https://unpkg.com/tippy.js@5.0.3/animations/shift-toward-subtle.css"><link rel="stylesheet" type="text/css" href="https://unpkg.com/tippy.js@5.0.3/themes/light-border.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <style>*{
+   scroll-behavior: smooth;
+  font-family:Noto Sans JP;
+  }
+  
+  @media screen and (max-width: 1800px) {
+  
+  .fgjd{
+    margin-top: 20px;
+  }
+  
+  
+  }
+  
+  @media screen and (min-width: 1800px) {
+  
+  .fgjd{
+    margin-top: -20px;
+  }
+  
+  .adsimg1c{
+    display: inline-block;
+  }
+  }
+  
+  @media screen and (max-width: 1600px) {
+    .adsimg1c{
+    display: none;
+  }
+  }
+  
+  .sw:hover{
+   font-weight:bold;
+   text-decoration:underline;
+   }
+  
+  .header-button:hover{
+   background-color: aliceblue;
+  border-radius: 4px;
+  }
+  
+  button:hover{
+   box-shadow: 2px 10px 13px #f0f0f0;
+  font-weight: bold;
+  color: #e8e8e8;
+  }
+  
+  
+  .banana1:not(:target) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  }
+  
+  .banana1 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  }
+  
+  
+  #page-top a{
+  background:#942D2F;
+  color:#fff;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  padding:20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  transition: all 0.3s;
+  }
+  
+  #page-top a:hover{
+  background: #777;
+  }
+  
+    dialog{
+      z-index:3;
+    }
+  
+  
+  .loop-area {
+    display: flex;
+    animation: loop-slide 20s infinite linear 1s both;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .loop-area .content {
+    width: 500px;
+  }
+  @keyframes loop-slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+    
+    
+    li{
+      list-style:none;
+      
+    }
+    
+    details {
+    margin: 14px;
+    padding: 10px;
+    height: 10px;
+    transition: .5s;
+  }
+  details[open] {
+    height: 166px;
+    background: #ffffff8a;
+    padding: 11px;
+    border-radius: 0px;
+    border-top-left-radius: 18px;
+  }
+  
+  
+  .loader2 {
+    width: 22px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 4px solid lightblue;
+    border-right-color: #1b9b89;
+    animation: l2 1s infinite linear;
+  }
+  @keyframes l2 {to{transform: rotate(1turn)}}
+  .sample01 {
+    margin: 0 auto 40px;
+    width: 568px;
+    font-size: 28px;
+    text-align: center;
+    overflow: hidden;
+    position: fixed;
+    text-shadow: 3px 3px 0 #fff, -3px 3px 0 #fff, -3px -3px 0 #fff, 3px -3px 0 #fff;
+    font-weight: bold;
+    margin-left: 25px;
+    height: 323px;
+  }
+  .sample01 p{
+  margin:0;
+  display : inline-block;
+  padding-left: 100%;
+  white-space : nowrap;
+  line-height : 1em;
+  animation : scrollSample01 20s linear infinite;
+  }
+  @keyframes scrollSample01{
+  0% { transform: translateX(0)}
+  100% { transform: translateX(-100%)}
+  }
+  
+    
+  .sample02 {
+  margin : 0 auto 40px;
+  text-align : center;
+  overflow : hidden;
+    width: 568px;
+    font-size: 28px;
+    position: fixed;
+    text-shadow: 3px 3px 0 #fff, -3px 3px 0 #fff, -3px -3px 0 #fff, 3px -3px 0 #fff;
+    font-weight: bold;
+    margin-left: 25px;
+    height: 323px;
+  }
+  .sample02 ul{
+  margin:0;
+  display : inline-block;
+  padding-left: 100%;
+  white-space : nowrap;
+  line-height : 1em;
+  animation : scrollSample02 15s linear infinite;
+  }
+  .sample02 ul li{
+  display:inline;
+  margin:0 100px 0 0;
+  }
+  .sample02 ul li:nth-child(1){
+  font-weight:bold;
+  }
+  .sample02 ul li:nth-child(2){
+  color:#F00;
+  }
+  .sample02 ul li:nth-child(3){
+  
+  }
+  .sample02 ul li:last-child{
+  color:#F90;
+  margin:0;
+  }
+  @keyframes scrollSample02{
+  0% { transform: translateX(0)}
+  100% { transform: translateX(-100%)}
+  }
+  
+  ul li.remove span {
+    color: rgb(255, 251, 0);
+    
+  }
+  
+  .osu3{
+    border-radius: 10px;
+    background-color: rgb(185, 222, 255);
+    width: 348px;
+    display: inline-block;
+    margin: 10px;
+    height: 10px;
+    height: 237px;
+    border: 1px #9ec8cc solid;
+    box-shadow: 0 2px 3px 0 #cdcedb;
+  }
+  
+  .osu3frame{
+    display: inline-block;
+    width: 290px;
+    height: 165px;
+    background: #0040ff3d;
+  }
+  
+  .osu3wf{
+    width: 180px;
+    height: 85px;
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    background: #0040ff3d;
+    margin-top: 12px;
+  
+  }
+  
+  .popup{
+    padding:4px;
+    padding-left: 5px;
+    padding-right:5px;
+    border:1px #0000007a solid;
+    background: #fff;
+    position: fixed;
+    z-index: 10;
+    
+  }
+  
+  @keyframes fadeInAnime{
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+  
+  
+  .fadein{
+    animation-name: fadeInAnime;
+    animation-duration: 0.35s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: 0s;
+  
+    
+  }
+  
+  @keyframes fadeIn2a{
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes f1{
+    from {
+      
+      transform: translateY(-50%);
+    }
+  
+    to {
+      
+      transform: translateY(0%);
+    }
+  }
+  
+  .f1c{
+    animation-name: f1;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+  
+  .fadein2{
+    animation-name: fadeIn2a;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: 0s;
+  }
+    
+    .poti:hover{
+      background:gray;
+      padding:2px;
+      border-radius:4px;
+      color:white;
+    }
+  
+  /* HTML: <div class="loader3"></div> */
+  .loader3 {
+  width: 40px;
+  aspect-ratio: 1;
+  --c: linear-gradient(#000 0 0);
+  --r1: radial-gradient(farthest-side at bottom,#000 93%,#0000);
+  --r2: radial-gradient(farthest-side at top   ,#000 93%,#0000);
+  background: 
+    var(--c) ,var(--r1),var(--r2),
+    var(--c) ,var(--r1),var(--r2),
+    var(--c) ,var(--r1),var(--r2);
+  background-repeat: no-repeat;
+  animation: l1 1s infinite alternate;
+  }
+  @keyframes l1 {
+  0%,10% {
+    background-size: 8px 0,8px 4px,8px 4px;
+    background-position: 0 50%,0 calc(50% - 2px),0 calc(50% + 2px),50% 50%,50% calc(50% - 2px),50% calc(50% + 2px),100% 50%,100% calc(50% - 2px),100% calc(50% + 2px);
+  }
+  90%,100% {
+    background-size: 8px 100%,8px 4px, 8px 4px;
+    background-position: 0 50%,0 -2px,0 calc(100% + 2px),50% 50%,50% -2px,50% calc(100% + 2px),100% 50%,100% -2px,100% calc(100% + 2px);
+  }
+  }
+  
+  .waku-new{
+    display: inline-block;
+  border: 2px #eee solid;
+  padding: 10px;
+  background: #fff;
+  width: 500px;
+  margin-left:30px;
+  }
+
+.f1c:hover{
+  text-decoration:underline;
+}
+
+.f1c{
+  font-size: 18px;
+vertical-align: 77%;
+margin-left: 8px;
+font-family: Roboto , Noto Sans JP;
+color: #222;
+
+}
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+  
+  
+  <title>【BGM視聴サイト】Chipi Audio │ About
+  </title><link rel="shortcut icon" sizes="64x64" href="icon2.png"><meta name="description" content="作業中のBGMなどに Chipi Audioを使ってみよう！"></head><body style="">
+    
+    
+    
+    
+    
+    <header style="position: fixed;border-bottom: 2px #ddd solid;border-radius: 0px;width: 100%;margin-left: -9px;margin-right: 9px;background: #ffff;">
+    <div class="logo" style="display: inline-block;padding: 10px;margin: 5px;margin-left: 22px;">
+  <a href="https://umaidango.github.io/chipi-audio/"><img style="height: 45px;border-radius: 0px;" src="chipiaudio.svg">
+
+</a>
+  
+  
+  </div><a href="index.html"><font class="f1c">ホーム</font></a><a href="about.html" style="margin-left: 10px;"><font class="f1c">Chipi Audioとは</font></a><span style="display: inline-block;border: 1px #ddd solid;border-top: 18px #ddd solid;vertical-align: 55%;margin-left: 19px;"></span>
+<a style="margin-left: 10px;" href="https://umaidango.github.io/kabegami/"><font class="f1c" style="">壁紙</font></a><a style="margin-left: 10px;" href="https://umaidango.github.io/commons/"><font class="f1c">コモンズ</font></a><a style="margin-left: 10px;" href="https://umaidango.github.io/bbs/"><font class="f1c">掲示板</font></a></header>
+    
+    
+    <div style="height:20vh;"></div>
+<div><font style="font-family: roboto, Noto Sans Jp;font-weight: normal;font-size: 32px;">Chipi Audioとは</font>
+    <p>Chipi Audioは作業BGMなどを視聴できるサイトです。　勉強中や、何かをするときなどにお使いください</p>
+  
+  </div>
+
+<div style="height: 2vh;"></div><div style=""><h2>U Software Privacy Policy</h2><p>
+</p><h3>説明<!--3-->
+<p style="font-size: 18px;font-weight: normal;"><font class="text">
+  当アプリ製作チーム(umaidango.github.io)は、個人情報の重要性を認識し、個人情報を保護することが社会的責務であると考え、個人情報に関する法令を遵守
+し、当サイトで取扱う個人情報の取得、利用、管理を適正に行います。 
+</font></p><p></p></h3><h3>範囲<!--3-->
+<p><font class="text" style="font-size: 18px;font-weight: normal;">
+このプライバシーポリシーは、お客様の個人情報もしくはそれに準ずる情報を取り扱う際に、当サイトが遵守する方針を示したものです。</font></p><p></p><p></p></h3><h3>個人情報の利用目的<!--3-->
+<p><font class="text" style="font-size: 18px;font-weight: normal;">このサイトは、以下のために情報を使用します。 お問い合わせなど</font></p><p></p><p></p></h3><h3 style="font-size: 18px;font-weight: normal;">本プライバシーポリシーは、事前の予告なく変更することがあります。<!--3-->
+<p></p><p></p></h3>
+  </div>
+    
+    <footer>
+      <font style="font-size:18px;">(c) 2024 - U Software</font>
+    </footer>
+    
+    <script>
+      setTimeout(function() {
+          document.getElementById("load").style.display = "none";  
+          view.innerHTML = '<div id="blog1" class="waku-new" style="margin-left: 0px;"><a href="#blog1up"><img src="img/blog1.png" style="width: 500px;border-radius: 4px;"></a><p style="margin-left: 0px;border-top: 1px #cecece solid;border-radius: 0px;margin-top: 10px;padding-top: 5px;margin-bottom: -3px;"><a href="styles/blog1.html">ブログデザイン１</a><a style="margin-left: 250px;" href="#blog1c">コード</a><a href="styles/blog1.html" style="margin-left: 30px;">View</a></p></div><div id="blog1" class="waku-new" style=""><a href="#blog-page1up"><img style="width: 500px;border-radius: 4px;height: 250px;" src="img/blog-page1.png"></a><p style="margin-left: 0px;border-top: 1px #cecece solid;border-radius: 0px;margin-top: 10px;padding-top: 5px;margin-bottom: -3px;"><a href="styles/blog-page1.html">ブログページ１</a><a style="margin-left: 270px;" href="#blog-page1c">コード</a><a style="margin-left: 27px;" href="styles/blog-page1.html">View</a></p></div>'
+    }, 350)
+  
+    </script>
+    
+    </body></html>

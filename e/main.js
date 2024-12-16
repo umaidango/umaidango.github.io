@@ -1,2 +1,0 @@
-header.innerHTML= '<div class="main-header" style="margin: -8px;padding: 15px;border-bottom: 1px #ddd solid;"><img src="logo.png" style="height: 82px;"><div style="display: inline-block;vertical-align: 105%;"><a href="/e/"><font class="header-buttons">ホーム</font></a><a href="/e/about"><font class="header-buttons">TWO LINE PICTURESとは</font></a></div></div>';
-footer.innerHTML = '<footer style="text-align: center;margin-top: 50px;">© 2024 - TWO LINE PICTURES</footer>';

@@ -1,2 +1,0 @@
-<!###COMMENT_TABLE###!>
-
