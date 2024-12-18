@@ -1,14 +1,15 @@
-  
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
         document.getElementById("main_header").style.boxShadow = '0px 0px 4px 1px #ddd';
-        document.getElementById("main_header").style.width = '260px';
+        document.getElementById("main_header").style.width = '150px';
         document.getElementById("main_header").style.borderRadius = '10px';
+        document.getElementById("umaidango_txt").style.display = 'none';
     } else {
         document.getElementById("main_header").style.boxShadow = 'none';
         document.getElementById("main_header").style.width = '100%';
         document.getElementById("main_header").style.borderRadius = '0px';
+        document.getElementById("umaidango_txt").style.display = 'inline-block';
     }
   });
 
