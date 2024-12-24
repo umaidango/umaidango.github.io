@@ -1,303 +1,335 @@
 <!DOCTYPE html>
-<html><head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <title>うまいだんごのホームページ</title>
-    <meta name="description" content="umaidango(うまいだんご)のホームページです！！">
-    <meta name="keywords" content="umaidango,ホームページ,うまいだんご">
-    <link rel="shortcut icon" href="icon.png" sizes="64x64">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
-        </style>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
-</style>
+    <meta name="description" content="うまいだんご(umaidango)は、GUIソフトウェアなどを開発しているプログラマー。U Software Groupの副社長でもある。"/>
+      <style>
+@media screen and (max-width: 800px) {
+        #picup::before{
+            content: "うまいだんご";
+            font-size: 2.5rem;
+            position: absolute;
+            z-index: 2;
+            font-weight: 500;
+            left: 50%;
+            transform: translateX(-44%);
+            margin-top: 80px;
+        }
+    }
 
-    <link rel="stylesheet" type="text/css" href="main.css">
+
+    @media screen and (min-width: 800px) {
+        #picup::before{
+            content: "うまいだんごのサイトへようこそ";
+            font-size: 2.5rem;
+            position: absolute;
+            z-index: 2;
+            font-weight: 500;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 80px;
+        }
+    }
+
+
+        *{
+            font-family: "M PLUS 2";
+            scroll-behavior: smooth;
+
+        }
+
+        a li{
+            display: inline-block;
+            margin: 10px;
+            margin-left: 25px;
+        }
+
+        .li-a{
+            font-size: 1.18rem;
+            list-style: none;
+            
+        }
+        ul a{
+            color: #000;
+            text-decoration: none;
+        }
+
+        #picup_img{
+            height: 35vh;
+            filter: opacity(0.5) blur(2px);
+            width: 100%;
+            overflow: hidden;
+            background: #fff;
+
+    }
+
+
+    .loader {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid #87edff;
+    animation:
+      l20-1 0.8s infinite linear alternate,
+      l20-2 1.6s infinite linear;
+  }
+  @keyframes l20-1{
+     0%    {clip-path: polygon(50% 50%,0       0,  50%   0%,  50%    0%, 50%    0%, 50%    0%, 50%    0% )}
+     12.5% {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100%   0%, 100%   0%, 100%   0% )}
+     25%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 100% 100%, 100% 100% )}
+     50%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+     62.5% {clip-path: polygon(50% 50%,100%    0, 100%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+     75%   {clip-path: polygon(50% 50%,100% 100%, 100% 100%,  100% 100%, 100% 100%, 50%  100%, 0%   100% )}
+     100%  {clip-path: polygon(50% 50%,50%  100%,  50% 100%,   50% 100%,  50% 100%, 50%  100%, 0%   100% )}
+  }
+  @keyframes l20-2{ 
+    0%    {transform:scaleY(1)  rotate(0deg)}
+    49.99%{transform:scaleY(1)  rotate(135deg)}
+    50%   {transform:scaleY(-1) rotate(0deg)}
+    100%  {transform:scaleY(-1) rotate(-135deg)}
+
+    
+  }
+  
+
+    #picup_img img{
+        width: 80%;
+        min-width: 1200px;
+        transform: translateX(-10%);
+    }
+
+
+        @keyframes updown-anime {
+        0%{
+            transform: translate(-50%, 100%);
+            
+        }
+
+        100%{
+            transform: translate(-50%, 0%);
+            
+        }
+        }
+        
+
+        @keyframes downup-anime {
+            0%{
+                
+            transform: translate(-50%, 0%);
+        }
+
+        100%{
+            
+            transform: translate(-50%, 100%);
+            
+        }
+            
+            }
+
+        #navi{
+            border-radius: 20px;
+            padding: 10px;
+            border: 1px #eee solid;
+            /*box-shadow: 0px 0px 4px 0px #ddd;*/
+            width: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 10px;
+            background: #99ff0026;
+            position: fixed;
+
+        }
+
+        #navi::after{
+            content: "うまいだんご";
+            font-size: 1.8rem;
+            vertical-align: 27%;
+            margin-left: 15px;
+        }
+
+
+        .logo{
+            height: 48px;
+            width: 48px;
+            border-radius: 50%;
+        }
+        
+        #menu_open img{
+            height: 35px;
+            width: 64px;
+            vertical-align: 18%;
+            cursor: pointer;
+            margin-left: -10px;
+        }
+
+        .box{
+            margin-left: 5%;
+            padding: 18px;
+        }
+
+
+.huki-left {
+    position: relative;
+    display: inline-block;
+    margin: 1.5em 0 1.5em 15px;
+    min-width: 120px;
+    max-width: 100%;
+    color: #555;
+    font-size: 16px;
+    background: #e0edff;
+    padding: 32px;
+    border-radius: 10px;
+}
+
+.huki-left:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-right: 16px solid #e0edff;
+}
+
+    </style>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic:wght@400;900&display=swap');
+    </style>
     
 </head>
 <body>
-    <div id="top">
-        
-    </div>
-    <header>
-        <div id="main_header" style="display: block; box-shadow: none; width: 100%; border-radius: 0px;">
+    <a id="top_btn" href="#" style="color: rgb(51, 51, 51); display: none;">
+        <div style="position: fixed;bottom: 25px;right: 25px;border-radius: 50%;background: #99ff0026;padding: 12px;width: 80px;height: 80px;text-align: center;"> <span><svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve" style="width: 48px;height: 48px;margin-top: 10px;"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394 l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393 C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"></path> </g></svg></span></div>
+    </a>
+
+
+    <nav>
+        <div id="navi">
+            <span id="menu_open" onclick="menu_o()">
+                <img height="32" src="https://umaidango.github.io/me/menu.svg">
+            </span>
+            <img class="logo" src="image.png">
+        </div>
+      
+    </nav>
+<div style="height:15vh;"></div>
+    <div id="content">
+        <div id="picup">
+            <div id="picup_img">
+                <img src="https://usoftware-gr.github.io/img/tw-header.png">
+            </div>
+        </div>
+        <div id="about" class="box">
+            <div style="height:15vh;"></div>
+            <h1>うまいだんごとは？</h1>
             
+            <div style="display: flex;">
+                <div>
+                    <img style="border-radius: 50%;" height="85" src="image.png">
+
+                    
+                </div>
+                <div>
+                    <ul>
+                        <li class="li-a">U Software Groupの副社長</li>
+                        <li class="li-a">ソフトウェア開発</li>
+                        <li class="li-a">12歳</li>
+                    </ul>
+                   
+                </div>
+          
                 
-            <div id="close_b2" style="position: absolute; top: 56px; left: 22px; display: none;" onclick="menu_close()">
-            <svg viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" style="cursor: pointer;vertical-align: -15%;margin-right: 20px;margin-left: -18px;width: 64px;height: 42px;background: #e5ffb6;">
-  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-  <g id="SVGRepo_iconCarrier"> 
-    <path d="M3 21.32L21 3.32001" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> 
-    <path d="M3 3.32001L21 21.32" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> 
-  </g></svg>
+            </div>
             </div>
 
-<img onclick="menu_open()" src="menu.svg" style="cursor: pointer;vertical-align: -15%;margin-right: -13px;margin-left: -8px;width: 64px;height: 42px;margin-bottom: -50px;">
-<img id="logo" src="icon.png">
-<span id="umaidango_txt">うまいだんご</span>
-            <div style="text-align: center;margin-left: -45px;"><span style="font-size: 25px;display: inline-block;padding: 24px;"></span></div>
+            <div id="works" class="box">
+                <div style="height:15vh;"></div>
+                <h1>活動場所</h1>
+                <div style="display: flex;">
+                    <div>
+                        <img style="border-radius: 50%;" height="85" src="image.png">
+                    </div>
+                    <div class="huki-left">
+                        Youtube、Twitter(x)で活動中！<br>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+            <div id="blog" class="box">
+                <div style="height:15vh;"></div>
+                <h1>日記</h1>
+
+
+            <div id="blog_main">
+                <div class="loader"></div>
+            </div>
+                </div>
+
+
+                <footer style="text-align: center;">
+                    <img src="https://usoftware-gr.github.io/img/top.png">
+                    <br>
+                    <span>©️ 2024 - うまいだんご</span>
+                </footer>
     </div>
-        </header>
-    <div id="menu" style="position: fixed; background: rgb(255, 255, 255); box-shadow: rgb(221, 221, 221) 0px 0px 4px 0px; width: 85%; max-width: 800px; height: 58vh; border-top-left-radius: 30px; border-top-right-radius: 30px; bottom: 0px; z-index: 5; left: 50%; transform: translate(-50%, 0%); display: none; animation: 0.3s downup-anime;">
-        <!--2024,u software--> 
-        
-    <ul id="menu_content" style="list-style: none;/*! text-align: center; */display: block;margin-left: -25px;font-size: 24px;margin-top: 32px;">
-<a href="/me/" style="text-decoration: none;"><li style="display: block;">ホーム</li></a>
+
+    
+
+
+
+</body>
+
+<div id="menu" style="position: fixed; background: rgb(255, 255, 255); box-shadow: rgb(221, 221, 221) 0px 0px 4px 0px; width: 85%; max-width: 800px; height: 58vh; border-top-left-radius: 30px; border-top-right-radius: 30px; bottom: 0px; z-index: 5; left: 50%; transform: translate(-50%, 0%); display: none; animation: 0.3s ease 0s 1 normal none running downup-anime;">
+
+    
+<ul id="menu_content" style="list-style: none;/*! text-align: center; */display: block;margin-left: -25px;font-size: 24px;margin-top: 32px;">
+<a onclick="menu_o()" href="#" style="text-decoration: none;"><li style="display: block;">ホーム</li></a>
+<a onclick="menu_o()" href="#about" style="text-decoration: none;"><li style="display: block;">うまいだんごとは？</li></a>
+<a onclick="menu_o()" href="#works" style="text-decoration: none;"><li style="display: block;">活動場所</li></a>
+<a onclick="menu_o()" href="#blog" style="text-decoration: none;"><li style="display: block;">日記</li></a>
+
 </ul>
-    </div>
-    
-    <div id="content">
-   
-    <div style="height: 12vh;"></div>
-    
 
 
-<div style="height: 4vh;"></div>
-<div style="display: flex;">
-    <div style="width: 52%;margin-top: 7px;">
-<div id="blog_content">
-  <div style="border: 1px #eee solid;padding: 15px;margin: 10px;border-radius: 4px;">
-    
-    <h2>俺のqiita見てほしい</h2><h5>2024/12/24</h5>
 
-  
-  <div>
-  <a href="https://qiita.com/umaidango">こちら</a>です。あんま上げてないけど少しずつ上げていきます！！
-</div></div><div style="border: 1px #eee solid;padding: 15px;margin: 10px;border-radius: 4px;">
-    
-    <h2>ヘッドフォンをヘッドセットにしたら片方聞こえない・ノイズ乗る</h2><h5>2024/11/24</h5>
-
-  
-  <div>
-マイク付きなので、今までヘッドセットとして設定していたんですが、なんかヘッドフォンじゃなくちゃおかしくなっちゃいました。
-</div></div><div style="border: 1px #eee solid;padding: 15px;margin: 10px;border-radius: 4px;">
-    
-    <h2>PythonはGUIに向いていない</h2><h5>2024/11/15</h5>
-
-  
-  <div>Pythonはそもそもロボット制御などなので、PythonでGUIは結構きついのと、そもそも、C++とかC#のようにGUIのデザイナーのやつがないのでC#がお勧めしますね。僕はね。C++はそもそも結構複雑に対して、C#はわかりやすいです。</div></div><div style="border: 1px #eee solid;padding: 15px;margin: 10px;border-radius: 4px;">
-    
-    <h2>ばなななななｎ</h2><h5>2024/11/09</h5>
-<div>うまいよね。　バナナ！</div>
-  
-  </div><div style="border: 1px #eee solid;padding: 15px;margin: 10px;border-radius: 4px;">
-    
-    <h2>初めて、cssのflex使いました。</h2><h5>2024/11/07</h5>
-<div>このサイトはdisplay:flex;を使って、二分割にしてみました！！
-結構いいんじゃないですかね！</div>
-  
-  </div>
-</div>
 </div>
 
 
-    
-    <div style="width: 48%;"><div style="border-radius: 3px;background: aliceblue;padding: 25px;margin: 18px;box-shadow: 0px 0px 10px -1px #cdd4db;">
-    <h1 style="font-size: 1.4rem;">うまいだんごについて</h1>
-    
-  <span style="font-size: 0.95rem;">・何かしらの障害持ち（精神）
-<br>・１２歳
-<br>・ジャンカー
-<br>・C#遣い
-<br>
-    猫とハムスターが好きな学生です！！
-    <br>
-趣味は、ハドフのジャンクPC漁りと、GUIアプリ開発です。現在は、Winだけですが、Linux用にもつくりたいですねー
-    <br>
-    ウェブ系はだいたいできると思ってますが、これからもよいウェブサイトを作れるように頑張っていく💪
-<br><br><img style="border-radius: 50%;margin: 32px;height: 124px;box-shadow: 0px 0px 4px 1px #cac1c1;" src="icon.png">
-</span>
-</div><div style="border-radius: 3px;background: #fffad2;padding: 25px;margin: 18px;box-shadow: 0px 0px 10px -1px #cdd4db;">
-    <h1 style="font-size: 1.4rem;">使える言語</h1>
-    <p>
-  <span style="font-size: 24px;">HTML</span></p>
-  <p>
-    <span style="font-size: 24px;">CSS</span></p>
-    <p>
-        <span style="font-size: 24px;">Python</span></p>
-    <p>
-        <span style="font-size: 24px;">C#</span></p>
-    <p>
-        <span style="font-size: 24px;">Javascript</span></p>
-</div><div style="border-radius: 3px;background: #dbffda;padding: 25px;margin: 18px;box-shadow: 0px 0px 10px -1px #cdd4db;">
-    <h1 style="font-size: 1.4rem;">リンク集</h1>
-  <span>
-    <p>
-        <a href="https://x.com/dango12_dango" style="text-decoration: none;">
-    <span style="color: black;font-size: 20px;">
-        Twitter
-    </span>
-</a>
-</p>
-
-    <p>
-        <a style="text-decoration: none;" href="https://usoftware-gr.github.io">
-            <span style="color: black;font-size: 20px;">
-                U Software Group
-            </span>
-        </a>
-    </p>
-    
-    <p>
-        <a href="https://bsky.app/profile/umaidango.bsky.social" style="text-decoration: none;">
-            <span style="color: black;font-size: 20px;">
-                Blue Sky
-            </span>
-        </a>
-    </p>
-    
-</span>  
-<div>
-</div>
-
-
-
-    </div></div></div>
-
-
-
-
-
-    (c) 2024 - うまいだんご
-
-    
-    </div>
-
-
-
-<div id="mobile_content">
-   
-    <div style="height: 12vh;"></div>
-    <div id="scroll_text"><marquee scrollamount="10">
-  <span style="font-size: 25px;font-family: DotGothic16;color: #fff;">うまいだんごのホームページへようこそ！！</span>
-  </marquee></div>
-
-
-<div style="height: 4vh;"></div>
-<div style="border-radius: 3px;background: aliceblue;padding: 25px;margin: 18px;box-shadow: 0px 0px 10px -1px #cdd4db;">
-    <h1 style="font-size: 1.4rem;">うまいだんごについて</h1>
-    
-  <span style="font-size: 0.95rem;">・何かしらの障害持ち（精神）
-<br>・１２歳
-<br>・ジャンカー
-<br>・C#遣い
-<br>
-    猫とハムスターが好きな学生です！！
-    <br>
-趣味は、ハドフのジャンクPC漁りと、GUIアプリ開発です。現在は、Winだけですが、Linux用にもつくりたいですねー
-    <br>
-    ウェブ系はだいたいできると思ってますが、これからもよいウェブサイトを作れるように頑張っていく💪
-<br><br>
-「障害持ち」と記載するかですが、少し言われただけでは理解できないのでその点はよろしくお願いします。<br><img style="border-radius: 50%;margin: 32px;height: 124px;box-shadow: 0px 0px 4px 1px #cac1c1;" src="icon.png">
-</span>
-</div><div style="border-radius: 3px;background: #fffad2;padding: 25px;margin: 18px;box-shadow: 0px 0px 10px -1px #cdd4db;">
-    <h1 style="font-size: 1.4rem;">使える言語</h1>
-    <p>
-  <span style="font-size: 24px;">HTML</span></p>
-  <p>
-    <span style="font-size: 24px;">CSS</span></p>
-    <p>
-        <span style="font-size: 24px;">Python</span></p>
-    <p>
-        <span style="font-size: 24px;">C#</span></p>
-    <p>
-        <span style="font-size: 24px;">Javascript</span></p>
-</div><div style="border-radius: 3px;background: #dbffda;padding: 25px;margin: 18px;box-shadow: 0px 0px 10px -1px #cdd4db;">
-    <h1 style="font-size: 1.4rem;">リンク集</h1>
-  <span>
-    <p>
-        <a href="https://x.com/dango12_dango" style="text-decoration: none;">
-    <span style="color: black;font-size: 20px;">
-        Twitter
-    </span>
-</a>
-</p>
-
-    <p>
-        <a style="text-decoration: none;" href="https://usoftware-gr.github.io">
-            <span style="color: black;font-size: 20px;">
-                U Software Group
-            </span>
-        </a>
-    </p>
-    
-    <p>
-        <a href="https://bsky.app/profile/umaidango.bsky.social" style="text-decoration: none;">
-            <span style="color: black;font-size: 20px;">
-                Blue Sky
-            </span>
-        </a>
-    </p>
-    
-</span>  
-
-
-
-
-    </div>
-
-
-    <div id="m_blog_content">
+<script>
         
-  <div style="border: 1px #eee solid;padding: 15px;margin: 10px;border-radius: 4px;">
-    
-    <h2>俺のqiita見てほしい</h2><h5>2024/12/24</h5>
-
-  
-  <div>
-  <a href="https://qiita.com/umaidango">こちら</a>です。あんま上げてないけど少しずつ上げていきます！！
-</div></div><div style="border: 1px #eee solid;padding: 15px;margin: 10px;border-radius: 4px;">
-    
-    <h2>ヘッドフォンをヘッドセットにしたら片方聞こえない・ノイズ乗る</h2><h5>2024/11/24</h5>
-
-  
-  <div>
-マイク付きなので、今までヘッドセットとして設定していたんですが、なんかヘッドフォンじゃなくちゃおかしくなっちゃいました。
-</div></div><div style="border: 1px #eee solid;padding: 15px;margin: 10px;border-radius: 4px;">
-    
-    <h2>PythonはGUIに向いていない</h2><h5>2024/11/15</h5>
-
-  
-  <div>Pythonはそもそもロボット制御などなので、PythonでGUIは結構きついのと、そもそも、C++とかC#のようにGUIのデザイナーのやつがないのでC#がお勧めしますね。僕はね。C++はそもそも結構複雑に対して、C#はわかりやすいです。</div></div><div style="border: 1px #eee solid;padding: 15px;margin: 10px;border-radius: 4px;">
-    
-    <h2>ばなななななｎ</h2><h5>2024/11/09</h5>
-<div>うまいよね。　バナナ！</div>
-  
-  </div><div style="border: 1px #eee solid;padding: 15px;margin: 10px;border-radius: 4px;">
-    
-    <h2>初めて、cssのflex使いました。</h2><h5>2024/11/07</h5>
-<div>このサイトはdisplay:flex;を使って、二分割にしてみました！！
-結構いいんじゃないですかね！</div>
-  
-  </div>
-    </div>
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+            navi.style = 'z-index: 5; border-radius:0px; padding: 10px; border: 1px #eee solid; width: 100%; margin-left: 30px; padding-right: 63px; margin-top: -8px;';
+            top_btn.style.display = 'block';
+        } else {
+            navi.style = '';
+            top_btn.style.display = 'none';
+        }
+    });
 
 
 
-    (c) 2024 - うまいだんご
+    function menu_o()
+    {
+        if (menu.style.display == "none")
+        {
+            document.getElementById('menu').style.animation = '0.3s updown-anime';
+            document.getElementById('menu').style.display = 'block';
+        }
 
-    
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <script src="main.js"></script>
-    
+        else if(menu.style.display == "block")
+        {
+            document.getElementById('menu').style.animation = '0.3s downup-anime';
+            setTimeout(() => {
+            document.getElementById('menu').style.display = 'none';} , "280");
+            }
+        }
+</script>
 
-
-
-
-
-
-
-
-</body></html>
+<script src="styles.js"></script>
