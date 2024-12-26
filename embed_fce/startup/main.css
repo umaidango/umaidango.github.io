@@ -1,0 +1,66 @@
+*{
+    font-family: "M PLUS 1";
+}
+
+h2{
+    font-weight: 500;
+}
+
+.sub-message{
+    font-size: 1.15rem;
+}
+
+.box{
+    border-radius: 25px 0px 0px 0px;
+    background: #EEF9FF;
+    padding: 25px;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 35px;
+}
+
+
+.umadan-button{
+    border: none;
+    background: none;
+}
+
+.umadan-button span{
+    border-radius: 4px;
+    padding: 2.5px 40px;
+    font-size: 1.5rem;
+    font-weight: 450;
+    background: #84d4ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.umadan-button span:hover{
+    border-radius: 4px;
+    padding: 2.5px 40px;
+    font-size: 1.5rem;
+    font-weight: 450;
+    background: #76c0e7;
+    color: #fff;
+    cursor: pointer;
+}
+
+.umadan-button span:active{
+    border-radius: 4px;
+    padding: 2.5px 40px;
+    font-size: 1.5rem;
+    font-weight: 450;
+    background: #5f9fc2;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+.umadan-button span::after{
+    content: "次へ";
+}
+
