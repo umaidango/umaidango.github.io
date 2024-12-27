@@ -1,51 +1,89 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Welcome to Fox Code Editor!</title>
-        <link rel="stylesheet" type="text/css" href="main.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&amp;display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div id="content">
-            <div class="box" id="page1">
-                <h2>Fox Code Editorをインストールしていただき、ありがとうございました。</h2>
-                <span class="sub-message">
-                    これから、FCEの使い方をご説明していきます。
-                </span>
-                <br>
-                <button class="umadan-button">
-                    
-                    <span></span>
+<html><head>
+    <title>Welcome to Fox Code Editor!</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="content">
+        <div class="box" id="page1" style="display: inline-block;">
+            <h2>Fox Code Editorをインストールしていただき、ありがとうございました。</h2>
+            <span class="sub-message">
+                <div style="display: flex;"><img class="img-content-1" src="img/img0.jpg">
+                  <span class="right_text">次にFCEの操作方法をご説明していきます。</span>
+                </div>
+            </span>
+            <br>
+            <br>
+            <button onclick="page_next()" class="umadan-button">
                 
-                </button>
-            </div>
-
-            <div style="display: none;" class="box" id="page2">
-                <h2></h2>
-                <span class="sub-message">
-                    
-                </span>
-                <br>
-                <button class="umadan-button">
-                    
-                    <span></span>
-                
-                </button>
-            </div>
-
-            <div style="display: none;" class="box" id="page3">
-                <h2></h2>
-                <span class="sub-message">
-                    
-                </span>
-                <br>
-                <button class="umadan-button">
-                    
-                    <span></span>
-                
-                </button>
-            </div>
+                <span></span>
+            
+            </button>
         </div>
-    </body>
-</html>
+
+        <div style="display: none;" class="box" id="page2">
+            <h2>FCEの操作方法</h2>
+            <span class="sub-message">
+
+                <div style="display: flex;">
+ 
+                    <img class="img-content-1" src="img/img1.png">
+                    <span class="right_text">左上の[ファイル]をクリック
+                <br>
+                　| 開く
+                
+                <br>
+                <br>
+                
+                これでファイルの編集を始めれます</span>
+
+
+                <br>
+                <br>
+                <button onclick="page_next()" class="umadan-button">
+                
+                <span></span>
+            
+            </button></div>
+            </span></div>
+        </div>
+
+
+        <div style="display: none;" class="box" id="page3">
+            <h2>終了</h2>
+            <span class="sub-message">
+
+                <div style="display: flex;">
+ 
+                    <img style="height:310px;" class="img-content-1" src="img/img2.png">
+                    <span class="right_text">これで説明は以上です。
+                        <br>
+                    更新・新機能などのお知らせは[ヘルプ]
+                    <br>
+                    | バージョン
+
+                    <br>
+                    でご確認できます。
+                <br>
+                <br>
+                
+                
+                </span>
+
+
+                <br>
+                <br>
+                
+                
+                <span></span>
+            
+            </button></div>
+            </span></div>
+        </div>
+
+        
+    
+
+<script src="main.js"></script>
+</body></html>
