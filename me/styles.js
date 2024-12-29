@@ -39,7 +39,7 @@ var load_blog_content = function() {
       const targetElement = doc.getElementById('blog_mainpage');
 
       // blog_mainに取得した要素を挿入
-      blog.appendChild(targetElement);
+      blog.innerHTML = targetElement;
     })
     .catch(error => {
       console.error('Error:', error);
@@ -47,6 +47,7 @@ var load_blog_content = function() {
 };
 
 setTimeout(load_blog_content, 1000);
+
 function i1(){
     slider = -1500;
     picup_img_f.style ="display: flex; transform: translate3d(" + slider + "px, 0px, 0px); transition:transform 1100ms;";
