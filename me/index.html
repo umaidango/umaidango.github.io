@@ -630,6 +630,9 @@
             }
         }
 </script>
+<script src="styles.js"></script>
+
+
 <script>
     const blog = document.getElementById("blog_main");
 
@@ -653,7 +656,6 @@ var load_blog_content = function() {
     .catch(ex => {
       console.error('Error:', ex);
       blog.innerHTML = '<h2>コンテンツの取得に失敗しました</h2>';
+      aleat("コンテンツの取得に失敗しました");
     });
 };</script>
-<script src="styles.js"></script>
-
