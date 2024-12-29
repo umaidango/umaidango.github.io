@@ -3,6 +3,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <title>うまいだんごのホームページ</title>
     <meta name="description" content="うまいだんご(umaidango)は、GUIソフトウェアなどを開発しているプログラマー。U Software Groupの副社長でもある。"/>
+    <style>
+
+        .about_main{
+          text-align: center;
+        }
+        .space{
+          height: 6vh;
+        }
+        #rinen{
+          font-size: 1.8rem;
+          font-weight: 500;
+        }
+    
+     
+    
+        .silicon
+        {
+          border-radius: 50%;
+          padding: 20px;
+          display: inline-block;
+          background: #5ac1ff;
+        }
+    
+        .silicon2{
+          border-radius: 50%;
+          padding: 20px;
+          display: inline-block;
+          background: #aaff65;
+        }
+    
+    
+        .history-border{
+            width: 5px;
+            height: 64px;
+            background: #5ac1ff;
+            display: inline-block;
+            margin-bottom: -22px;
+            border-radius: 5000px;
+            margin-left: -28px;
+            margin-right: 32px;
+            animation: 0.8s border-slides;
+          
+        }
+    
+        .member-border{
+          width: 64px;
+          height: 5px;  
+          background: #aaff65;
+          display: inline-block;
+          margin-bottom: 18px;
+          margin-left:-25px;
+          border-radius: 5000px;
+          animation: 0.8s border-slides;
+          
+        }
+        .history-text{
+          font-size: 1.2rem;
+          font-weight: 450;
+          vertical-align: 30%;
+          margin-left: 10px;
+            }
+    
+            .name-text{
+          font-size: 1.8rem;
+          font-weight: 450;
+          vertical-align: 30%;
+          margin-left: 10px;
+            }
+        
+        .history-tosi
+        {
+          font-size: 1.2rem;
+          vertical-align: 51%;
+          margin: 18px;
+          display: inline-block;
+            }
+    
+        .syoku
+        {
+          font-size: 1.2rem;
+          vertical-align: 51%;
+          margin: 18px;
+          display: inline-block;
+            }
+    
+        .history-page-border{
+          text-align: left;     
+          margin: 15px; 
+        }
+    
+        .member-page-border{
+          text-align: left;     
+          margin: 15px; 
+        }
+    
+        @keyframes border-slides {
+        0% {
+            transform: translateY(-64px); /* 初期状態では上に移動させて隠す */
+            height: 64px; /* 高さは最初から設定しておく */
+        }
+        25% {
+            transform: translateY(-44px);
+        }
+        50% {
+            transform: translateY(-16px);
+        }
+        100% {
+            transform: translateY(0px); /* 最終的に元の位置に戻す */
+        }
+}
+    
+    
+        #top{
+          background: #fff;
+          background-size: 1500px;
+          background-repeat: no-repeat;
+          width: 100%;
+          box-sizing: border-box;
+          margin: 0 auto;
+    
+        }
+    
+        #top div{
+          padding: 48px;
+          background-image: url(img/tw-header.png);
+          background-size: 1500px;
+          background-repeat: no-repeat;
+          width: 100%;
+          box-sizing: border-box;
+          margin: 0 auto;
+        }
+      </style>
+      
+
       <style>
 @media screen and (max-width: 800px) {
         .picup::before{
@@ -20,7 +154,7 @@
 
     @media screen and (min-width: 800px) {
         .picup::before{
-            content: "うまいだんごのサイトへようこそ";
+            content: "うまいだんごのサイトへようこそ!";
             font-size: 2.5rem;
             position: absolute;
             z-index: 2;
@@ -65,6 +199,10 @@
 
 
     .loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 50px;
     aspect-ratio: 1;
     border-radius: 50%;
@@ -91,6 +229,25 @@
     
   }
   
+  .slider_maru{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #9dffba;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .slider_maru:hover{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #5fff8f;
+    margin: 10px;
+    cursor: pointer;
+  }
 
     #picup_img img{
        /* width: 80%;*/
@@ -225,12 +382,20 @@
     </nav>
 <div style="height:15vh;"></div>
     <div id="content">
-        <div id="picup" class="picup">
+        <div id="picup">
   
             <div id="picup_img">
 
 
+
                 <div id="button_contents" style="display:none;">
+
+                    <div style="display: none;position: absolute;z-index: 10;bottom: -12px;left: 50%;transform: translateX(-50%);">
+                        <span onclick="next_1img()" class="slider_maru" style=""></span>
+                        <span onclick="next_2img()" class="slider_maru" style=""></span>
+                        <span onclick="next_3img()" class="slider_maru" style=""></span>
+                        <span onclick="next_4img()" class="slider_maru" style=""></span>
+                    </div>
                     <button onclick="left_img()" style="z-index: 10; border: none;background: #ceffdfde;width: 75px;height: 75px;top: 105px;position: absolute;left: 0px;cursor: pointer;border-radius: 50%;margin-left: 30px;padding: 5px;">
                         <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style=""><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.9991 19L9.83911 14C9.56672 13.7429 9.34974 13.433 9.20142 13.0891C9.0531 12.7452 8.97656 12.3745 8.97656 12C8.97656 11.6255 9.0531 11.2548 9.20142 10.9109C9.34974 10.567 9.56672 10.2571 9.83911 10L14.9991 5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                         </button>
@@ -313,6 +478,86 @@
 
 
             </div>
+
+
+
+            <div id="history" class="box">
+                <div style="height:15vh;"></div>
+                <h1>経歴</h1>
+               
+
+                    <div style="display: flex;">
+                      <div>
+                      <span class="history-tosi">2023年6月</span>
+                      <br>
+                      <span class="history-tosi">2024年1月</span>
+                      <br>
+                      <span class="history-tosi">2024年3月</span>
+                      <br>
+                      <span class="history-tosi">2024年5月</span>
+                      <br>
+                      <span class="history-tosi">2024年5月</span>
+                      <br>
+                      <span class="history-tosi">2024年10月</span>
+                      
+                      
+                    </div>
+                        
+                      <div>
+                              <div class="history-page-border">
+                                
+                                <span class="silicon"></span>
+                                <span class="history-border"></span>
+                                <span class="history-text">初めてのアプリ、Original Clockを制作</span>
+                              </div>
+                      
+                              
+                              <div class="history-page-border">
+                                
+                                <span class="silicon"></span>
+                                <span class="history-border"></span>
+                                <span class="history-text">Original Clockを公開</span>
+                              </div>
+                              
+                              
+                              <div class="history-page-border">
+                                
+                                <span class="silicon"></span>
+                                <span class="history-border"></span>
+                                <span class="history-text">MY Widgetを公開</span>
+                              </div>
+                              
+                              <div class="history-page-border">
+                                
+                                <span class="silicon"></span>
+                                <span class="history-border"></span>
+                                <span class="history-text">Kabegami Downloadのサービスが始まる</span>
+                              </div>
+                              
+                              <div class="history-page-border">
+                                <span class="silicon"></span>
+                                <span class="history-border"></span>
+                                <span class="history-text">チピ掲示板をリリース</span>
+                              </div>
+                              
+                              <div class="history-page-border">
+                                
+                                <span class="silicon"></span>
+                                <span class="history-border"></span>
+                                <span class="history-text">Fox Code Editorを公開</span>
+                              </div>
+                            </div></div>
+                    
+
+
+
+
+            </div>
+
+
+
+
+            
             <div id="blog" class="box">
                 <div style="height:15vh;"></div>
                 <h1>日記</h1>
@@ -327,7 +572,7 @@
                 <footer style="text-align: center;">
                     <img src="https://usoftware-gr.github.io/img/top.png">
                     <br>
-                    <span>©️ 2024 - うまいだんご</span>
+                    <span>© 2024 - うまいだんご</span>
                 </footer>
     </div>
 
@@ -344,6 +589,7 @@
 <a onclick="menu_o()" href="#" style="text-decoration: none;"><li style="display: block;">ホーム</li></a>
 <a onclick="menu_o()" href="#about" style="text-decoration: none;"><li style="display: block;">うまいだんごとは？</li></a>
 <a onclick="menu_o()" href="#works" style="text-decoration: none;"><li style="display: block;">活動場所</li></a>
+<a onclick="menu_o()" href="#history" style="text-decoration: none;"><li style="display: block;">経歴</li></a>
 <a onclick="menu_o()" href="#blog" style="text-decoration: none;"><li style="display: block;">日記</li></a>
 
 </ul>
