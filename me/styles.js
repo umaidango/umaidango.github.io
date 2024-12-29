@@ -1,7 +1,4 @@
-
 displayWindowSize();
-
-
 
 // 画面サイズを取得して表示する関数
 function displayWindowSize() {
@@ -51,8 +48,9 @@ function splash_off() {
 }
 
 
-const blog = document.getElementById("blog_main");
 
+
+setTimeout(load_blog_content, 1000);
 
 function i1(){
     slider = -1500;
