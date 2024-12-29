@@ -1,28 +1,3 @@
-var load_blog_content = function() {
-    blog.innerHTML = '';
-
-  fetch('blog_em.html')
-    .then(response => response.text())
-    .then(html => {
-      // HTML文字列をDOMに変換
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-
-      // idがblog_mainpageの要素を取得
-      const targetElement = doc.getElementById('blog_mainpage');
-
-  
-      // blog_mainに取得した要素を挿入
-      blog.appendChild(targetElement);
-    })
-    .catch(ex => {
-      console.error('Error:', ex);
-      blog.innerHTML = '<h2>コンテンツの取得に失敗しました</h2>';
-    });
-};
-
-setTimeout(load_blog_content, 1000);
-
 
 displayWindowSize();
 
@@ -37,28 +12,6 @@ function displayWindowSize() {
     // 画面サイズに応じて処理を分岐させる例
     if (width <= 768) {
         picup_img.innerHTML = '<img src="img/mobile_header.png" alt="うまいだんごのホームページ" style="width: 100%;position: absolute;z-index: 0;left: 50%;transform: translateX(-50%);">';
-        var load_blog_content = function() {
-            blog.innerHTML = '';
-        
-          fetch('blog_em.html')
-            .then(response => response.text())
-            .then(html => {
-              // HTML文字列をDOMに変換
-              const parser = new DOMParser();
-              const doc = parser.parseFromString(html, 'text/html');
-        
-              // idがblog_mainpageの要素を取得
-              const targetElement = doc.getElementById('blog_mainpage');
-        
-          
-              // blog_mainに取得した要素を挿入
-              blog.appendChild(targetElement);
-            })
-            .catch(ex => {
-              console.error('Error:', ex);
-              blog.innerHTML = '<h2>コンテンツの取得に失敗しました</h2>';
-            });
-        };
         splash_off();
     }
 
