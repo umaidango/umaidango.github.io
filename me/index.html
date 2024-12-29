@@ -5,7 +5,7 @@
     <meta name="description" content="うまいだんご(umaidango)は、GUIソフトウェアなどを開発しているプログラマー。U Software Groupの副社長でもある。"/>
       <style>
 @media screen and (max-width: 800px) {
-        #picup::before{
+        .picup::before{
             content: "うまいだんご";
             font-size: 2.5rem;
             position: absolute;
@@ -19,7 +19,7 @@
 
 
     @media screen and (min-width: 800px) {
-        #picup::before{
+        .picup::before{
             content: "うまいだんごのサイトへようこそ";
             font-size: 2.5rem;
             position: absolute;
@@ -191,6 +191,16 @@
     border-right: 16px solid #e0edff;
 }
 
+@keyframes blur-m {
+    0%{ 
+        filter: opacity(0.5) blur(2px); 
+    }
+
+    100%{ 
+        filter: opacity(1) blur(0px);
+    }
+}
+
     </style>
 
 <style>
@@ -215,8 +225,21 @@
     </nav>
 <div style="height:15vh;"></div>
     <div id="content">
-        <div id="picup">
+        <div id="picup" class="picup">
+  
             <div id="picup_img">
+
+
+                <div id="button_contents" style="display:none;">
+                    <button onclick="left_img()" style="z-index: 10; border: none;background: #ceffdfde;width: 75px;height: 75px;top: 105px;position: absolute;left: 0px;cursor: pointer;border-radius: 50%;margin-left: 30px;padding: 5px;">
+                        <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style=""><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.9991 19L9.83911 14C9.56672 13.7429 9.34974 13.433 9.20142 13.0891C9.0531 12.7452 8.97656 12.3745 8.97656 12C8.97656 11.6255 9.0531 11.2548 9.20142 10.9109C9.34974 10.567 9.56672 10.2571 9.83911 10L14.9991 5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                        <button style="z-index: 10;border: none;background: #ceffdfde;width: 75px;height: 75px;top: 105px;position: absolute;right: 0px;cursor: pointer;border-radius: 50%;margin-right: 30px;padding: 5px;" onclick="right_img()">
+                            <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.9991 19L9.83911 14C9.56672 13.7429 9.34974 13.433 9.20142 13.0891C9.0531 12.7452 8.97656 12.3745 8.97656 12C8.97656 11.6255 9.0531 11.2548 9.20142 10.9109C9.34974 10.567 9.56672 10.2571 9.83911 10L14.9991 5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        </button></div>
+
+
+
                 <div id="picup_img_f" style="display: flex;">
                     <div style="float: left;">
                         <img src="img/header_img_0.png" style="height: 35vh;">
@@ -225,7 +248,27 @@
                         <div style="float: left;">
                             <img src="https://usoftware-gr.github.io/img/original_clock_h.jpg" style="height: 35vh;">
                         </div>
+
+                        <div style="float: left;">
+                            <img src="https://usoftware-gr.github.io/img/mobile_top_back_01.png" style="height: 35vh;">
+                        </div>
+                        <div style="float: left;">
+                            <img src="img/header_img_0.png" style="height: 35vh;">
+                        </div>
+    
+                            <div style="float: left;">
+                                <img src="https://usoftware-gr.github.io/img/original_clock_h.jpg" style="height: 35vh;">
+                            </div>
+    
+                            <div style="float: left;">
+                                <img src="https://usoftware-gr.github.io/img/mobile_top_back_01.png" style="height: 35vh;">
+                            </div>
                     </div>
+
+                    
+                  
+                    
+                </div>
                 
             </div>
         </div>
