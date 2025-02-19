@@ -372,13 +372,13 @@
     
 </head>
 <body>
-    <a id="top_btn" href="#" style="color: rgb(51, 51, 51); display: block;">
+    <a id="top_btn" href="#" style="color: rgb(51, 51, 51); display: none;">
         <div style="position: fixed;bottom: 25px;right: 25px;border-radius: 50%;background: #99ff0026;padding: 12px;width: 80px;height: 80px;text-align: center;"> <span><svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve" style="width: 48px;height: 48px;margin-top: 10px;"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394 l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393 C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"></path> </g></svg></span></div>
     </a>
 
 
     <nav>
-        <div id="navi" style="z-index: 5; border-radius: 0px; padding: 10px 63px 10px 10px; border: 1px solid rgb(238, 238, 238); width: 100%; margin-left: 30px; margin-top: -8px;">
+        <div id="navi" style="">
             <span id="menu_open" onclick="menu_o()">
                 <img height="32" src="https://umaidango.github.io/me/menu.svg">
             </span>
@@ -390,55 +390,23 @@
     <div id="content">
         <div id="picup">
   
-            <div id="picup_img" style="animation: 0.5s blur-m; filter: opacity(1) blur(0px);">
+            <div id="picup_img">
 
-                <div id="button_contents" style="display: inline-block;">
-
-                    <div style="display: none;position: absolute;z-index: 10;bottom: -12px;left: 50%;transform: translateX(-50%);">
-                        <span onclick="next_1img()" class="slider_maru" style=""></span>
-                        <span onclick="next_2img()" class="slider_maru" style=""></span>
-                        <span onclick="next_3img()" class="slider_maru" style=""></span>
-                        <span onclick="next_4img()" class="slider_maru" style=""></span>
-                    </div>
-                    <button onclick="left_img()" style="z-index: 10; border: none;background: #ceffdfde;width: 75px;height: 75px;position: absolute;left: 0px;cursor: pointer;border-radius: 50%;margin-left: 30px;padding: 5px;margin-top: 65px;">
-                        <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style=""><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.9991 19L9.83911 14C9.56672 13.7429 9.34974 13.433 9.20142 13.0891C9.0531 12.7452 8.97656 12.3745 8.97656 12C8.97656 11.6255 9.0531 11.2548 9.20142 10.9109C9.34974 10.567 9.56672 10.2571 9.83911 10L14.9991 5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                        </button>
-                        <button style="z-index: 10;border: none;background: #ceffdfde;width: 75px;height: 75px;position: absolute;right: 0px;cursor: pointer;border-radius: 50%;margin-right: 30px;padding: 5px;margin-top: 65px;" onclick="right_img()">
-                            <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.9991 19L9.83911 14C9.56672 13.7429 9.34974 13.433 9.20142 13.0891C9.0531 12.7452 8.97656 12.3745 8.97656 12C8.97656 11.6255 9.0531 11.2548 9.20142 10.9109C9.34974 10.567 9.56672 10.2571 9.83911 10L14.9991 5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-        </button></div>
+                
 
 
 
-                <div id="picup_img_f" style="display: flex;">
-                    <div style="float: left;">
-                        <a href="https://purin-site.pages.dev">
-                        <img src="img/header_img_0.png" style="height: 35vh;">
-                    </a>
-                    </div>
-
-                        <div style="float: left;">
-                           <a href="https://ku-daa.web.app/original_clock.html"> <img src="https://usoftware-gr.github.io/img/original_clock_h.jpg" style="height: 35vh;">
-                           </a>
-                        </div>
-
-                        <div style="float: left;">
-                           <a href="https://usoftware-gr.github.io/">
-                            <img src="https://usoftware-gr.github.io/img/mobile_top_back_01.png" style="height: 35vh;">
-                        </a>
-                        </div>
+                <div style="background: url(https://umaidango.github.io/me/img/header_img_0.png);background-size: 1200px;width: 100%;height: 297px;">
+                    
 
                         
-                        <div style="float: left;">
-                            <a href="https://share-tool.net">
-                             <img src="https://share-tool.net/src/banner.png" style="height: 35vh;">
-                         </a>
-                         </div>
 
-                         <div style="float: left;">
-                             <a href="https://share-tool.net/extentions-dl.html">
-                              <img src="img/kyoyu_tool_ad.png" style="height: 35vh;">
-                          </a>
-                          </div>
+                        
+
+                        
+                        
+
+                         
                       
                     </div>
 
@@ -699,4 +667,5 @@ var load_blog_content = function() {
       blog.innerHTML = '<h2>コンテンツの取得に失敗しました</h2>';
       aleat("コンテンツの取得に失敗しました");
     });
-};</script></body></html>
+};</script>
+</body></html>
