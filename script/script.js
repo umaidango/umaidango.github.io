@@ -18,6 +18,8 @@ let randomIndex_txt = Math.floor(Math.random() * random_s.length);
 let menu_bottom_c = 0;
 let menu_on_b = 0;
 
+let message_tx;
+
 var random_txt_ss = function() {
     var randomIndex_txt = Math.floor(Math.random() * random_s.length);
     random_text.innerHTML = random_s[randomIndex_txt];
@@ -216,3 +218,22 @@ if (window.history && window.history.pushState) {
     .catch(error => {
         console.error('データの取得中にエラーが発生しました:', error);
     });
+
+    about_link.onclick = about_link_click;
+
+    function about_link_click(message_tx)
+    {
+        navigator.clipboard.writeText("https://umaidango.github.io/about");
+        message_s.style.display = "block";
+        message_s.textContent = "✔️Copyed🐱😸";
+        
+        function message_close() {
+            message_s.style.display = "none";
+            message_s.textContent = "";
+        }
+    
+        
+        setTimeout(message_close, 1000);
+    }
+
+

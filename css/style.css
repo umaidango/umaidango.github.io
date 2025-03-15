@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Kosugi&family=M+PLUS+2:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
 
 *{
+
     margin: 0px;
     font-family: "M PLUS 2";
+    scroll-behavior: smooth;
+    
 }
 
 #header_main {
@@ -213,6 +216,11 @@
     display: flex;
   }
 
+  .oo01 {
+    z-index: 1;
+    position: relative;
+  }
+
  
   @media (max-width: 1158px) {
     #about_img {
@@ -231,11 +239,86 @@
 
   footer {
     padding: 20px;
-    background: #eeecec;
-    
+    padding-top: 84px;
+    display: inline-block;
+    width: 100%;
+    height: 85px;
+    box-sizing: border-box;
+    height: 30vh;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    z-index: 0;
+    margin-top: -78px;
   }
 
   #logo_co {
-    width: 20%;text-align: right;margin-right: 15px;
+    width: 20%;
+    text-align: right;
+    margin-right: 15px;
+  }
 
+  #footer_background {
+    background-image: url(/img/background_img_0.svg);
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    height: 30vh;
+    margin-top: -82px;
+  }
+
+
+  #message_s {
+    position: fixed;
+  z-index: 5;
+  background: #fff;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
+  top: 0px;
+  right: 0px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border: 1px #eee solid;
+  animation: slide01 0.8s;
+  display: none;
+  }
+
+  @keyframes slide01 {
+    0%{
+      transform: translateX(100%);
+    }
+
+    100%{
+      transform: translateX(0%);
+    }
+  }
+
+  #top_page {
+    border: none;
+    background: #96fff5;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    position: fixed;
+    z-index: 5;
+    right: 0px;
+    bottom: 0px;
+    margin: 18px;
+  }
+
+  #top_page:hover {
+    background: #86e6dc;
+  }
+
+
+  #top_page:active {
+    background: #78cfc7;
+  }
+
+
+  #top_page span img {
+    height: 54px;
   }
