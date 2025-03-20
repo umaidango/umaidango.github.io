@@ -1,0 +1,33 @@
+.weatherForecast {
+    height: 120px;
+    text-align: center;
+  }
+  
+  .weather {
+    width: 120px;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    padding: 12px;
+    margin: 10px;
+    background: #f8fdff;
+  }
+  
+  .weather > div {
+    height: 20%;
+    font-size: 14px;
+  }
+  
+  .weatherImg {
+    height: 42%;
+  }
+  
+  .tempMin {
+    color: rgb(99, 99, 255);
+  }
+  
+  .tempMax {
+    color: rgb(255, 93, 93);
+  }
+  

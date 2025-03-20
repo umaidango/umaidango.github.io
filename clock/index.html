@@ -45,6 +45,16 @@
                 font-weight: bold;
                 font-size: 2.2rem;
             }
+
+            #weather {
+                width: 152px;
+                border: none;
+                overflow: hidden;
+                user-select: none;
+                position: absolute;
+                bottom: 0px;
+                right: 8px;
+            }
         </style>
 
   
@@ -58,6 +68,8 @@
                 <span id="time_t">00:00:00</span>
                 <br>
                 <span id="sub_txt">0/0</span>
+
+                <iframe id="weather" src="weather.html"></iframe>
             </div>
         </div>
 
