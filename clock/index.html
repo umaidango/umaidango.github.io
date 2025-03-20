@@ -159,8 +159,8 @@
 
             weather.onpointermove = function(event){
             if(event.buttons){
-                this.style.left     = this.offsetLeft + event.movementX * 2 + 'px'
-                this.style.top      = this.offsetTop  + event.movementY * 2 + 'px'
+                this.style.left     = this.offsetLeft + event.movementX * 5 + 'px'
+                this.style.top      = this.offsetTop  + event.movementY * 5 + 'px'
                 this.style.position = 'absolute'
                 this.draggable      = false
                 this.setPointerCapture(event.pointerId)
@@ -169,8 +169,8 @@
 
         clock_value.onpointermove = function(event){
             if(event.buttons){
-                this.style.left     = this.offsetLeft + event.movementX * 2 + 'px'
-                this.style.top      = this.offsetTop  + event.movementY * 2 + 'px'
+                this.style.left     = this.offsetLeft + event.movementX * 5 + 'px'
+                this.style.top      = this.offsetTop  + event.movementY * 5 + 'px'
                 this.style.position = 'absolute'
                 this.draggable      = false
                 this.setPointerCapture(event.pointerId)
