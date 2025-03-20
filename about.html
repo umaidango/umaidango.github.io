@@ -3,10 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>404 Not found - うまいだんご</title>
+        <title>About - うまいだんご</title>
         <link rel="stylesheet" type="text/css" href="/css/style.css">
         <link rel="stylesheet" type="text/css" href="/css/ui.css">
-        <link rel="shortcut icon" sizes="64x64" href="/img/favicon.png">
         <script defer src="/script/script.js"></script>
         <meta name="description" content="うまいだんご(umaidango)は、GUIソフトウェアなどを開発しているプログラマー。略名は「udapp」といい、これはうまいだんごアプリ拡張子という拡張子からきている。">
   
@@ -26,20 +25,42 @@
             </div>
         </nav>
 
-        <div style="height: 18vh;"></div>
+        <div style="height: 8vh;"></div>
 
         <div id="menu"></div>
 
         <div id="menu_on"></div>
 
         <main>
-            404 Not Found
+            <div id="about" class="pages">
+
+            </div>
         </main>
 
         <footer id="main_footer">
 
         </footer>
 
+
+        <script>
+              fetch('index.html')
+    .then(response => response.text())
+    .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const about_page = doc.getElementById('about_page');
+
+        if (about_page) {
+            const about = document.getElementById('about');
+            if (about) {
+                about.innerHTML = about_page.innerHTML;
+            }
+        }
+    })
+    .catch(error => {
+        console.error('データの取得中にエラーが発生しました:', error);
+    });
+    </script>
 
     </body>
 </html>

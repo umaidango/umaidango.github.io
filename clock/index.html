@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>clock</title>
+        <meta charset="utf-8">      
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Bytesized&family=DotGothic16&family=M+PLUS+2:wght@100..900&family=Tektur:wght@400..900&display=swap');
+         
+            * {
+                font-family: "Tektur", "DotGothic16";
+            }
+
+         
+
+             body{
+                margin: 0;
+             }
+
+            #main {
+                background: url(https://umaidango.github.io/kabegami/index_files/obu-3.jpg);
+                margin: 0;
+                background-size: cover;
+                height: 100vh; /* 追加 */
+            }
+
+            
+
+            #clock_value {
+                border-radius: 30px;
+                background: #fff;
+                text-align: center;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                padding: 80px;
+                width: 705px;
+            }
+            #time_t {
+                font-weight: bold;
+                font-size: 8.8rem;
+            }
+
+            #sub_txt {
+                font-weight: bold;
+                font-size: 2.2rem;
+            }
+        </style>
+
+  
+    </head>
+    <body>
+        <div id="main">
+            <div id="clock_value">
+                <span id="time_t">00:00:00</span>
+                <br>
+                <span id="sub_txt">0/0</span>
+            </div>
+        </div>
+
+        <script defer>
+            let currentTime;
+            let currentm_d;
+
+            function getCurrentTime() {
+                let now = new Date();
+                let hours = String(now.getHours()).padStart(2, '0');
+                let minutes = String(now.getMinutes()).padStart(2, '0');
+                let seconds = String(now.getSeconds()).padStart(2, '0');
+                return `${hours}:${minutes}:${seconds}`;
+            }
+            
+            function getMonthDay() {
+                const now = new Date();
+                const month = String(now.getMonth() + 1).padStart(2, '0'); // 月は0から始まるため+1する
+                const day = String(now.getDate()).padStart(2, '0');
+                return `${month}/${day}`; // または `${month}月${day}日`
+            }
+
+            
+            
+            var now_time = function() {
+                currentTime = getCurrentTime();
+                time_t.textContent = currentTime;
+            }
+            setInterval(now_time, 1000);
+
+            function niti() {
+                currentm_d = getMonthDay();
+                sub_txt.textContent = currentm_d;
+            }
+
+
+            niti();
+            
+            clock_value.onclick = zengamen;
+
+            function zengamen()
+            {
+                document.getElementById('main').requestFullscreen(); // #main要素を全画面表示にする
+            }
+            
+
+            let wakeLock = null;
+
+            async function enableWakeLock() {
+            try {
+                wakeLock = await navigator.wakeLock.request('screen');
+                console.log('Wake Lock enabled');
+            } catch (err) {
+                console.error(`Wake Lock failed: ${err.name}, ${err.message}`);
+            }
+            }
+
+            async function disableWakeLock() {
+            if (wakeLock !== null) {
+                await wakeLock.release();
+                wakeLock = null;
+                console.log('Wake Lock disabled');
+            }
+            }
+
+            enableWakeLock();
+
+
+
+        </script>
+
+
+    </body>
+</html>
