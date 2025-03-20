@@ -124,7 +124,7 @@
             <div id="background">
             </div>
 
-            <div id="clock_value">
+            <div id="clock_value" class="draggable" >
                 <span id="time_t">00:00:00</span>
                 <br>
                 <span id="sub_txt">0/0</span>
@@ -136,7 +136,7 @@
             </div>
 
             <div id="widget">
-                <div id="weather">     
+                <div  class="draggable" id="weather">     
                     <div class="weatherForecast">
                     <div class="weather">
                         <div class="date">--/--(-)</div>
@@ -157,55 +157,56 @@
             let currentm_d;
 
 
-            
-            const drag01 = document.getElementById('clock_value');
-            let offsetX, offsetY, isDragging = false;
+            const draggableElements = document.querySelectorAll('.draggable'); // draggableクラスを持つ要素を全て取得
 
-            // タッチイベント
-            drag01.addEventListener('touchstart', (e) => {
-                isDragging = true;
-                offsetX = e.touches[0].clientX - drag01.offsetLeft;
-                offsetY = e.touches[0].clientY - drag01.offsetTop;
-            });
+draggableElements.forEach(dragElement => {
+    let offsetX, offsetY, isDragging = false;
 
-            document.addEventListener('touchmove', (e) => {
-                if (!isDragging) return;
-                if (e.touches && e.touches[0]) { //タッチイベントの時
-                    drag01.style.left = e.touches[0].clientX - offsetX + 'px';
-                    drag01.style.top = e.touches[0].clientY - offsetY + 'px';
-                }
-            });
+    // タッチイベント
+    dragElement.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        offsetX = e.touches[0].clientX - dragElement.offsetLeft;
+        offsetY = e.touches[0].clientY - dragElement.offsetTop;
+    });
 
-            document.addEventListener('touchend', () => {
-                isDragging = false;
-            });
+    document.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        if (e.touches && e.touches[0]) {
+            dragElement.style.left = e.touches[0].clientX - offsetX + 'px';
+            dragElement.style.top = e.touches[0].clientY - offsetY + 'px';
+        }
+    });
 
-            // マウスイベント
-            drag01.addEventListener('mousedown', (e) => {
-                isDragging = true;
-                offsetX = e.clientX - drag01.offsetLeft;
-                offsetY = e.clientY - drag01.offsetTop;
-            });
+    document.addEventListener('touchend', () => {
+        isDragging = false;
+    });
 
-            document.addEventListener('mousemove', (e) => {
-                if (!isDragging) return;
-                if (!e.touches) { //マウスイベントの時
-                    drag01.style.left = e.clientX - offsetX + 'px';
-                    drag01.style.top = e.clientY - offsetY + 'px';
-                }
-            });
+    // マウスイベント
+    dragElement.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        offsetX = e.clientX - dragElement.offsetLeft;
+        offsetY = e.clientY - dragElement.offsetTop;
+    });
 
-            document.addEventListener('mouseup', () => {
-                isDragging = false;
-            });
+    document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        if (!e.touches) {
+            dragElement.style.left = e.clientX - offsetX + 'px';
+            dragElement.style.top = e.clientY - offsetY + 'px';
+        }
+    });
 
-            //ドラッグ開始を無効化
-            drag01.ondragstart = function() {
-            return false;
-            };
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
+
+    //ドラッグ開始を無効化
+    dragElement.ondragstart = function() {
+        return false;
+    };
+});
 
 
-            
             function getCurrentTime() {
                 let now = new Date();
                 let hours = String(now.getHours()).padStart(2, '0');
