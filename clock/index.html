@@ -16,14 +16,14 @@
                 margin: 0;
              }
 
-            #main {
+            #background {
                 background: url(https://umaidango.github.io/kabegami/index_files/obu-3.jpg);
                 margin: 0;
                 background-size: cover;
                 height: 100vh; /* 追加 */
+                filter: brightness(0.9);
             }
 
-            
 
             #clock_value {
                 border-radius: 30px;
@@ -51,6 +51,9 @@
     </head>
     <body>
         <div id="main">
+            <div id="background">
+            </div>
+
             <div id="clock_value">
                 <span id="time_t">00:00:00</span>
                 <br>
@@ -85,6 +88,17 @@
             }
             setInterval(now_time, 1000);
 
+            var check_display = function() {
+
+                if(!document.getElementById('main').requestFullscreen())
+                {
+                    clock_value.onclick = zengamen;
+                }
+            }
+
+           setInterval(check_display, 10);
+
+
             function niti() {
                 currentm_d = getMonthDay();
                 sub_txt.textContent = currentm_d;
@@ -97,10 +111,27 @@
 
             function zengamen()
             {
-                document.getElementById('main').requestFullscreen(); // #main要素を全画面表示にする
+                document.getElementById('main').requestFullscreen(); // #background
+                clock_value.onclick = kabegami;
             }
+
+
             
 
+            let kabegami_d = ["obu-2.jpg", "obu-3.jpg", "rai-1.png", "purin-2.png", "purin-3.png"]
+            var randomIndex_txt = Math.floor(Math.random() * kabegami_d.length);
+            let img_url;
+
+            function kabegami()
+            {
+                randomIndex_txt = Math.floor(Math.random() * kabegami_d.length);
+                img_url = "https://umaidango.github.io/kabegami/index_files/" + kabegami_d[randomIndex_txt];
+                background.style.background = "url(" + img_url + ")";
+            }        
+
+
+            
+            
             let wakeLock = null;
 
             async function enableWakeLock() {
