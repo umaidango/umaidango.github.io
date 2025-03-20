@@ -3,6 +3,35 @@
     <head>
         <title>clock</title>
         <meta charset="utf-8">   
+        
+        <script async>
+            function preloadImage(url) {
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.onload = () => resolve(img);
+                    img.onerror = reject;
+                    img.src = url;
+                });
+                }
+
+                // 例: 画像をプリロード
+                preloadImage('image.jpg')
+                .then((img) => {
+                    console.log('画像のプリロードが完了しました:', img);
+                    // プリロード完了後の処理
+                })
+                .catch((error) => {
+                    console.error('画像のプリロードに失敗しました:', error);
+                });
+
+                preloadImage("https://umaidango.github.io/kabegami/index_files/obu-3.jpg");
+                preloadImage("https://umaidango.github.io/kabegami/index_files/obu-2.jpg");
+                preloadImage("https://umaidango.github.io/kabegami/index_files/purin-3.png");
+                preloadImage("https://umaidango.github.io/kabegami/index_files/rai-1.png");
+                
+        </script>
+
+
         <link rel="stylesheet" href="./weather.css">   
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Bytesized&family=DotGothic16&family=M+PLUS+2:wght@100..900&family=Tektur:wght@400..900&display=swap');
@@ -62,6 +91,30 @@
                 width: 152px;
                 height: 150px;
             }
+
+            #setting {
+                position: absolute;
+                width: 75px;
+                height: 75px;
+                box-sizing: border-box;
+                border: 1px solid #eee;
+                border-radius: 18px;
+                padding: 12px;
+                margin: 10px;
+                background: #d9f4ff;
+                bottom: 10px;
+                right: 10px;
+            }
+            
+            @keyframes huwa01 {
+                0% {
+                    opacity: 0.2;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
         </style>
 
   
@@ -75,7 +128,11 @@
                 <span id="time_t">00:00:00</span>
                 <br>
                 <span id="sub_txt">0/0</span>
-
+                <div id="setting">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#666666"><path d="m388-80-20-126q-19-7-40-19t-37-25l-118 54-93-164 108-79q-2-9-2.5-20.5T185-480q0-9 .5-20.5T188-521L80-600l93-164 118 54q16-13 37-25t40-18l20-127h184l20 126q19 7 40.5 18.5T669-710l118-54 93 164-108 77q2 10 2.5 21.5t.5 21.5q0 10-.5 21t-2.5 21l108 78-93 164-118-54q-16 13-36.5 25.5T592-206L572-80H388Zm48-60h88l14-112q33-8 62.5-25t53.5-41l106 46 40-72-94-69q4-17 6.5-33.5T715-480q0-17-2-33.5t-7-33.5l94-69-40-72-106 46q-23-26-52-43.5T538-708l-14-112h-88l-14 112q-34 7-63.5 24T306-642l-106-46-40 72 94 69q-4 17-6.5 33.5T245-480q0 17 2.5 33.5T254-413l-94 69 40 72 106-46q24 24 53.5 41t62.5 25l14 112Zm44-210q54 0 92-38t38-92q0-54-38-92t-92-38q-54 0-92 38t-38 92q0 54 38 92t92 38Zm0-130Z"/></svg>
+                    </span>
+                </div>
             </div>
 
             <div id="widget">
@@ -89,30 +146,38 @@
                     </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
+
 
         <script defer>
             let currentTime;
             let currentm_d;
 
+
             weather.onpointermove = function(event){
             if(event.buttons){
-                this.style.left     = this.offsetLeft + event.movementX + 'px'
-                this.style.top      = this.offsetTop  + event.movementY + 'px'
+                this.style.left     = this.offsetLeft + event.movementX * 2 + 'px'
+                this.style.top      = this.offsetTop  + event.movementY * 2 + 'px'
                 this.style.position = 'absolute'
                 this.draggable      = false
                 this.setPointerCapture(event.pointerId)
-            }}
-        
-            clock_value.onpointermove = function(event){
+            }
+        }
+
+        clock_value.onpointermove = function(event){
             if(event.buttons){
-                this.style.left     = this.offsetLeft + event.movementX + 'px'
-                this.style.top      = this.offsetTop  + event.movementY + 'px'
+                this.style.left     = this.offsetLeft + event.movementX * 2 + 'px'
+                this.style.top      = this.offsetTop  + event.movementY * 2 + 'px'
                 this.style.position = 'absolute'
                 this.draggable      = false
                 this.setPointerCapture(event.pointerId)
-            }}
+            }
+        }
+
+            
 
             function getCurrentTime() {
                 let now = new Date();
@@ -137,15 +202,11 @@
             }
             setInterval(now_time, 1000);
 
-            var check_display = function() {
-
-                if(!document.getElementById('main').requestFullscreen())
-                {
-                    clock_value.onclick = zengamen;
-                }
+            var random_wallpaper = function() {
+                kabegami();
             }
 
-           setInterval(check_display, 10);
+           setInterval(random_wallpaper, 10000);
 
 
             function niti() {
@@ -161,7 +222,7 @@
             function zengamen()
             {
                 document.getElementById('main').requestFullscreen(); // #background
-                clock_value.onclick = kabegami;
+
             }
 
 
@@ -170,12 +231,22 @@
             let kabegami_d = ["obu-2.jpg", "obu-3.jpg", "rai-1.png", "purin-2.png", "purin-3.png"]
             var randomIndex_txt = Math.floor(Math.random() * kabegami_d.length);
             let img_url;
+            let auto_img;
 
             function kabegami()
             {
-                randomIndex_txt = Math.floor(Math.random() * kabegami_d.length);
-                img_url = "https://umaidango.github.io/kabegami/index_files/" + kabegami_d[randomIndex_txt];
-                background.style = "background:url(" + img_url + ");background-size:cover";
+                if(!auto_img == 1) {
+                    randomIndex_txt = Math.floor(Math.random() * kabegami_d.length);
+                    img_url = "https://umaidango.github.io/kabegami/index_files/" + kabegami_d[randomIndex_txt];
+                    background.style = "background:url(" + img_url + ");background-size:cover";
+                    
+                    // アニメーションをリセットするために、一度アニメーションを削除してから再度適用する
+                    background.style.animation = 'none'; // アニメーションを削除
+                    background.offsetHeight; // リフローを強制してアニメーションをリセット
+                    background.style.animation = 'huwa01 0.68s'; // アニメーションを再適用
+
+                    background.style.display = 'block';
+                }
             }        
 
 
@@ -205,6 +276,8 @@
 
 
         </script>
+
+        
         <script src="./weather.js"></script>
         
 
