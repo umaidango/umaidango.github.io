@@ -157,28 +157,55 @@
             let currentm_d;
 
 
-            weather.onpointermove = function(event){
-            if(event.buttons){
-                this.style.left     = this.offsetLeft + event.movementX * 5 + 'px'
-                this.style.top      = this.offsetTop  + event.movementY * 5 + 'px'
-                this.style.position = 'absolute'
-                this.draggable      = false
-                this.setPointerCapture(event.pointerId)
-            }
-        }
+            
+            const drag01 = document.getElementById('clock_value');
+            let offsetX, offsetY, isDragging = false;
 
-        clock_value.onpointermove = function(event){
-            if(event.buttons){
-                this.style.left     = this.offsetLeft + event.movementX * 5 + 'px'
-                this.style.top      = this.offsetTop  + event.movementY * 5 + 'px'
-                this.style.position = 'absolute'
-                this.draggable      = false
-                this.setPointerCapture(event.pointerId)
-            }
-        }
+            // タッチイベント
+            drag01.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                offsetX = e.touches[0].clientX - drag01.offsetLeft;
+                offsetY = e.touches[0].clientY - drag01.offsetTop;
+            });
+
+            document.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                if (e.touches && e.touches[0]) { //タッチイベントの時
+                    drag01.style.left = e.touches[0].clientX - offsetX + 'px';
+                    drag01.style.top = e.touches[0].clientY - offsetY + 'px';
+                }
+            });
+
+            document.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+
+            // マウスイベント
+            drag01.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                offsetX = e.clientX - drag01.offsetLeft;
+                offsetY = e.clientY - drag01.offsetTop;
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                if (!e.touches) { //マウスイベントの時
+                    drag01.style.left = e.clientX - offsetX + 'px';
+                    drag01.style.top = e.clientY - offsetY + 'px';
+                }
+            });
+
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+
+            //ドラッグ開始を無効化
+            drag01.ondragstart = function() {
+            return false;
+            };
+
 
             
-
             function getCurrentTime() {
                 let now = new Date();
                 let hours = String(now.getHours()).padStart(2, '0');
