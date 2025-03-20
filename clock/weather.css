@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bytesized&family=DotGothic16&family=M+PLUS+2:wght@100..900&family=Tektur:wght@400..900&display=swap');
+
+*{
+    font-family: "Noto Sans JP";
+}
+
 .weatherForecast {
     height: 120px;
     text-align: center;
@@ -11,7 +17,7 @@
     border-radius: 15px;
     padding: 12px;
     margin: 10px;
-    background: #f8fdff;
+    background: #d9f4ff;
   }
   
   .weather > div {
