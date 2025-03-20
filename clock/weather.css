@@ -27,6 +27,7 @@
   
   .weatherImg {
     height: 42%;
+    pointer-events:none;
   }
   
   .tempMin {

@@ -2,7 +2,8 @@
 <html>
     <head>
         <title>clock</title>
-        <meta charset="utf-8">      
+        <meta charset="utf-8">   
+        <link rel="stylesheet" href="./weather.css">   
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Bytesized&family=DotGothic16&family=M+PLUS+2:wght@100..900&family=Tektur:wght@400..900&display=swap');
          
@@ -54,6 +55,12 @@
                 position: absolute;
                 bottom: 0px;
                 right: 8px;
+                height: 150px;
+            }
+
+            #widget_weather {
+                width: 152px;
+                height: 150px;
             }
         </style>
 
@@ -72,13 +79,40 @@
             </div>
 
             <div id="widget">
-                <iframe id="weather" src="weather.html"></iframe>
+                <div id="weather">     
+                    <div class="weatherForecast">
+                    <div class="weather">
+                        <div class="date">--/--(-)</div>
+                        <img class="weatherImg">
+                        <div class="weatherTelop">--</div>
+                        <div><span class="tempMin">-℃</span>/<span class="tempMax">-℃</span></div>
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <script defer>
             let currentTime;
             let currentm_d;
+
+            weather.onpointermove = function(event){
+            if(event.buttons){
+                this.style.left     = this.offsetLeft + event.movementX + 'px'
+                this.style.top      = this.offsetTop  + event.movementY + 'px'
+                this.style.position = 'absolute'
+                this.draggable      = false
+                this.setPointerCapture(event.pointerId)
+            }}
+        
+            clock_value.onpointermove = function(event){
+            if(event.buttons){
+                this.style.left     = this.offsetLeft + event.movementX + 'px'
+                this.style.top      = this.offsetTop  + event.movementY + 'px'
+                this.style.position = 'absolute'
+                this.draggable      = false
+                this.setPointerCapture(event.pointerId)
+            }}
 
             function getCurrentTime() {
                 let now = new Date();
@@ -171,6 +205,8 @@
 
 
         </script>
+        <script src="./weather.js"></script>
+        
 
 
     </body>
