@@ -127,12 +127,58 @@
                 }
             }
 
+            @keyframes slide01 {
+                0% {
+                    transform: translateX(-100%);
+                }
+
+                100% {
+                    transform: translateX(0%);
+                }
+            }
+
+            @keyframes slide01_2 {
+                0% {
+                    transform: translateX(0%);
+                }
+
+                100% {
+                    transform: translateX(100%);
+                }
+            }
+
             .title {
                 text-align: center;
             }
 
             #close_setting {
                 font-size: 2rem; position: absolute; right: 10px; top: 10px; cursor: pointer;
+            }
+
+            #widget_img {
+                width: 120px;
+                height: 120px;
+                border-radius: 18px;
+                padding: 12px;
+                margin: 10px;
+                position: absolute;
+                bottom: 10px;
+                right: 160px;
+                background: #fff;
+                box-sizing: border-box; 
+                overflow: hidden;              
+            } 
+
+            #widget_img_nn {
+                width: 120px;
+                height: 120px;
+                position: absolute; 
+                top: 0px; 
+                left: 0px; 
+                border-radius: 18px; 
+                box-sizing: border-box; 
+                border: 1px solid #eee;
+                animation: slide01 0.56s;
             }
         </style>
 
@@ -168,6 +214,9 @@
                     </div>
                 </div>
 
+                <div id="widget_img" class="draggable">
+                    <div id="widget_img_nn"></div>
+                </div>
 
             </div>
 
@@ -184,6 +233,16 @@
 
 
         <script defer>
+            let img_url_s = ["img01.JPG", "img02.JPG", "img03.jpg", "img04.jpg"];
+            let img_num = 0;
+
+            function img_slider() {
+                let item = img_url_s[img_num];
+                img_num = (img_num + 1) % img_url_s.length; // 剰余演算子でインデックスを調整
+                return item;
+            }
+
+            
             let currentTime;
             let currentm_d;
 
@@ -196,11 +255,12 @@
             function close_setting_m()
             {
                 setting_menu.style.display = "none";
+                document.exitFullscreen();
             }
 
             function setting_on()
-            {
-                setting_menu.style.display = "block";
+            { 
+              setting_menu.style.display = "block";   
             }
 
             const draggableElements = document.querySelectorAll('.draggable'); // draggableクラスを持つ要素を全て取得
@@ -284,6 +344,40 @@ draggableElements.forEach(dragElement => {
 
            setInterval(random_wallpaper, 10000);
 
+           
+           widget_img_nn.style.background = 'url("img/' + img_url_s[img_num] + '") center/cover';
+
+                
+           var slide_img_widget = function() {
+                
+                var slide_b = function()
+                {
+                    // アニメーションをリセットするために、一度アニメーションを削除してから再度適用する
+                    widget_img_nn.style.animation = 'none'; // アニメーションを削除
+                    widget_img_nn.offsetHeight; // リフローを強制してアニメーションをリセット
+                    widget_img_nn.style.animation = 'slide01_2 0.56s'; // アニメーションを再適用
+                    widget_img_nn.style.display = 'block';
+                }
+                setTimeout(slide_b, 560);
+    
+
+                var slide_c = function()
+                {
+                    img_slider();
+                    widget_img_nn.style.background = 'url("img/' + img_url_s[img_num] + '") center/cover';
+                    
+                    // アニメーションをリセットするために、一度アニメーションを削除してから再度適用する
+                    widget_img_nn.style.animation = 'none'; // アニメーションを削除
+                    widget_img_nn.offsetHeight; // リフローを強制してアニメーションをリセット
+                    widget_img_nn.style.animation = 'slide01 0.56s'; // アニメーションを再適用
+
+                    widget_img_nn.style.display = 'block';
+                }
+                setTimeout(slide_c, 1000);
+           }
+
+           setInterval(slide_img_widget, 10000);
+
 
             function niti() {
                 currentm_d = getMonthDay();
@@ -298,11 +392,18 @@ draggableElements.forEach(dragElement => {
             function zengamen()
             {
                 document.getElementById('main').requestFullscreen(); // #background
-
+                setting.style.display = "none";
+                // 全画面表示状態が変化したときのイベントリスナー
+                document.addEventListener('fullscreenchange', handleFullscreenChange);
             }
 
-
-            
+            function handleFullscreenChange() {
+                if (!document.fullscreenElement) {
+                    // 全画面表示が解除された
+                    setting.style.display = "block";
+                    document.removeEventListener('fullscreenchange', handleFullscreenChange); // イベントリスナーを削除
+                }
+            }
 
             let kabegami_d = ["obu-2.jpg", "obu-3.jpg", "rai-1.png", "purin-2.png", "purin-3.png"]
             var randomIndex_txt = Math.floor(Math.random() * kabegami_d.length);
