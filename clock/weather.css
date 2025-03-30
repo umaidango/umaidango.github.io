@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Bytesized&family=DotGothic16&family=M+PLUS+2:wght@100..900&family=Tektur:wght@400..900&display=swap');
+
+*{
+    font-family: "Noto Sans JP";
+}
+
+.weatherForecast {
+    height: 120px;
+    text-align: center;
+  }
+  
+  .weather {
+    width: 120px;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    border-radius: 18px;
+    padding: 12px;
+    margin: 10px;
+    background: #d9f4ff;
+  }
+  
+  .weather > div {
+    height: 20%;
+    font-size: 14px;
+  }
+  
+  .weatherImg {
+    height: 42%;
+    pointer-events:none;
+  }
+  
+  .tempMin {
+    color: rgb(99, 99, 255);
+  }
+  
+  .tempMax {
+    color: rgb(255, 93, 93);
+  }
+  
