@@ -8,6 +8,33 @@
     
 }
 
+body::before
+{
+  background: #f2fffa !important;
+  border: 1px solid #6ddef073 !important;
+  -moz-border-radius: 2px !important;
+  -webkit-border-radius: 2px !important;
+  border-radius: 10px !important;
+  -moz-box-shadow: 0 2px 4px rgba(0,0,0,.14) !important;
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.14) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,.14) !important;
+  color: #000 !important;
+  content: "このサイトはアーカイブ化され、更新されることはありません。　現行のサイトURLはhttps://umaii.f5.siです。" !important;
+  font-family: arial,sans-serif !important;
+  font-size: 12px !important;
+  left: 30% !important;
+  line-height: 16px !important;
+  margin: 0 !important;
+  opacity: .9 !important;
+  padding: 8px !important;
+  position: fixed !important;
+  right: 30% !important;
+  text-align: center !important;
+  top: 5px !important;
+  width: 40% !important;
+  z-index: 1000 !important;
+}
+
 #header_main {
   background: transparent;
   position: fixed;
